@@ -64,6 +64,13 @@ Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la sigu
     usuario@maquina:~/vagrant$ vagrant halt
     usuario@maquina:~/vagrant$ vagrant destroy
 
+.. warning:: 
+
+    1. Entra en virtualbox y comprueba las características de la máuina que se ha creado.
+    2. ¿Qué usuario tiene creado por defecto el sistema?¿Cómo se ejecutan intracciones de superusuario?
+    3. ¿Cuantas tarjetas de red tiene?¿Para qué sirve la eth0?
+    4. Investiga el funcionamiento de la instrucción ``vagrant ssh``. ¿Por que interfaz se conecta?¿Qué certificado se utiliza para acceder?
+
 * **Práctica 4: Creación de varias máquinas virtuales**
 
 En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile con el siguiente contenido:::
