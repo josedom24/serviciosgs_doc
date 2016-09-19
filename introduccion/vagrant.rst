@@ -34,6 +34,37 @@ Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la sigu
 
     usuario@maquina:~$ vagrant box list
 
+* **Práctica 3: Creación de una máquina virtual**
+
+	1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:::
+        
+	usuario@maquina:~/vagrant$ vagrant init
+        
+	2. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:::
+
+    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+    Vagrant.configure("2") do |config|
+                config.vm.box = "precise64"
+                config.vm.hostname = "mimaquina"
+                config.vm.network :public_network,:bridge=>"eth0"
+    end    
+    
+	3. Iniciamos la máquina:::
+
+    usuario@maquina:~/vagrant$ vagrant up
+        
+	4. Para acceder a la instancia:::
+   	
+    usuario@maquina:~/vagrant$ vagrant ssh default
+    	      
+	5. Suspender, apagar o destruir:
+    	
+    usuario@maquina:~/vagrant$ vagrant suspend
+    usuario@maquina:~/vagrant$ vagrant halt
+    usuario@maquina:~/vagrant$ vagrant destroy
+
+
 
 Enlaces interesantes
 --------------------
