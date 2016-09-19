@@ -42,3 +42,38 @@ Veamos algunas instrucciones que nos pueden ayudar en nuestrs scripts de adminis
 
 	#Ejecutar la instrucción como si fuera un fichero
 	f=popen("ls -l","r")
+
+Ejercicios
+----------
+
+
+
+Reailiza un script en python que realice la siguiente función:
+
+1. Muestre el directorio de trabajo.
+
+2. Muestra cuantos usuarios hay definido en el sistema
+
+3. Muestre los usuarios conectados al equipo.
+
+4. Script que lea el nombre de un usuario, si existe dice si es administrador o no, si no existe da un mensaje de error. Realiza el script leyendo el usuario por teclado, y realiza otra versión indicándolo como parámetro.
+
+5. Pasa por parámetros una dirección ip y un nombre de máquina he inserta en /etc/hosts (en la tercera línea) la resolución estática. Si no se introducen dos parámetros se da un error.
+
+6. Para crear un usuario "a mano":
+
+	* Editar /etc/passwd y agregar una nueva linea por cada nueva cuenta. Teniendo cuidado con la sintaxis. Debería hacer que el campo de la contraseña sea `*', de esta forma es imposible ingresar al sistema.
+    * Similarmente, edite /etc/group para crear también un grupo.
+    * Cree el directorio Inicio del usuario con el comando mkdir.
+    * Copia los archivos de /etc/skel al nuevo directorio creado 
+    * Corrija la pertenencia del dueño y permisos con los comandos chown y chmod (Ver paginas de manual de los respectivos comandos). La opción -R es muy útil. Los permisos correctos varían un poco de un sitio a otro, pero generalmente los siguientes comandos harán lo correcto:::
+
+	cd /home/nuevo-nombre-de-usuario
+	chown -R nombre-de-usuario:group .
+	chmod -R 755 .
+
+    * Asigne una contraseña con el comando passwd
+	* Crea un script python que cree un usuario, para ello debe recibir el nombre de usuario y nombre completo por parámetros, por defecto se pone uid y gid a 2000. Mejorar el programa para que:
+    * De un error si se intenta dar de alta un usuario que ya existe
+    Al ir dando de alta a distintos usuarios vaya incrementando automáticamente el uid y el gid a partir de 2000
+
