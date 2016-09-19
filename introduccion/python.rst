@@ -21,7 +21,7 @@ Veamos algunas instrucciones que nos pueden ayudar en nuestrs scripts de adminis
 	import sys
 	sys.exit(0)
 
-* **La libreía *os* te permite acceder del sistema operativo**: Esta librería es muy importante para realizar scripts de administración, veamos algunos ejemplos.::
+* **La libreía os te permite acceder del sistema operativo**: Esta librería es muy importante para realizar scripts de administración, veamos algunos ejemplos.::
 
 	import os
 	print os.getcwd() #Devuelve el directorio donde estás trabajando
