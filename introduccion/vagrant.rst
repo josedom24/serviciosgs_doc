@@ -58,7 +58,7 @@ Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la sigu
   	
     usuario@maquina:~/vagrant$ vagrant ssh default
     	      
-5. Suspender, apagar o destruir:
+5. Suspender, apagar o destruir:::
     	
     usuario@maquina:~/vagrant$ vagrant suspend
     usuario@maquina:~/vagrant$ vagrant halt
@@ -92,7 +92,45 @@ nodo1 tendrá una red interna con ip 10.1.1.101, y nodo2 tendrá una interfaz de
 Si accedemos por ssh a nodo1 podremos hacer ping a nodo2.
 
 
+* **Práctica 5: Añadir un dico duro adicional y modificar la RAM a una máquina virtual**
 
+Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este contenido:::
+
+    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+    
+    Vagrant.configure("2") do |config|
+    
+      config.vm.define :nodo1 do |nodo1|
+        nodo1.vm.box = "precise64"
+        nodo1.vm.hostname = "nodo1"
+        nodo1.vm.network :private_network, ip: "10.1.1.101"
+        nodo1.vm.provider :virtualbox do |v|
+			v.customize ["modifyvm", :id, "--memory", 768]
+		end
+
+      end
+          
+      disco = '.vagrant/midisco.vdi'
+      config.vm.define :nodo2 do |nodo2|
+        nodo2.vm.box = "precise64"
+        nodo2.vm.hostname = "nodo2"
+        nodo2.vm.network :public_network,:bridge=>"eth0"
+        nodo2.vm.network :private_network, ip: "10.1.1.102"
+        nodo2.vm.provider :virtualbox do |v|
+			v.customize ["createhd", "--filename", disco, "--size", 1024]
+			v.customize ["storageattach", :id, "--storagectl", "SATA Controller",
+                         "--port", 1, "--device", 0, "--type", "hdd",
+                         "--medium", disco]
+			end
+        end
+    end
+
+Como podemos ver al nodo1 le hemos modifcado el tamaño de la memoria RAM y en el nodo2 hemos añadido un disco duro de 1GB. Para que estos cambios tengan efecto debes ejecutar la instrucción:::
+
+	usuario@maquina:~/vagrant$ vagrant reload
+
+Para terminar, indicar que tenemos más parámetros de configuración que nos permiten configurar otros aspectos de la máquina virtual. Puedes encontrar más información en la `documentación oficial de vagrant <http://docs.vagrantup.com/v2/>`_.
 Enlaces interesantes
 --------------------
 
