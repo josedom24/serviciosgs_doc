@@ -36,11 +36,11 @@ Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la sigu
 
 * **Práctica 3: Creación de una máquina virtual**
 
-	1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:::
+1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:::
         
 	usuario@maquina:~/vagrant$ vagrant init
         
-	2. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:::
+2. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:::
 
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
@@ -50,19 +50,46 @@ Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la sigu
                 config.vm.network :public_network,:bridge=>"eth0"
     end    
     
-	3. Iniciamos la máquina:::
+3. Iniciamos la máquina:::
 
     usuario@maquina:~/vagrant$ vagrant up
         
-	4. Para acceder a la instancia:::
-   	
+4. Para acceder a la instancia:::
+  	
     usuario@maquina:~/vagrant$ vagrant ssh default
     	      
-	5. Suspender, apagar o destruir:
+5. Suspender, apagar o destruir:
     	
     usuario@maquina:~/vagrant$ vagrant suspend
     usuario@maquina:~/vagrant$ vagrant halt
     usuario@maquina:~/vagrant$ vagrant destroy
+
+* **Práctica 4: Creación de varias máquinas virtuales**
+
+En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile con el siguiente contenido:::
+
+    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+    
+    Vagrant.configure("2") do |config|
+    
+      config.vm.define :nodo1 do |nodo1|
+        nodo1.vm.box = "precise64"
+        nodo1.vm.hostname = "nodo1"
+        nodo1.vm.network :private_network, ip: "10.1.1.101"
+      end
+      config.vm.define :nodo2 do |nodo2|
+        nodo2.vm.box = "precise64"
+        nodo2.vm.hostname = "nodo2"
+        nodo2.vm.network :public_network,:bridge=>"eth0"
+        nodo2.vm.network :private_network, ip: "10.1.1.102"
+      end
+    end
+
+Cuando iniciemos el escenario veremos que hemos creado dos máquinas virtuales: nodo1 y nodo2. 
+nodo1 tendrá una red interna con ip 10.1.1.101, y nodo2 tendrá una interfaz de red "modo puente" y una interfaz de red del tipo red interna con ip 10.1.1.102.
+
+Si accedemos por ssh a nodo1 podremos hacer ping a nodo2.
 
 
 
