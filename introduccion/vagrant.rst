@@ -131,6 +131,7 @@ Como podemos ver al nodo1 le hemos modifcado el tamaño de la memoria RAM y en e
 	usuario@maquina:~/vagrant$ vagrant reload
 
 Para terminar, indicar que tenemos más parámetros de configuración que nos permiten configurar otros aspectos de la máquina virtual. Puedes encontrar más información en la `documentación oficial de vagrant <http://docs.vagrantup.com/v2/>`_.
+
 Enlaces interesantes
 --------------------
 
