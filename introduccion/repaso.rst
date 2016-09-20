@@ -1,4 +1,4 @@
-Cuestionario de respaso
+Cuestionario de repaso
 =======================
 
 Repaso TCP/IP
@@ -23,7 +23,7 @@ Repaso DNS
 ----------
 
 10. ¿Qué herramientas se usa en linux para realizar una consulta DNS?¿Y en Windows? Pregunta en varios sistemas cuál es la dirección IP de www.marca.com. Realiza una consulta para saber los servidores DNS que conocen el dominio gonzalonazareno.org.
-11. ¿Qué ocurre si hacemos una consulta para averiguar la ip de informatica.gonzalonazareno.org desde el ordenador del aula y desde el ordenador de tu casa? Razona la respuesta.
+11. ¿Qué ocurre si hacemos una consulta para averiguar la ip de dit.gonzalonazareno.org desde el ordenador del aula y desde el ordenador de tu casa? Razona la respuesta.
 12. A qué servidor DNS le estás consultando desde clase. Realiza una consulta a www.google.es consultando a nuestro DNS. Vuelve a hacer la consulta usando el servidor público que ofrece google.
 13. ¿Qué información puedo guardar en una zona DNS? ¿Qué registros puedo guardar? ¿Cuantos tipos de zonas existen?
 14. Si desde clase, consulto la dirección IP de www.josedomingo.org? ¿Cuál es el proceso de consultas que se realiza? ¿A que servidores se va preguntando?
