@@ -22,9 +22,12 @@ Al trabajar con el servidor DHCP tenemos que conocer los siguientes conceptos:
 
 * **Ámbito  servidor  DHCP**:  Agrupamiento administrativo  de  equipos  o  clientes  de  una subred que utilizan el servicio DHCP.
 * **Rango  servidor  DHCP**:  Grupo  de  direcciones IP en una subred que el servidor puede conceder a los clientes 
-* **Concesión  o  alquiler  de  direcciones**:  Período de tiempo que los servidores DHCP especifican, durante el cual un equipo cliente puede utilizar una dirección IP. 
+* **Concesión  o  alquiler  de  direcciones**:  Período de tiempo que los servidores DHCP especifican, durante el cual un equipo cliente puede utilizar una dirección IP.
+
 ­* **Reserva  de  direcciones  IP**:  Direcciones  IP que se asugna siempre  a  las  mismos equipos. Es similar a configurar una dirección IP estática pero de forma  automática  desde  el  servidor  DHCP,  la  forma  de hacerlo es asociar direcciones MAC a direcciones IP. 
 * **Exclusiones**: Conjunto de direcciones IP pertenecientes al rango que no se van a asignar.
+
+**Indice**
 
 .. toctree::
    
