@@ -7,5 +7,6 @@ Servidor DHCP
    dhcp
    curstionario
    ejercicio1
+   practica
 
    
