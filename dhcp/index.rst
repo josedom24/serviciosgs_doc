@@ -5,7 +5,7 @@ Servidor DHCP
 .. toctree::
    
    dhcp
-   curstionario
+   cuestionario
    ejercicio1
    practica
 
