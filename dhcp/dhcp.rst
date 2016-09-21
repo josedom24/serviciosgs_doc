@@ -106,3 +106,4 @@ particular. El servidor DHCP de la red podría colocar la dirección del alquile
 disponible.
 
 Si los clientes DHCP operan en ordenadores que tienen disco duro, la dirección IP asignada puede ser almacenada en este dispositivo y, cuando la computadora reinicie sus operaciones, puede hacer una nueva petición usando esta dirección IP.
+
