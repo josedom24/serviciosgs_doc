@@ -1,5 +1,5 @@
-Enlaces intersantes
-===================
+Enlaces interesantes
+====================
 
 * `Wikipedia - APIPA <https://es.wikipedia.org/wiki/Automatic_Private_Internet_Protocol_Addressing>`_
 * `Internet Systems Consortium - dhcp <http://www.isc.org/downloads/dhcp/>`_
