@@ -5,7 +5,7 @@ Cuestionario DHCP
 2. ¿Cómo hay que configurar un cliente DHCP?
 3. Ventajas de usar un servidor DHCP
 4. Enumera los distintos parámetros que un servidor DHCP puede conceder a un cliente
-5.Definición de:
+5. Definición de:
   
     * Ámbito servidor DHCP
     * Rango servidor DHCP
@@ -13,7 +13,7 @@ Cuestionario DHCP
     * Reserva de direcciones IP
     * Exclusión de direcciones IP
   
-6. ¿Quñe es APIPA?
+6. ¿Qué es APIPA?
 7. ¿Por qué el mensaje DHCPDISCOVER es del tipo broadcast?
 8. Desde el estado INIT al estado BOUND. ¿Qué mensajes se transmiten desde el cliente al servidor?
 9. ¿Qué significa el mensaje DHCPDECLINE por parte del cliente?
