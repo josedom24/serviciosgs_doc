@@ -73,7 +73,7 @@ Directivas de localización de ficheros
 Directivas de control de la conexión
 
 * `Timeout <http://httpd.apache.org/docs/2.4/mod/core.html#timeout>`_
-* `KeepAlive <http://httpd.apache.org/docs/2.4/mod/core.html#keepalive>`_`Más información <http://systemadmin.es/2011/08/conexiones-con-keepalive-en-http1-0>`_
+* `KeepAlive <http://httpd.apache.org/docs/2.4/mod/core.html#keepalive>`_ `Más información <http://systemadmin.es/2011/08/conexiones-con-keepalive-en-http1-0>`_
 * `MaxKeepAliveRequests <http://httpd.apache.org/docs/2.4/mod/core.html#maxkeepaliverequests>`_
 * `KeepAliveTimeout <http://httpd.apache.org/docs/2.4/mod/core.html#keepalivetimeout>`_
 
