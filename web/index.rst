@@ -6,6 +6,7 @@ En este bloque del módulo vamos a estudiar el servidor Web, programa software q
 	* El protocolo HTTP: tipos de peticiones, tipos de respuestas, cabeceras, autentificación, control de acceso, etc.
 	* Vamos a usar el servidor Apache 2.4: 
 		* Configuración básica
+		* Virtual Hosting
 		* Mapeo de URL
 		* Autentificación y control de acceso
 		* Analizador de logs
@@ -21,5 +22,5 @@ En este bloque del módulo vamos a estudiar el servidor Web, programa software q
 .. toctree::
    
    enlaces
-
+   ejercicio1
    
