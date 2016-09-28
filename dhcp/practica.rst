@@ -24,7 +24,7 @@ Crea un escenario usando Vagrant que defina las siguientes máquinas:
 Servidor dhcp
 -------------
 
-Instala un servidor dhcp en el ordenador "servidor" que de servicio a los ordenadores de red local, teniendo en cuanta que el tiempo de concesión sea 12 horas y que la red local tiene el direccionamiento 192.168.100.0/24.
+Instala un servidor dhcp en el ordenador "servidor" que de servicio a los ordenadores de red local, teniendo en cuenta que el tiempo de concesión sea 12 horas y que la red local tiene el direccionamiento 192.168.100.0/24.
 
 .. warning::
 
@@ -61,7 +61,7 @@ Modifica el escenario Vagrant para añadir una nueva red local y un nuevo nodo:
 * Servidor: En el servidor hay que crear una nueva interfaz
 * nodo_lan2: Un cliente conectado a la segunda red local.
 
-Configura el servidor dhcp en el ordenador "servidor" para que de servicio a los ordenadores de la nueva red local, teniendo en cuante que el tiempo de concesión sea 24 horas y que la red local tiene el direccionamiento 192.168.200.0/24.
+Configura el servidor dhcp en el ordenador "servidor" para que de servicio a los ordenadores de la nueva red local, teniendo en cuenta que el tiempo de concesión sea 24 horas y que la red local tiene el direccionamiento 192.168.200.0/24.
 
 .. warning::
 
