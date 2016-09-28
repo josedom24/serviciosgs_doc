@@ -55,7 +55,7 @@ dirección IP sugerida para verificar que no esté duplicada.  En caso de estarl
 
 Cuando la petición ARP se difunde sobre la red, el cliente usa su propia dirección de hardware en el campo de dirección fuente de hardware del ARP, pero coloca el valor de 0 en el campo de dirección fuente IP.  Esta dirección de valor 0 se utiliza en lugar de la dirección IP sugerida, para no confundir a las memorias caché ARP de otros hosts. 
 
-3. **Duración de la conseción (BOUND)**
+3. **Duración de la concesión (BOUND)**
 
 Cuando se acepta el DHCPACK proveniente del servidor DHCP, se colocan tres valores de temporización y el cliente DHCP se mueve al estado BOUND (asociado) . 
 
