@@ -56,7 +56,7 @@ Ejemplo de configuración de la sección subnet puede ser:::
 	subnet 192.168.0.0 netmask 255.255.255.0 {
 	  range 192.168.0.60 192.168.0.90;
 	  option routers 192.168.0.254;
-	  option domain-­nam-e­servers 80.58.0.33, 80.58.32.9;
+	  option domain-name-server 80.58.0.33, 80.58.32.9;
 	}
 	
 Reinciciamos el servidor dhcp:::
