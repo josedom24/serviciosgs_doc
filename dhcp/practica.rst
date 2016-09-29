@@ -8,9 +8,13 @@ Práctica: Servidor DHCP
 Teoría
 ------
 
-.. warning::
+.. note::
 
 	* **Tarea 1 (1 punto):** Lee el documento `Teoría: Servidor DHCP <http://serviciosgs.readthedocs.io/es/latest/dhcp/dhcp.html>`_ y explica el funcionamiento del servidor DHCP resumido en este `gráfico <http://serviciosgs.readthedocs.io/es/latest/_images/dhcp.png>`_.	
+
+.. note::
+
+	* Muestra al profesor: Tarea 4, Tarea 7
 
 
 Preparación del escenario
