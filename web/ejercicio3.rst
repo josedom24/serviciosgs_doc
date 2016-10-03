@@ -37,7 +37,7 @@ Y por defecto este sitio virtual está habilitado, por lo que podemos comprobar 
 Podemos habilitar o deshabilitar nuestros host virtuales utilizando los siguientes comandos::
 
 	a2ensite
-    a2dissite
+	a2dissite
 
 En el fichero de configuración general ``/etc/apache2/apache2.conf`` nos encontramos las opciones de configuración del directorio padre del indicado en la directiva ``DocumentRoot`` (suponemos que todos los host virtuales van a estar guardados en subdirectorios de este directorio)::
 
