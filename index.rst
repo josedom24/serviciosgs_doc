@@ -14,6 +14,7 @@ El índice de contenidos que vamos a estudiar será:
    
    introduccion/index
    dhcp/index
+   web/index
    
 
 `Calificaciones del módulo <https://docs.google.com/spreadsheets/d/1qsWeDsIaY7PJA2MbqQUR0CrhkMDhbYsiciH0E8Z6e5w/pubhtml>`_   
