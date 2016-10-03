@@ -5,7 +5,7 @@ Ejercicio: VirtualHosting con Apache
 Introducción al VirtualHosting
 ------------------------------
 
-El término Hosting Virtual se refiere a hacer funcionar más de un sitio web (tales como www.company1.com y www.company2.com) en una sola máquina. Los sitios web virtuales pueden estar "basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente, o "basados en nombres diferentes", lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres (de dominio). Apache fue uno de los primeros servidores web en soportar hosting virtual basado en direcciones IP.
+El término Hosting Virtual se refiere a hacer funcionar más de un sitio web (tales como ``www.company1.com`` y ``www.company2.com``) en una sola máquina. Los sitios web virtuales pueden estar "basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente, o "basados en nombres diferentes", lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres (de dominio). Apache fue uno de los primeros servidores web en soportar hosting virtual basado en direcciones IP.
 
 El servidor web Apache2 se instala por defecto con un host virtual. La configuración de este sitio la podemos encontrar en::
 
