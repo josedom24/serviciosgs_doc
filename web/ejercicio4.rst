@@ -28,5 +28,5 @@ URL ``http://www.mapeo.com/documentos`` y visualice los ficheros del ``/home/usu
 	* Cuando no se encuentre una página (error 404) por un mensje de error.
 	* Crea un alias llamado ``error`` que corresponda a ``/srv/mapeo/error``. Dentro de ese directorio crea páginas personalizadas para visualizar cuando  se produzca un error 404 y cuando se tenga un forbidden (403). Configura el sistema para que se redireccione a estas páginas cuando se produce un error.
 	* Descomenta en el fichero ``localized-error-pages.conf`` las líneas adecuadas para tener los mensajes de error traducidos a los diferentes idiomas. Para que funcione tienes que hacer dos cosas:
-		* Activar el módulo include.
+		* Activar el módulo ``include``.
 		* Si quieres los mensajes en español modifica adecuadamente la directiva ``LanguagePriority`` del módulo ``negotiation``.
