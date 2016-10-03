@@ -80,6 +80,6 @@ De esta manera tendremos un fichero llamado ``iesgn.conf`` para realizar la conf
 
 La creación de los enlaces simbólicos se puede hacer con la instrucción ``a2ensite nombre_fichero_configuracion``, para deshabilitar el sitio tenemos que borrar el enlace simbólico o usar la instrucción ``a2dissite nombre_fichero_configuracion``.
 
-4.Crea los directorios y los ficheros index.html necesarios en ``/var/www`` y reiniciamos el servicio.
+4. Crea los directorios y los ficheros index.html necesarios en ``/var/www`` y reiniciamos el servicio.
 
-5.Para terminar lo único que tendremos que hacer es cambiar el fichero hosts en los clientes y poner dos nuevas líneas donde se haga la conversión entre los dos nombre de dominio y la dirección IP del servidor.
+5. Para terminar lo único que tendremos que hacer es cambiar el fichero hosts en los clientes y poner dos nuevas líneas donde se haga la conversión entre los dos nombre de dominio y la dirección IP del servidor.
