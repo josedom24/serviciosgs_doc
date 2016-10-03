@@ -70,7 +70,7 @@ Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:
     cp 000-default.conf iesgn.conf
     cp 000-default.conf departamentos.conf
 
-	De esta manera tendremos un fichero llamado ``iesgn.conf`` para realizar la configuración del sitio web ``www.iesgn.org``, y otro llamado ``departamentos.conf`` para el sitio web ``www.departamentosgn.org``.
+De esta manera tendremos un fichero llamado ``iesgn.conf`` para realizar la configuración del sitio web ``www.iesgn.org``, y otro llamado ``departamentos.conf`` para el sitio web ``www.departamentosgn.org``.
 
 2. Modificamos los ficheros ``iesgn.conf`` y ``departamentos.conf``, para indicar el nombre que vamos ausar para acceder al host virtual (``ServerName``) y el directorio detrabajo (``DocumentRoot``).
 3. No es suficiente crear los ficheros de configuración de cada sitio web, es necesario crear un enlace simbólico a estos ficheros dentro del directorio ``/etc/apache2/sites-enabled``, para ello::
@@ -78,7 +78,7 @@ Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:
         a2ensite iesgn
         a2ensite departamentos
 
-    La creación de los enlaces simbólicos se puede hacer con la instrucción *a2ensite nombre_fichero_configuracion*, para deshabilitar el sitio tenemos que borrar el enlace simbólico o usar la instrucción *a2dissite nombre_fichero_configuracion*
+La creación de los enlaces simbólicos se puede hacer con la instrucción ``a2ensite nombre_fichero_configuracion``, para deshabilitar el sitio tenemos que borrar el enlace simbólico o usar la instrucción ``a2dissite nombre_fichero_configuracion``.
 
 4.Crea los directorios y los ficheros index.html necesarios en ``/var/www`` y reiniciamos el servicio.
 
