@@ -6,9 +6,9 @@ Instalación de Apache 2.4
 
 1. Instala el servidor web Apache e indica el FQDN para que al inciar el servicio no nos de ningún problema.
 
-Para controlar el servicio apache2 podemos usar: (para más información <http://httpd.apache.org/docs/2.4/es/stopping.html>)::
+	Para controlar el servicio apache2 podemos usar: (para más `información <http://httpd.apache.org/docs/2.4/es/stopping.html>`_)::
 
-    apache2ctl [-k start|restart|graceful|graceful-stop|stop]
+    	apache2ctl [-k start|restart|graceful|graceful-stop|stop]
 
 2. ¿Qué es la opción graceful?
 
@@ -68,7 +68,7 @@ Directivas de localización de ficheros
 * `LockFile <http://httpd.apache.org/docs/2.4/mod/mpm_common.html#lockfile>`_
 * `PidFile <http://httpd.apache.org/docs/2.4/mod/mpm_common.html#pidfile>`_
 * `ServerRoot <http://httpd.apache.org/docs/2.4/mod/core.html#serverroot>`_
-* `AccessFileName <http://httpd.apache.org/docs/2.0/mod/core.html#accessfilename>`_
+* `AccessFileName <http://httpd.apache.org/docs/2.4/mod/core.html#accessfilename>`_
 
 Directivas de control de la conexión
 
@@ -79,8 +79,8 @@ Directivas de control de la conexión
 
 Otras directivas
 
-* `User <http://httpd.apache.org/docs/2.0/mod/mpm_common.html#user>`_
-* `Group <http://httpd.apache.org/docs/2.0/mod/mpm_common.html#group>`_
-* `DefaultType <http://httpd.apache.org/docs/2.0/mod/core.html#defaulttype>`_
-* `LogLevel <http://httpd.apache.org/docs/2.0/mod/core.html#loglevel>`_
-* `LogFormat <http://httpd.apache.org/docs/2.0/mod/mod_log_config.html#logformat>`_
+* `User <http://httpd.apache.org/docs/2.4/mod/mpm_common.html#user>`_
+* `Group <http://httpd.apache.org/docs/2.4/mod/mpm_common.html#group>`_
+* `DefaultType <http://httpd.apache.org/docs/2.4/mod/core.html#defaulttype>`_
+* `LogLevel <http://httpd.apache.org/docs/2.4/mod/core.html#loglevel>`_
+* `LogFormat <http://httpd.apache.org/docs/2.4/mod/mod_log_config.html#logformat>`_
