@@ -86,4 +86,4 @@ La creación de los enlaces simbólicos se puede hacer con la instrucción ``a2e
 
 .. note::
 
-	Repetie el ejercicio cambiando los directorios de trabajo a ``/srv/www``. ¿Qué modificación debes hacer en el fichero ``/etc/apache2/apache2.conf``?
+	Repite el ejercicio cambiando los directorios de trabajo a ``/srv/www``. ¿Qué modificación debes hacer en el fichero ``/etc/apache2/apache2.conf``?
