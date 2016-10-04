@@ -4,11 +4,13 @@ Ejercicio: Instalación y configuración básica de Apache
 Instalación de Apache 2.4
 -------------------------
 
-1. Instala el servidor web Apache e indica el FQDN para que al inciar el servicio no nos de ningún problema.
+1. Instala el servidor web Apache::
 
-Para controlar el servicio apache2 podemos usar: (para más `información <http://httpd.apache.org/docs/2.4/es/stopping.html>`_)::
+	apt-get install apache2
 
-    	apache2ctl [-k start|restart|graceful|graceful-stop|stop]
+Para controlar el servicio apache2 podemos usar (para más `información <http://httpd.apache.org/docs/2.4/es/stopping.html>`_)::
+
+    apache2ctl [-k start|restart|graceful|graceful-stop|stop]
 
 2. ¿Qué es la opción graceful?
 
