@@ -6,7 +6,7 @@ Instalación de Apache 2.4
 
 1. Instala el servidor web Apache e indica el FQDN para que al inciar el servicio no nos de ningún problema.
 
-	Para controlar el servicio apache2 podemos usar: (para más `información <http://httpd.apache.org/docs/2.4/es/stopping.html>`_)::
+Para controlar el servicio apache2 podemos usar: (para más `información <http://httpd.apache.org/docs/2.4/es/stopping.html>`_)::
 
     	apache2ctl [-k start|restart|graceful|graceful-stop|stop]
 
