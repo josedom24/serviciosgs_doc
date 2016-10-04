@@ -31,8 +31,7 @@ Estructura de los ficheros de configuración
 
 3. Busca en la configuración una variable de entorno y determina en que fichero están definidas.
 
-4. La directiva `Include <http://httpd.apache.org/docs/2.4/mod/core.html#include>`_
- nos permite añadir ficheros de configuración a la configuración general de apache2. Comprueba qué ficheros son añadidos con esta directiva.
+4. La directiva `Include <http://httpd.apache.org/docs/2.4/mod/core.html#include>`_ nos permite añadir ficheros de configuración a la configuración general de apache2. Comprueba qué ficheros son añadidos con esta directiva.
 
 5. Podemos aplicar directivas a partes concretas de nuestro servidor web, para ello estudia las siguientes directivas (Para aprender más lee `Secciones de Configuración <http://httpd.apache.org/docs/2.4/sections.html>`_):
 
