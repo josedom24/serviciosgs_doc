@@ -15,3 +15,8 @@ Enlaces interesantes
 * `Documentación oficial servidor web Apache 2.4 <http://httpd.apache.org/docs/2.4/es/>`_
 * `Updating Virtual Host Settings from Apache 2.2 to Apache 2.4 <https://www.linode.com/docs/security/upgrading/updating-virtual-host-settings-from-apache-2-2-to-apache-2-4>`_
 * `How To Migrate your Apache Configuration from 2.2 to 2.4 Syntax <https://www.digitalocean.com/community/tutorials/migrating-your-apache-configuration-from-2-2-to-2-4-syntax>`_
+
+**Módulos en apache**
+
+* `Utilización de módulos en Apache <https://github.com/josedom24/serviciosgs_doc/raw/master/web/doc/apache-modular.pdf>`_
+* `Cómo crear URLS amigables con htaccess <http://www.emenia.es/como-crear-urls-amigables-con-htaccess/>`_
