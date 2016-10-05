@@ -1,6 +1,7 @@
 Ejercicio: Mapear URL a ubicaciones de un sistema de ficheros
 =============================================================
 
+
 1. Crea un nuevo host virtual que es accedido con el nombre ``www.mapeo.com``, cuyo ``DocumentRoot``  sea /srv/mapeo. 
 
 2. `Alias <http://httpd.apache.org/docs/2.4/mod/mod_alias.html#alias>`_: Crea un alias en el host virtual del ejercicio anterior, que mi permita entrar en la 
