@@ -15,7 +15,7 @@ En **apache2.4** se utilizan las siguientes directivas: `Require <https://httpd.
 2. Crea un escenario en Vagrant que tenga un servidor con una red publica, y una privada, un cliente conectada a la red privada. Crea un host virtual, que sólo se tenga acceso desde el cliente de la red local, y no se pueda acceder desde la anfitriona por la red pública.
 
 Autentificación básica
-======================
+----------------------
 
 El servidor web Apache puede acompañarse de distintos módulos para proporcionar diferentes modelos de autenticación.
 La primera forma que veremos es la más simple. Usamos para ello el módulo de autenticación básica que viene instalada "de serie" con cualquier Apache: `mod_auth_basic <http://httpd.apache.org/docs/2.4/es/mod/mod_auth_basic.html>`_. La configuración que tenemos que añadir en el fichero de definición del Virtual Host a proteger podría ser algo así::
