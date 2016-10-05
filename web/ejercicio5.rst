@@ -6,7 +6,7 @@ Control de acceso
 
 El **Control de acceso** en un servidor web nos permite determinar desde donde podemos acceder a los recursos del servidor.
 
-En **apache2.2** se utilizan las siguientes directivas: `order <http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#order>`_, `allow <http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#allow>`_ y `deny <http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#deny>`_. Un buen manual para que quede más claro lo puedes encontrar en este [enlace](http://systemadmin.es/2011/04/la-directiva-order-de-apache).
+En **apache2.2** se utilizan las siguientes directivas: `order <http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#order>`_, `allow <http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#allow>`_ y `deny <http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#deny>`_. Un buen manual para que quede más claro lo puedes encontrar en este `enlace <http://systemadmin.es/2011/04/la-directiva-order-de-apache>`_.
 
 En **apache2.4** se utilizan las siguientes directivas: `Require <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#require>`_, `RequireAll <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requireall>`_, `RequireAny <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requireany>`_ y `RequireNone <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requirenone>`_
 
