@@ -49,7 +49,7 @@ En el fichero de configuración general ``/etc/apache2/apache2.conf`` nos encont
 	</Directory>
 	...
 
-Configuración de VirutalHosting
+Configuración de VirtualHosting
 -------------------------------
 
 El objetivo de esta práctica es la puesta en marcha de dos sitios web utilizando el mismo servidor web apache. Hay que tener en cuenta lo siguiente:
