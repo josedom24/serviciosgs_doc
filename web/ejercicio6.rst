@@ -1,5 +1,5 @@
-Configuración de apache mediante archivo .htaccess
-==================================================
+Ejercicio: Configuración de apache mediante archivo .htaccess
+=============================================================
 
 Un fichero ``.htaccess`` (hypertext access), también conocido como archivo de configuración distribuida, es un fichero especial, popularizado por el Servidor HTTP Apache que nos permite definir diferentes directivas de configuración para cada directorio (con sus respectivos subdirectorios) sin necesidad de editar el archivo de configuración principal de Apache.
 
