@@ -9,7 +9,7 @@ Práctica: Servidor WEB
 
 	* Muestra al profesor: 
 
-.. note::
+.. warning::
 
 	* **Tarea 1 (1 punto)(Obligatorio):** Instala el servidor web Apache2 en una máquina. Modifica la paǵina index.html que viene por defecto y accede a ella desde un navegador. Entrega una captura de pantalla accediendo a ella.
 
@@ -26,7 +26,7 @@ Los dos sitios web tendrán las siguientes características:
 * El nombre de dominio del primero será ``www.iesgn.org``, su directorio base será ``/srv/www/iesgn`` y contendrá una página llamada ``index.html``, donde sólo se verá una bienvenida a la página del Instituto Gonzalo Nazareno.
 * En el segundo sitio vamos a crear una página donde se pondrán noticias por parte de los departamento, el nombre de este sitio será ``departamentos.iesgn.org``, y su directorio base será ``/srv/www/departamentos``. En este sitio sólo tendremos una página inicial ``index.html``, dando la bienvenida a la página de los departamentos del instituto.
 
-.. note::
+.. warning::
 
 	* **Tarea 2 (3 punto)(Obligatorio):** Configura la resolución estática en los clientes y muestra al profesor el acceso a cada una de las páginas.
 
@@ -35,7 +35,7 @@ Mapeo de URL
 
 Cambia la configuración del sitio web ``www.iesgn.org`` para que se comporte de la siguiente forma:
 
-.. note::
+.. warning::
 
 	* **Tarea 3 (1 punto)(Obligatorio):** Cuando se entre a la dirección ``www.iesgn.org`` se redireccionará automaticamente a ``www.iesgn.org/principal``, donde se mostrará el mensaje de bienvenida. En el directorio **principal** no se permite ver la lista de los ficheros, no se permite que se siga los enlaces símbolicos y no se permite negociación de contenido. Muestra al profesor el funcionamiento.
 	* **Tarea 4 (1 punto)(Obligatorio):** Si accedes a la página ``www.iesgn.org/principal/documentos`` se visualizarán los documentos que hay en /srv/doc. Por lo tanto se permitirá el listado de fichero y el seguimiento de enlaces símbolicos siempre que sean a ficheros o directorios cuyo dueño sea el usuario. Muestra al profesor el funcionamiento.
@@ -50,7 +50,7 @@ Vamos a instalar y configurar un analizador de logs de apache2 (**webalizer**) q
 * La URL de la estadística sera ``www.masterlan.com/estadistica``.
 * El acceso a la estadística desde la red local está permitido, si hace desde fuera, por ejemplo desde el host, se requiere autentificación tipo digest (realizar este punto por medio de un fichero ``.htaccess``)
 
-.. note::
+.. warning::
 
 	* **Tarea 7 (2 puntos):** Realiza la instalación de webalizer y muestra al profesor el funcionamiento del mismo teniendo en cuenta los requerimientos señalados.
 
@@ -58,7 +58,7 @@ Vamos a instalar y configurar un analizador de logs de apache2 (**webalizer**) q
 Autentificación, Autorización, y Control de Acceso
 --------------------------------------------------
 
-.. note::
+.. warning::
 
 	* **Tarea 8 (1 punto)(Obligatorio):** Crea un escenario en Vagrant que tenga un servidor con una red publica, y una privada, un cliente conectada a la red privada. Crea un host virtual que se acceda con el nombre ``www.masterlan.com``. A la URL ``www.masterlan.com/intranet`` sólo se debe tener acceso desde el cliente de la red local, y no se pueda acceder desde la anfitriona por la red pública. A la URL ``www.masterlan.com/internet``, sin embargo, sólo se debe tener acceso desde la anfitriona por la red pública, y no desde la red local. Muestra los reultados al profesor.
 	* **Tarea 9 (1 punto):** Autentificación básica. Limita el acceso a la URL ``www.masterlan.com/secreto``. Comprueba las cabeceras de los mensajes HTTP que se intercambian entre el servidor y el cliente. ¿Cómo se manda la contraseña entre el cliente y el servidor?. Entrega una breve explicación del ejercicio.
@@ -72,7 +72,7 @@ Configuración con .htaccess
 
 Date de alta en un **proveedor de hosting**. ¿Si necesitamos configurar el servidor web que han configurado los administradores del proveedor?, ¿qué podemos hacer? Explica la directiva ``AllowOverride`` de apache2. Utilizando archivos .htaccess realiza las siguientes configuraciones:
 
-.. note::
+.. warning::
 
 	* **Tarea 13 (1 punto)(Obligatorio):** Habilita el listado de ficheros en la URL  ``http://tunombre.mialias.net/nas``.
 	* **Tarea 14 (1 punto):** Crea una redirección permanente: cuando entremos en ``ttp://tunombre.mialias.net/google`` salte a ``ww.google.es``.
@@ -82,7 +82,7 @@ Date de alta en un **proveedor de hosting**. ¿Si necesitamos configurar el serv
 Módulos
 -------
 
-.. note::
+.. warning::
 
 	* **Tarea 16 (2 puntos)(Obligatorio):** Módulo *userdir*: Activa y configura el módulo *userdir*, que permite que cada usuario del sistema tenga la posibilidad de tener un directorio (por defecto se llama ``public_html``) donde alojar su página web. Publica una página de un usuario, y accede a la misma.
 	* **Tarea 17 (2 puntos):** Instalación de un servidor WebDAV que sea accesible desde la URL ``www.masterlan.com/webdav``.
