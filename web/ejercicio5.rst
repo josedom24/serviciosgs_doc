@@ -11,7 +11,7 @@ En **apache2.2** se utilizan las siguientes directivas: `order <http://httpd.apa
 En **apache2.4** se utilizan las siguientes directivas: `Require <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#require>`_, `RequireAll <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requireall>`_, `RequireAny <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requireany>`_ y `RequireNone <https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requirenone>`_
 
 
-1. Comprueba el control de acceso por defecto que tiene el virtual host por defecto (00-default).
+1. Comprueba el control de acceso por defecto que tiene el virtual host por defecto (000-default).
 2. Crea un escenario en Vagrant que tenga un servidor con una red publica, y una privada, un cliente conectada a la red privada. Crea un host virtual, que sólo se tenga acceso desde el cliente de la red local, y no se pueda acceder desde la anfitriona por la red pública.
 
 Autentificación básica
@@ -79,7 +79,7 @@ En realidad la información que se manda es el nombre de usuario y la contraseñ
 
 La directiva `satisfy <http://httpd.apache.org/docs/2.4/mod/core.html#satisfy>`_ controla como el se debe comportar el servidor cuando tenemos autorizaciones a nives de host (Require, RequireAll,...) y tenemos autorizaciones de usuarios (require).
 
-6. El directorio privado3 del ejercicio5 haz que sólo sea accesible desde el localhost, y estudia como se comporta la autorización si ponemos:
+6. El directorio privado3 del ejercicio5 haz que sólo sea accesible desde el localhost, y estudia como se comporta la autorización si ponemos::
 
     satisfy any
     satisfy all
