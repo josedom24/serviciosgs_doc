@@ -7,7 +7,7 @@ Práctica: Servidor WEB
 
 .. note::
 
-	* Muestra al profesor: 
+	* Muestra al profesor: *Tarea 4, Tarea 10 y Tarea 16*
 
 .. warning::
 
