@@ -74,9 +74,9 @@ Date de alta en un **proveedor de hosting**. ¿Si necesitamos configurar el serv
 
 .. warning::
 
-	* **Tarea 13 (1 punto)(Obligatorio):** Habilita el listado de ficheros en la URL  ``http://tunombre.mialias.net/nas``.
-	* **Tarea 14 (1 punto):** Crea una redirección permanente: cuando entremos en ``ttp://tunombre.mialias.net/google`` salte a ``ww.google.es``.
-	* **Tarea 15 (1 punto):** Pedir autentificación para entrar en la URL ``http://tunombre.mialias.net/prohibido``.
+	* **Tarea 13 (1 punto)(Obligatorio):** Habilita el listado de ficheros en la URL  ``http://host.dominio/nas``.
+	* **Tarea 14 (1 punto):** Crea una redirección permanente: cuando entremos en ``ttp://host.dominio/google`` salte a ``ww.google.es``.
+	* **Tarea 15 (1 punto):** Pedir autentificación para entrar en la URL ``http://host.dominio/prohibido``.
 
 
 Módulos
