@@ -1,5 +1,5 @@
-Ejercicio: Móduloes en apache
-=============================
+Ejercicio: Módulos en apache
+============================
 
 Directorios web para cada usuario (public_html)
 -----------------------------------------------
