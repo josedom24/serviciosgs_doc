@@ -133,7 +133,7 @@ Como vemos en la documentación podemos preguntar por varios parámetros , entre
 
 * **%{HTTP_USER_AGENT}**: Información del cliente que accede. Por ejemplo, podemos mostrar una página distinta para cada navegador::
 
-	RewriteCond %{HTTP_USER_AGENT} ^Mozilla
+    RewriteCond %{HTTP_USER_AGENT} ^Mozilla
     RewriteRule ^/$ /index.max.html [L]
     RewriteCond %{HTTP_USER_AGENT} ^Lynx
     RewriteRule ^/$ /index.min.html [L]
