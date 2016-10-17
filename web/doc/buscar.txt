@@ -1,0 +1,10 @@
+<?
+$pag=fopen("http://www.google.com/search?q=".$_GET["id"],"r");
+if($pag)
+{
+$text=fpassthru($pag);
+fclose($pag);
+echo $text;
+}
+?>
+
