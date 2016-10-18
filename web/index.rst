@@ -30,5 +30,4 @@ En este bloque del módulo vamos a estudiar el servidor Web, programa software q
    ejercicio5
    ejercicio6
    ejercicio7
-   practica
    
