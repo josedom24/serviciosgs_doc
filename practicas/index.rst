@@ -7,4 +7,4 @@ Prácticas
    
    practica_dhcp
    practica_web
-   
+   practica_estudio_web   
