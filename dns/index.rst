@@ -28,4 +28,5 @@ Los contenidos que vamos a estudiar en este bloque serán:
    ejercicio4
    ejercicio5
    ejercicio6
+   ejercicio7
    

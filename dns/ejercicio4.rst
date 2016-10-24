@@ -5,7 +5,6 @@ Ejercicio: Instalación y configuración de un servidor DNS esclavo
 
 	Suponemos que tenemos instalado el servidor DNS del `ejercicio anterior <ejercicio3.html>`_.
 
-
 Actualmente tenemos instalado un servidor DNS que tiene autoridad sobre la zona ``iesgn.org`` y sobre la zona de resolución inversa correspondiente. Este servidor va a funcionar como **DNS maestro**. Vamos a instalar un nuevo servidor DNS que va a estar configurado como **DNS esclavo** del anterior, donde se van a ir copiando periódicamente las zonas del DNS maestro. Suponemos que el nombre del servidor DNS esclavo se va llamar ``nombredelesclavo.iesgn.org``.
 
 Modifica la configuración del servidor DNS actual para que funcione como maestro de las zonas que tiene definida. Instala y configura un nuevo servidor DNS para que funcione como DNS esclavo del anterior. Y realiza las siguientes comprobaciones:
