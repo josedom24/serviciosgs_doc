@@ -22,4 +22,5 @@ Los contenidos que vamos a estudiar en este bloque serán:
 .. toctree::
    
    enlaces
+   ejercicio1
    
