@@ -3,5 +3,14 @@ Enlaces interesantes
 
 **Protocolo DNS**
 
-* `Fundamentos del servicio DNS <https://github.com/josedom24/serviciosgm_doc/raw/master/windows/dns/doc/DNS-1.pdf>`_
+* `¿Cómo funciona el DNS? <http://blog.smaldone.com.ar/2006/12/05/como-funciona-el-dns/>`_
 * `Ficheros importantes en la resolución de nombres <fichero.html>`_
+
+**DNSmasq**
+
+* `Fundamentos del servicio DNS <https://github.com/josedom24/serviciosgs_doc/raw/master/dns/doc/dnsmasq.pdf>`_
+* `HowTodnsmasq <https://wiki.debian.org/HowTo/dnsmasq>`_
+
+**bind9**
+
+* `Servidor dns: Bind9 <https://github.com/josedom24/serviciosgs_doc/raw/master/dns/doc/bind9.pdf>`_
