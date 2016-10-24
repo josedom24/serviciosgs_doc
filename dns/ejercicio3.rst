@@ -1,5 +1,5 @@
- Ejercicio: Instalación y configuración del servidor bind9 en nuestra red local
-===============================================================================
+Ejercicio: Instalación y configuración del servidor bind9 en nuestra red local
+==============================================================================
 
 .. note::
 
