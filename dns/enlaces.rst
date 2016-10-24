@@ -19,3 +19,4 @@ Enlaces interesantes
 * `Servidores DNS esclavos (1ª parte) <http://www.josedomingo.org/pledin/2011/11/configuracion-de-un-servidor-dns-esclavo/>`_
 * `Servidores DNS esclavos (2ª parte) <http://www.josedomingo.org/pledin/2013/11/configurar_servidor_dns_esclavo_2/>`_
 
+* `Configurar subdominios en bind9 <http://www.josedomingo.org/pledin/2013/11/configurar-subdominios-en-bind9>`_
