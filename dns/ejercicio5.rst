@@ -1,8 +1,9 @@
 Ejercicio: Configuración de subdominios virtuales con bind9
+===========================================================
 
 .. note::
 
-Suponemos que tenemos instalado el servidor DNS de la `ejercicio anterior <ejercicio3.html>`_.
+Suponemos que tenemos instalado el servidor DNS del `ejercicio anterior <ejercicio3.html>`_.
 
 
 Tenemos un servidor DNS que gestiona la zona correspondiente al nombre de dominio ``iesgn.org``, queremos configurar dicho servidor para crear el subdominio ``informatica.iesgn.org``. Los nombres que vamos a tener en ese subdominio son los siguientes:
