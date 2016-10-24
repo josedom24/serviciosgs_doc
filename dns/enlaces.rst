@@ -14,3 +14,4 @@ Enlaces interesantes
 **bind9**
 
 * `Servidor dns: Bind9 <https://github.com/josedom24/serviciosgs_doc/raw/master/dns/doc/bind9.pdf>`_
+* `Esquema: Servidor DNS [jpg] <https://github.com/josedom24/serviciosgs_doc/raw/master/dns/doc/esquema_dns.jpg>`_
