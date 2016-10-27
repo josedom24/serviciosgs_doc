@@ -11,9 +11,7 @@ Esquema de red
 
 Debes configurar en un entorno virtual usando KVM el siguiente esquema de red:
 
-.. image:: 
-
-	http://josedom24.github.io/mod/serviciosgm/img/esquema_red.png"
+.. image:: http://josedom24.github.io/mod/serviciosgm/img/esquema_red.png
 
 Como podemos ver, vamos a tener tres máquinas: un servidor Windows Server y dos clientes: uno Linux y otro Windows.
 
