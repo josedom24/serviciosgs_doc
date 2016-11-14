@@ -5,7 +5,7 @@ Práctica: Configueación de servidores GNU/Linux
 
     (12 tareas - 20 puntos)(6 tareas obligatorias - 7 puntos)
 
-.. warnings::
+.. warning::
 
     Objetivo
 
@@ -15,7 +15,7 @@ Práctica: Configueación de servidores GNU/Linux
     * Servidor2: Piolín (Debian)
     * Servidor3: Taz (CentOs)
 
-.. warnings::
+.. warning::
 
     Ejemplo de nombres, suponiendo que mi nombre de dominio va a ser josedom.gonzalonazareno.org
 
@@ -100,7 +100,7 @@ Servidor Web
 
 En nuestro servidor3 vamos a instalar un servidor Web apache2 con las siguientes características.
 
-.. warnings::
+.. warning:
 
     * **Tarea 4 (1 punto)(Obligatorio):** Nuestro servidor va  a tener dos hosts virtuales: ``www.tu_nombre.gonzalonazareno.org`` y ``informatica.tu_nombre.gonzalonazareno.org``. Explica los pasos fundamentales para realizar los dos virtual hosts.
     * **Tarea 5 (1 punto):** Comenta los cambios en el servidor DNS para de dar de alta los dos nuevos nombres.
@@ -116,7 +116,7 @@ Servidor de Base de Datos
 
 En nuestro servidor1 vamos a instalar un servidor de base de datos mysql.
 
-.. warnings::
+.. warning::
 
 i   * **Tarea 11 (1 punto)(Obligatorio):** Configura el servidor para que sea accesible por los equipos de la red local. Muestra al profesor una conexión a la base de datos desde el servidor3.
     * **Tarea 12 (2 puntos):** Instala en el servidor3 la aplicación phpmyadmin que nos permite gestionar las bases de datos de nuestro servidor. Esta aplicación sólo será accesible desde la URL ``www.tu_nombre.gonzalonazareno.org/basededatos``. Muestra el acceso al profesor.
