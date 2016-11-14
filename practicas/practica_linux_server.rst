@@ -21,15 +21,15 @@ Práctica: Configueación de servidores GNU/Linux
 
     Los nombres de los equipos van a ser:
 
-        ``silvestre.josedom.gonzalonazareno.org``
-        ``piolin.josedom.gonzalonazareno.org``
-        ``taz.josedom.gonzalonazareno.org``
+        * ``silvestre.josedom.gonzalonazareno.org``
+        * ``piolin.josedom.gonzalonazareno.org``
+        * ``taz.josedom.gonzalonazareno.org``
 
     * El servidor DNS va a estar instalado en ``piolin.josedom.gonzalonazareno.org``
     * El servidor web va a estar instalado en ``taz.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
         
-        ``www.josedom.gonzalonazareno.org``
-        ``informatica.josedom.gonzalonazareno.org``
+        * ``www.josedom.gonzalonazareno.org``
+        * ``informatica.josedom.gonzalonazareno.org``
 
     * El servidor de base de datos va a estar instalado en ``silvestre.josedom.gonzalonazareno.org``
 
