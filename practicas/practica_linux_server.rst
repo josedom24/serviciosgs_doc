@@ -7,7 +7,7 @@ Práctica: Configueación de servidores GNU/Linux
 
 .. note::
 
-    Muestra al profesor: 
+    Muestra al profesor: *tarea 6, tarea 8 y tarea 11* 
 
 .. warning::
 
