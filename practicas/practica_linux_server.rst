@@ -17,7 +17,7 @@ Práctica: Configueación de servidores GNU/Linux
 
 .. warning::
 
-    Ejemplo de nombres, suponiendo que mi nombre de dominio va a ser josedom.gonzalonazareno.org
+    Ejemplo de nombres, suponiendo que mi nombre de dominio va a ser ``josedom.gonzalonazareno.org``:
 
     Los nombres de los equipos van a ser:
 
