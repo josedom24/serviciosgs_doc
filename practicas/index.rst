@@ -8,4 +8,6 @@ Prácticas
    practica_dhcp
    practica_web
    practica_estudio_web  
-   practica_dns 
+   practica_dns
+   practica_wserver
+   practica_linux_server 
