@@ -59,7 +59,7 @@ El servidor DNS se va a instalar en el servidor 2. Y en un primer momento se con
 
 .. warning::
 
-    * **Tarea 1 (1 puntos):** Comprueba que los servidores tienen configurados el nuevo nombre de dominio de forma adecuada después de volver a renovar la concesión del servidor DHCP. Documenta el contenido del fichero en el que se puede comprobar este punto (ejecuta el comando 'hostname -f' y muestra el fichero /etc/resolv.conf).
+    * **Tarea 1 (1 puntos):** Comprueba que los servidores tienen configurados el nuevo nombre de dominio de forma adecuada después de volver a renovar la concesión del servidor DHCP. Documenta el contenido del fichero en el que se puede comprobar este punto (ejecuta el comando ``hostname -f`` y muestra el fichero ``/etc/resolv.conf``).
     * **Tarea 2 (2 puntos)(Obligatorio):** Entrega el resultado de las siguientes consultas :
       * El servidor DNS con autoridad sobre la zona del dominio ``tu_nombre.gonzalonazareno.org``
       * La dirección IP de los tres servidores
@@ -100,7 +100,7 @@ Servidor Web
 
 En nuestro servidor3 vamos a instalar un servidor Web apache2 con las siguientes características.
 
-.. warning:
+.. warning::
 
     * **Tarea 4 (1 punto)(Obligatorio):** Nuestro servidor va  a tener dos hosts virtuales: ``www.tu_nombre.gonzalonazareno.org`` y ``informatica.tu_nombre.gonzalonazareno.org``. Explica los pasos fundamentales para realizar los dos virtual hosts.
     * **Tarea 5 (1 punto):** Comenta los cambios en el servidor DNS para de dar de alta los dos nuevos nombres.
