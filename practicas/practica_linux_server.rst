@@ -15,9 +15,9 @@ Práctica: Configueación de servidores GNU/Linux
 
     El objetivo de esta práctica es montar una infraestrucuta de servicios que se mantenga en el tiempo y que nos sirva para montar servicios y aplicaciones en los distintos módulos durante el curso. Esta práctica la tenéis que realizar en la infraestructura de máquinas que hemos creado en el cloud para todas los módulos. En cualquier momento del curso los servicios que instalemos en esta práctica deben estar funcionando de manera adecuada.
 
-    * Servidor1: Silvestre (Ubuntu)
-    * Servidor2: Piolín (Debian)
-    * Servidor3: Taz (CentOs)
+    * Servidor1: homer (Ubuntu)
+    * Servidor2: barney (Debian)
+    * Servidor3: lisa (CentOs)
 
 .. warning::
 
@@ -29,8 +29,8 @@ Práctica: Configueación de servidores GNU/Linux
         * ``piolin.josedom.gonzalonazareno.org``
         * ``taz.josedom.gonzalonazareno.org``
 
-    * El servidor DNS va a estar instalado en ``piolin.josedom.gonzalonazareno.org``
-    * El servidor web va a estar instalado en ``taz.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
+    * El servidor DNS va a estar instalado en ``barney.josedom.gonzalonazareno.org``
+    * El servidor web va a estar instalado en ``lisa.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
         
         * ``www.josedom.gonzalonazareno.org``
         * ``informatica.josedom.gonzalonazareno.org``
