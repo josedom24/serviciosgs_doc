@@ -1,4 +1,4 @@
-Práctica: Configueación de servidores GNU/Linux
+Práctica: Configuración de servidores GNU/Linux
 ===============================================
 
 .. note::
@@ -65,6 +65,7 @@ El servidor DNS se va a instalar en el servidor 2. Y en un primer momento se con
 
     * **Tarea 1 (1 puntos):** Comprueba que los servidores tienen configurados el nuevo nombre de dominio de forma adecuada después de volver a renovar la concesión del servidor DHCP. Documenta el contenido del fichero en el que se puede comprobar este punto (ejecuta el comando ``hostname -f`` y muestra el fichero ``/etc/resolv.conf``).
     * **Tarea 2 (2 puntos)(Obligatorio):** Entrega el resultado de las siguientes consultas :
+
       * El servidor DNS con autoridad sobre la zona del dominio ``tu_nombre.gonzalonazareno.org``
       * La dirección IP de los tres servidores
       * Un resolución inversa de IP fija, y otra resolución inversa de IP flotante.
