@@ -25,9 +25,9 @@ Práctica: Configuración de servidores GNU/Linux
 
     Los nombres de los equipos van a ser:
 
-        * ``silvestre.josedom.gonzalonazareno.org``
-        * ``piolin.josedom.gonzalonazareno.org``
-        * ``taz.josedom.gonzalonazareno.org``
+        * ``homer.josedom.gonzalonazareno.org``
+        * ``barney.josedom.gonzalonazareno.org``
+        * ``lisa.josedom.gonzalonazareno.org``
 
     * El servidor DNS va a estar instalado en ``barney.josedom.gonzalonazareno.org``
     * El servidor web va a estar instalado en ``lisa.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
