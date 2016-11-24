@@ -1,4 +1,4 @@
-Práctica: Configueación de servidores GNU/Linux
+Práctica: Configuración de servidores GNU/Linux
 ===============================================
 
 .. note::
@@ -15,9 +15,9 @@ Práctica: Configueación de servidores GNU/Linux
 
     El objetivo de esta práctica es montar una infraestrucuta de servicios que se mantenga en el tiempo y que nos sirva para montar servicios y aplicaciones en los distintos módulos durante el curso. Esta práctica la tenéis que realizar en la infraestructura de máquinas que hemos creado en el cloud para todas los módulos. En cualquier momento del curso los servicios que instalemos en esta práctica deben estar funcionando de manera adecuada.
 
-    * Servidor1: Silvestre (Ubuntu)
-    * Servidor2: Piolín (Debian)
-    * Servidor3: Taz (CentOs)
+    * Servidor1: homer (Ubuntu)
+    * Servidor2: barney (Debian)
+    * Servidor3: lisa (CentOs)
 
 .. warning::
 
@@ -25,12 +25,12 @@ Práctica: Configueación de servidores GNU/Linux
 
     Los nombres de los equipos van a ser:
 
-        * ``silvestre.josedom.gonzalonazareno.org``
-        * ``piolin.josedom.gonzalonazareno.org``
-        * ``taz.josedom.gonzalonazareno.org``
+        * ``homer.josedom.gonzalonazareno.org``
+        * ``barney.josedom.gonzalonazareno.org``
+        * ``lisa.josedom.gonzalonazareno.org``
 
-    * El servidor DNS va a estar instalado en ``piolin.josedom.gonzalonazareno.org``
-    * El servidor web va a estar instalado en ``taz.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
+    * El servidor DNS va a estar instalado en ``barney.josedom.gonzalonazareno.org``
+    * El servidor web va a estar instalado en ``lisa.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
         
         * ``www.josedom.gonzalonazareno.org``
         * ``informatica.josedom.gonzalonazareno.org``
@@ -65,6 +65,7 @@ El servidor DNS se va a instalar en el servidor 2. Y en un primer momento se con
 
     * **Tarea 1 (1 puntos):** Comprueba que los servidores tienen configurados el nuevo nombre de dominio de forma adecuada después de volver a renovar la concesión del servidor DHCP. Documenta el contenido del fichero en el que se puede comprobar este punto (ejecuta el comando ``hostname -f`` y muestra el fichero ``/etc/resolv.conf``).
     * **Tarea 2 (2 puntos)(Obligatorio):** Entrega el resultado de las siguientes consultas :
+
       * El servidor DNS con autoridad sobre la zona del dominio ``tu_nombre.gonzalonazareno.org``
       * La dirección IP de los tres servidores
       * Un resolución inversa de IP fija, y otra resolución inversa de IP flotante.
