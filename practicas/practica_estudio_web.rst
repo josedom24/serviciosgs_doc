@@ -3,8 +3,8 @@ Práctica: Estudio de servidores Webs
 
 .. note::
 
-	**(6 tareas - 30 puntos)**
-	** (En la 1ª evalaución: 20 y en la 2ª evaluación 10)
+	* **(6 tareas - 30 puntos)**
+	* **(En la 1ª evalaución: 20 y en la 2ª evaluación 10)**
 
 
 
@@ -57,16 +57,11 @@ Se realizará el estudio sobre la página principal de un CMS Wordpress que esta
 
 	Para cada uno de los servidores:
 
-	* **Tarea 2 (1 punto):** El punto **Instalación del servidor web**.
-	* **Tarea 3 (1 punto):** El punto **Configurando Virtual Hosting**.
-	* **Tarea 4 (2 puntos):** El punto **Auntentificación y Control de Acceso**.
-	* **Tarea 5 (2 puntos):** El punto **Ejecución de scripts PHP**.
-	* **Tarea 6 (5 puntos):** El punto **Estudio comparativo con el servidor web Apache 2**, se valorará también las conclusiones desprendida del estudio.
-
-
-.. note::
-
-	**El apartado 7 (tarea 6) se realizará durante la 2ª evaluación.**
+	* **Tarea 2 (2 puntos):** El punto **Instalación del servidor web**.
+	* **Tarea 3 (4 puntos):** El punto **Configurando Virtual Hosting**.
+	* **Tarea 4 (5 puntos):** El punto **Auntentificación y Control de Acceso**.
+	* **Tarea 5 (7 puntos):** El punto **Ejecución de scripts PHP**.
+	* **Tarea 6 (10 puntos):** El punto **Estudio comparativo con el servidor web Apache 2**, se valorará también las conclusiones desprendida del estudio.
 
 
 .. note::
