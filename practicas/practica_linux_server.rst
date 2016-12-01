@@ -58,7 +58,7 @@ El servidor DNS se va a instalar en el servidor 2. Y en un primer momento se con
 .. note::
 
     * Debes determinar si la resolución directa se hace con dirección ip fijas o flotantes del cloud depediendo del servicio que se este prestando.
-    * Debes considerar la posibilidad de hacer dos zonas de resolución inversa para resolver ip jijas o flotantes del cloud.
+    * Debes considerar la posibilidad de hacer dos zonas de resolución inversa para resolver ip fijas o flotantes del cloud.
     * Debes modificar la configuración del servidor DHCP del cloud para que mande a los servidores el nuevo nombre de dominio.
 
 .. warning::
