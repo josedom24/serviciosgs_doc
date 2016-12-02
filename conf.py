@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Servicios en red e internet'
+project = u'Servicios de red e internet'
 copyright = u'2016, José Domingo Muñoz'
 author = u'José Domingo Muñoz'
 
