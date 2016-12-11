@@ -16,6 +16,7 @@ El índice de contenidos que vamos a estudiar será:
    dhcp/index
    web/index
    dns/index
+   rendimiento/index
    practicas/index   
 
 `Calificaciones del módulo <http://notas.gonzalonazareno.org>`_   
