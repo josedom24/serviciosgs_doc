@@ -23,7 +23,7 @@ Para cambiar de MPM tenemos que desactivar el actual y activar el nuevo módulo:
 
 En ``/etc/apache2/mods-availables/mpm_prefork.conf``::
 
-Directivas de control de `prefork <http://httpd.apache.org/docs/2.4/mod/prefork.html>`_
+Directivas de control de `prefork <http://httpd.apache.org/docs/2.4/mod/prefork.html>`_::
 
     StartServers          5
     MinSpareServers       5
@@ -33,7 +33,7 @@ Directivas de control de `prefork <http://httpd.apache.org/docs/2.4/mod/prefork.
 
 En ``/etc/apache2/mods-availables/mpm_worker.conf``::
 
-Directivas de control de `worker <http://httpd.apache.org/docs/2.4/mod/worker.html>`_
+Directivas de control de `worker <http://httpd.apache.org/docs/2.4/mod/worker.html>`_::
 
     StartServers          2
     MinSpareThreads      25
@@ -45,7 +45,7 @@ Directivas de control de `worker <http://httpd.apache.org/docs/2.4/mod/worker.ht
 
 En ``/etc/apache2/mods-availables/mpm_event.conf``::
 
-Directivas de control de `event <http://httpd.apache.org/docs/2.4/mod/event.html>`_
+Directivas de control de `event <http://httpd.apache.org/docs/2.4/mod/event.html>`_::
 
     StartServers              2
     MinSpareThreads          25
