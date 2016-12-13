@@ -28,7 +28,7 @@ Vamos a instalar un wordpress un servidor y vamos a realizar las siguientes prue
 Hay que generar gráficas de uso de memoria y rendimiento donde se vea la comparativa entre las distintas formas de ejecutar PHP:
 	
 	* Módulo php5-apache2
-    * Módulo php5-apache2 + memcached
+	* Módulo php5-apache2 + memcached
 	* Módulo php5-apache2 + varnish
 	* FPM-PHP + event
 	* FPM-PHP + event + memcached
