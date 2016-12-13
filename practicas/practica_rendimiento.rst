@@ -6,6 +6,7 @@ Práctica: Mediciones de rendimiento de Apache2 sirviendo páginas dinámicas
 .. note::
 
     (9 tareas - 30 puntos)(6 tareas obligatorias - 12 puntos)
+    
     Las seis primeras tareas hay que hacerla individualmente, las tres últimas se tienen que hacer como un trabajo grupal.
 
 Vamos a comparar el uso de memoria y el rendimiento de Apache2 sirviendo páginas dinámicas programadas con PHP, en concreto vamos a servir una CMS Wordpress.
@@ -25,9 +26,9 @@ Vamos a instalar un wordpress un servidor y vamos a realizar las siguientes prue
 	Modifica el número de peticiones y el nivel de concurrencia, adecuándolo a tu infraestructura. Elige los datos teniendo en cuenta que vamos a ahcer pruebas con una carga baja de peticiones, otra media y otra alta.
 
 Hay que generar gráficas de uso de memoria y rendimiento donde se vea la comparativa entre las distintas formas de ejecutar PHP:
-
-    * Módulo php5-apache2
-	* Módulo php5-apache2 + memcached
+	
+	* Módulo php5-apache2
+    * Módulo php5-apache2 + memcached
 	* Módulo php5-apache2 + varnish
 	* FPM-PHP + event
 	* FPM-PHP + event + memcached
