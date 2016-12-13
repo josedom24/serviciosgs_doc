@@ -36,16 +36,16 @@ Hay que generar gráficas de uso de memoria y rendimiento donde se vea la compar
 
 Genera una documentación que al menos tenga los siguientes puntos:
 
-    1. Introducción. Explicación de los módulos de multiprocesamiento. Objetivos de la práctica.
-    2. Configuración de los escenarios:
-        * Instalación del módulo php de apache2.
-        * Instalación y configuración de memcached
-        * Instalación y configuración de vanish
-        * Instalación y configuración de FPM-PHP con el módulo de multiprocesamiento event
-        * Configuración de memcached y vanish con la nueva configuración
-    3. Generación de las grafícas de uso de memoria: una para cada configuración en cada una de las cargas (18 en total).
-    4. Generación de las gráficas de rendimiento: una para cada carga, con 6 gráficas.
-    5. CONCLUSIONES. Lo más valorado en la tarea serán las conclusiones a las que llegas.
+	1. Introducción. Explicación de los módulos de multiprocesamiento. Objetivos de la práctica.
+	2. Configuración de los escenarios:
+		* Instalación del módulo php de apache2.
+		* Instalación y configuración de memcached
+		* Instalación y configuración de vanish
+		* Instalación y configuración de FPM-PHP con el módulo de multiprocesamiento event
+		* Configuración de memcached y vanish con la nueva configuración
+	3. Generación de las grafícas de uso de memoria: una para cada configuración en cada una de las cargas (18 en total).
+	4. Generación de las gráficas de rendimiento: una para cada carga, con 6 gráficas.
+	5. CONCLUSIONES. Lo más valorado en la tarea serán las conclusiones a las que llegas.
 
 .. note::
 
