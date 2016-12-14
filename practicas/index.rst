@@ -11,3 +11,4 @@ Prácticas
    practica_dns
    practica_wserver
    practica_linux_server 
+   practica_rendimiento
