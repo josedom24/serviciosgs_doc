@@ -42,7 +42,7 @@ Instala el servidor proFTPd y comprueba su funcionamiento desde un cliente FTP g
 
 Modifica la configuración del servidor para que los usuarios sólo puedan entrar en su directorio "Documentos".
 
-..note ::
+.. note::
 
         Todos los accesos al servidor FTP lo vamos a hacer utilizando su nombre, por ejemplo ftp.iesgn.org, por lo tanto debes configurar el servidor BIND9 en el servidor para que todos los clientes conozcan este nombre.
 
