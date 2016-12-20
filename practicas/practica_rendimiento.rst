@@ -1,5 +1,3 @@
-
-
 Práctica: Mediciones de rendimiento de Apache2 sirviendo páginas dinámicas
 ==========================================================================
 
