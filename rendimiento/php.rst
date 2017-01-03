@@ -40,4 +40,5 @@ Varnish es un acelerador HTTP que funciona como un proxy inverso. Se sitúa por 
     * `http://pabloroman.es/blog/2013/05/20/varnish-3-trucos-y-consejos/ <http://pabloroman.es/blog/2013/05/20/varnish-3-trucos-y-consejos/>`_
     * `https://scalr-wiki.atlassian.net/wiki/display/docs/Install+Varnish+HTTP+Accelerator+with+WordPress <https://scalr-wiki.atlassian.net/wiki/display/docs/Install+Varnish+HTTP+Accelerator+with+WordPress>`_
     * `http://kontsu.wordpress.com/2012/10/10/apache-2-performance-boost-with-varnish-yslow/ <http://kontsu.wordpress.com/2012/10/10/apache-2-performance-boost-with-varnish-yslow/>`_
+     * `Put Varnish on port 80 <http://www.varnish-cache.org/docs/trunk/tutorial/putting_varnish_on_port_80.html>`_
 
