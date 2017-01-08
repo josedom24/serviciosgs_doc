@@ -11,13 +11,13 @@ El índice de contenidos que vamos a estudiar será:
 
 .. toctree::
    :maxdepth: 2
-   
+
    introduccion/index
    dhcp/index
    web/index
    dns/index
    rendimiento/index
-   practicas/index   
+   ftp/index
+   practicas/index
 
-`Calificaciones del módulo <http://notas.gonzalonazareno.org>`_   
-   
+`Calificaciones del módulo <http://notas.gonzalonazareno.org>`_
