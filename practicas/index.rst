@@ -13,3 +13,4 @@ Prácticas
    practica_linux_server
    practica_rendimiento
    practica_ftp
+   practica_hosting
