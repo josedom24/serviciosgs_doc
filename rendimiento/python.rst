@@ -10,6 +10,7 @@ Aunque de forma general se utilizan distintos framework (el más popular es djan
 
 
 Crear una página web con Python (con framework)
+-----------------------------------------------
 
 Estaudiando el apartado anterior podemos llegar a la conclusión que la utilización de un framework facilita mucho la implementación de aplicaciones web escritas en python. Tenemos a nuestra disposición muchos framework, el más conocido y usado es django, pero tenemos otros menos complejos como bottle o flask. La lista de framework python: `Web Frameworks for Python <https://wiki.python.org/moin/WebFrameworks>`_.
 
