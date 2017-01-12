@@ -12,9 +12,9 @@ Aunque de forma general se utilizan distintos framework (el más popular es djan
 Crear una página web con Python (con framework)
 -----------------------------------------------
 
-Estaudiando el apartado anterior podemos llegar a la conclusión que la utilización de un framework facilita mucho la implementación de aplicaciones web escritas en python. Tenemos a nuestra disposición muchos framework, el más conocido y usado es django, pero tenemos otros menos complejos como bottle o flask. La lista de framework python: `Web Frameworks for Python <https://wiki.python.org/moin/WebFrameworks>`_.
+Estudiando el apartado anterior podemos llegar a la conclusión que la utilización de un framework facilita mucho la implementación de aplicaciones web escritas en python. Tenemos a nuestra disposición muchos framework, el más conocido y usado es django, pero tenemos otros menos complejos como bottle o flask. La lista de framework python: `Web Frameworks for Python <https://wiki.python.org/moin/WebFrameworks>`_.
 
-Pero antes de ver la configuración de apache2 para servir aplicaciones web python con distintos framework, vamos a estudiar la herrmienta virtualenv.
+Pero antes de ver la configuración de apache2 para servir aplicaciones web python con distintos framework, vamos a estudiar la herramienta ``virtualenv``.
 
 **Utilización de un entorno virtual de python**
 
@@ -22,11 +22,11 @@ Hay que tener en cuenta que python es ampliamente utilizado por muchas aplicacio
 
 Instalamos los paquetes ``python-virtualenv`` y ``python-dev`` con un usuario privilegiado del sistema::
 
-    apt-get install python-dev python-virtualenv
+    $ apt-get install python-dev python-virtualenv
 
 Creamos un entorno virtual para instalar las dependencias que necesitamos con un usuario con privilegios normales::
 
-    virtualenv Python
+    $ virtualenv Python
     Running virtualenv with interpreter /usr/bin/python2
     New python executable in Python/bin/python2
     Also creating executable in Python/bin/python
