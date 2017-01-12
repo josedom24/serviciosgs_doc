@@ -47,3 +47,19 @@ Cuando estemos dentro del entorno virtual de python y queramos salir basta con h
     usuario@oslo:~$
 
 
+**Ejemplo 1: Despliegue de una aplicación web desarrollada con bottle**
+
+En este primer ejemplo suponemos que hemos instalado ``bottle`` y las librerías python necesarias del repositorio oficial de debian. Por ejemplo tenemos la siguiente aplicación bottle::
+
+    from bottle import route, run   
+
+    @route('/hello')
+    def hello():
+        return "Hola mundo" 
+
+    run(host='localhost', port=8080, debug=True)
+
+Sabemos que si ejecutamos el anterior programa, se ejecutará un servidor web escuchando en el puerto 8080 y podremos acceder a comprobar la página. El servidor web que ejecuta python no está pensando para producción, sólo para desarrollos y pruebas. Por lo tanto si queremos que apache2 sirva esta aplicación tenemos que configurar apache2 de la manera adecuada:
+
+
+
