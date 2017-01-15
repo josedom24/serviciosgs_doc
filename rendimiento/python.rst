@@ -65,7 +65,8 @@ Sabemos que si ejecutamos el anterior programa, se ejecutará un servidor web es
 
 Necesitamos crear un fichero ``app.wsgi`` que facilita un objeto de tipo ``application``. Veamos el siguiente fichero ``/var/www/miapp/app.wsgi``::
 
-    import os
+    import sys,os
+    sys.path = ['/var/www/html/miapp/'] + sys.path
     # Change working directory so relative paths (and template lookup) work again
     os.chdir(os.path.dirname(__file__)) 
 
@@ -78,6 +79,7 @@ Y la configuración del Apache2 sería la siguiente::
 
     <VirtualHost *>
         ServerName www.example.com
+        DocumentRoot /var/www
 
         WSGIDaemonProcess miapp user=www-data group=www-data processes=1 threads=5
         WSGIScriptAlias / /var/www/miapp/app.wsgi 
