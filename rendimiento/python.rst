@@ -91,6 +91,6 @@ Y la configuración del Apache2 sería la siguiente:
 
 .. warning::
 
-    Ya no es necesario que acion bottle ejecute un servidor web, por lo tanto es necesario eliminar la instrucción ``run`` del código.
+    Ya no es necesario que la aplicación bottle ejecute un servidor web, por lo tanto es necesario eliminar la instrucción ``run`` del código.
 
 
