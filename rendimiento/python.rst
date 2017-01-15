@@ -65,8 +65,8 @@ Sabemos que si ejecutamos el anterior programa, se ejecutará un servidor web es
 
 Necesitamos crear un fichero ``app.wsgi`` que facilita un objeto de tipo ``application``. Veamos el siguiente fichero ``/var/www/miapp/app.wsgi``::
 
-    import sys,os
-    sys.path = ['/var/www/html/miapp/'] + sys.path
+    import os
+    
     # Change working directory so relative paths (and template lookup) work again
     os.chdir(os.path.dirname(__file__)) 
 
@@ -81,7 +81,7 @@ Y la configuración del Apache2 sería la siguiente::
         ServerName www.example.com
         DocumentRoot /var/www
 
-        WSGIDaemonProcess miapp user=www-data group=www-data processes=1 threads=5
+        WSGIDaemonProcess miapp user=www-data group=www-data processes=1 threads=5 python-path=/var/www/html/miapp
         WSGIScriptAlias / /var/www/miapp/app.wsgi 
 
         <Directory /var/www/miapp>
@@ -96,3 +96,58 @@ Y la configuración del Apache2 sería la siguiente::
     Ya no es necesario que la aplicación bottle ejecute un servidor web, por lo tanto es necesario eliminar la instrucción ``run`` del código.
 
 
+**Ejemplo 2: Despliegue de una aplicación web desarrollada con django**
+
+Hemos instalado el paquete django que tenemos en el repositorio oficial de debian jessie::
+
+    $ apt-get install python-django
+    $ django-admin version
+    1.7.11
+
+La versión actual de django es la 1.10, en el siguiente ejemplo usaremos un entrono virtual para trabajar con la última versión de django.
+
+Creamos una nueva aplicación django::
+
+    /var/www/html# django-admin startproject mysite
+
+En el directorio ``mysite`` se han creado los ficheros y necesarios para desarrollar nuestra aplicación django, puedo ejecutar un servidor web para probar la aplicación de la siguiente manera:
+
+    /var/www/html/mysite# python manage.py runserver 0.0.0.0:8000
+    
+    Django version 1.7.11, using settings 'mysite.settings'
+    Starting development server at http://0.0.0.0:8000/
+    Quit the server with CONTROL-C.
+
+Después de construir nuestra aplicación, si queremos desplegarla sobre apache2, tenemos que utilizar el fichero ``/var/www/html/mysite/mysite/wsgi.py`` y configurar apache2 de la siguiente manera::
+
+DocumentRoot /var/www/html/mysite
+
+
+    <VirtualHost *>
+        ServerName www.example.com
+        DocumentRoot /var/www/html/mysite
+        WSGIDaemonProcess mysite user=www-data group=www-data processes=1 threads=5 python-path=/var/www/html/mysite
+        WSGIScriptAlias / /var/www/html/mysite/mysite/wsgi.py
+
+        <Directory /var/www/html/mysite>
+                WSGIProcessGroup mysite
+                WSGIApplicationGroup %{GLOBAL}
+                Require all granted
+        </Directory>
+    </VirtualHost>
+
+**Ejemplo 3: Despliegue de una aplicación web desarrollada con django usuando virtualenv**
+
+Como hemos dicho en el ejemplo anterior si queremos utilizar la última versión de django tenemos que instalarlo en un  entrono virtual, para ello::
+
+    $ virtualenv django
+    $ source django/bin/activate
+    (django)debian@python:~$  pip install django
+
+Crearíamos nuestra aplicación djngo y a la hora de modificar la configuración de apache2 la única línea que tendríamos que modificar sería la siguiente::
+
+    ...
+    WSGIDaemonProcess mysite user=www-data group=www-data processes=1 threads=5 python-path=/var/www/html/mysite:/home/debian/python/lib/python2.7/site-packages
+    ...
+
+teniendo en cuenta que el entorno virtual python lo hicimos en el directorio ``/home/debian/python``.
