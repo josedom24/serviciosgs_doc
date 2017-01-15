@@ -39,7 +39,9 @@ Cada vez que vayamos a utilizar los paquetes de python de este entorno virtual o
     usuario@oslo:~$ source ~/Python/bin/activate
     (Python)usuario@oslo:~$
 
-Como vemos se indica en el prompt con el prefijo (Python) que estamos dentro del entorno virtual.
+Como vemos se indica en el prompt con el prefijo (Python) que estamos dentro del entorno virtual. Y ahora podemos realizar en nuestro entorno virtual las instalaciones que queramos:
+
+    (Python)usuario@oslo:~$ pip install bottle requests
 
 Cuando estemos dentro del entorno virtual de python y queramos salir basta con hacer::
 
@@ -59,7 +61,36 @@ En este primer ejemplo suponemos que hemos instalado ``bottle`` y las librerías
 
     run(host='localhost', port=8080, debug=True)
 
-Sabemos que si ejecutamos el anterior programa, se ejecutará un servidor web escuchando en el puerto 8080 y podremos acceder a comprobar la página. El servidor web que ejecuta python no está pensando para producción, sólo para desarrollos y pruebas. Por lo tanto si queremos que apache2 sirva esta aplicación tenemos que configurar apache2 de la manera adecuada:
+Sabemos que si ejecutamos el anterior programa, se ejecutará un servidor web escuchando en el puerto 8080 y podremos acceder a comprobar la página. El servidor web que ejecuta python no está pensando para producción, sólo para desarrollos y pruebas. Por lo tanto si queremos que apache2 sirva esta aplicación tenemos que configurar apache2 (con el módulo WSGI) de la manera adecuada:
 
+Necesitamos crear un fichero ``app.wsgi`` que facilita un objeto de tipo ``application``. Veamos el siguiente fichero ``/var/www/miapp/app.wsgi``:
+
+    import os
+    # Change working directory so relative paths (and template lookup) work again
+    os.chdir(os.path.dirname(__file__)) 
+
+    import bottle
+    # ... build or import your bottle application here ...
+    # Do NOT use bottle.run() with mod_wsgi
+    application = bottle.default_app()
+
+Y la configuración del Apache2 sería la siguiente:
+
+    <VirtualHost *>
+        ServerName www.example.com
+
+        WSGIDaemonProcess miapp user=www-data group=www-data processes=1 threads=5
+        WSGIScriptAlias / /var/www/miapp/app.wsgi 
+
+        <Directory /var/www/miapp>
+            WSGIProcessGroup miapp
+            WSGIApplicationGroup %{GLOBAL}
+            Require all granted
+        </Directory>
+    </VirtualHost>
+
+.. warning::
+
+    Ya no es necesario que acion bottle ejecute un servidor web, por lo tanto es necesario eliminar la instrucción ``run`` del código.
 
 
