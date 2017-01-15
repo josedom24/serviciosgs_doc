@@ -120,9 +120,6 @@ En el directorio ``mysite`` se han creado los ficheros y necesarios para desarro
 
 Después de construir nuestra aplicación, si queremos desplegarla sobre apache2, tenemos que utilizar el fichero ``/var/www/html/mysite/mysite/wsgi.py`` y configurar apache2 de la siguiente manera::
 
-DocumentRoot /var/www/html/mysite
-
-
     <VirtualHost *>
         ServerName www.example.com
         DocumentRoot /var/www/html/mysite
