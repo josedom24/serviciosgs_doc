@@ -110,7 +110,7 @@ Creamos una nueva aplicación django::
 
     /var/www/html# django-admin startproject mysite
 
-En el directorio ``mysite`` se han creado los ficheros y necesarios para desarrollar nuestra aplicación django, puedo ejecutar un servidor web para probar la aplicación de la siguiente manera:
+En el directorio ``mysite`` se han creado los ficheros y necesarios para desarrollar nuestra aplicación django, puedo ejecutar un servidor web para probar la aplicación de la siguiente manera::
 
     /var/www/html/mysite# python manage.py runserver 0.0.0.0:8000
     
