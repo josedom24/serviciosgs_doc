@@ -61,7 +61,7 @@ Podemos comprobar el log ``/var/log/mail.log`` para comproar que se ha mandado e
 	Feb 6 18:11:08 vostro postfix/qmgr[3531]: DE3232C16A: removed
 	Feb 6 18:11:09 vostro postfix/smtpd[3660]: disconnect from localhost[127.0.0.1]
 
-Y podemos leer el mansaje del usuario "usuario" con el programa ``mail``:
+Y podemos leer el mansaje del usuario "usuario" con el programa ``mail``::
 
 	Mail version 8.1.2 01/15/2001. Type ? for help.
 	"/var/mail/usuario": 1 message 1 new
