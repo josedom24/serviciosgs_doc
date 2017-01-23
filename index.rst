@@ -18,6 +18,7 @@ El índice de contenidos que vamos a estudiar será:
    dns/index
    rendimiento/index
    ftp/index
+   correo/index
    practicas/index
 
 `Calificaciones del módulo <http://notas.gonzalonazareno.org>`_
