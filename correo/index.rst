@@ -9,6 +9,6 @@ Servidor de correo electrónico
    postfix1
    postfix2
    postfix3
-   #postfix4
-   #postfix5
+   postfix4
+   postfix5
    #postfix6
