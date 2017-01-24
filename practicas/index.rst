@@ -14,3 +14,4 @@ Prácticas
    practica_rendimiento
    practica_ftp
    practica_hosting
+   practica_correo
