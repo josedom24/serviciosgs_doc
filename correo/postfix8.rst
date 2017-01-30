@@ -12,3 +12,9 @@ Veamos la configuración del cliente de correo Evolutión:
 
 .. image:: img/evo1.png
 
+.. image:: img/evo2.png
+
+.. image:: img/evo3.png
+
+.. image:: img/evo4.png
+
