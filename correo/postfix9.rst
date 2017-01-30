@@ -1,8 +1,7 @@
 Caso 5: Recepción de correo electrónico usando nuestro servidor de correos
 ==========================================================================
 
-En este caso vamos a utilizar el `protocolo pop3 <https://es.wikipedia.org/wiki/Post_Office_Protocol/>`_
- y el `protocolo imap <https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol>`_ para obtener los correos electrónicos que hemos recibio en nuestro servidor. 
+En este caso vamos a utilizar el `protocolo pop3 <https://es.wikipedia.org/wiki/Post_Office_Protocol/>`_ y el `protocolo imap <https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol>`_ para obtener los correos electrónicos que hemos recibio en nuestro servidor. 
 
 Ante de ellos tenemos que estudiar los ditintos tipos de buzones donde un servidor de correos puede guardar los mensajes: 
 
