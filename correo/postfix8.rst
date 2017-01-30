@@ -11,7 +11,10 @@ Es el momento de utilizar un cliente de correos (evolution, outlook, icedove, Th
 Veamos la configuración del cliente de correo Evolutión:
 
 .. image:: img/evo1.png
+
 .. image:: img/evo2.png
+
 .. image:: img/evo3.png
+
 .. image:: img/evo4.png
 
