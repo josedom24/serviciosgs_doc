@@ -46,7 +46,7 @@ Protocolo imap
 
 Internet Message Access Protocol, o su acrónimo IMAP, es un protocolo de red de acceso a mensajes electrónicos almacenados en un servidor. Mediante IMAP se puede tener acceso al correo electrónico desde cualquier equipo que tenga una conexión a Internet. IMAP tiene varias ventajas sobre POP, que es el otro protocolo empleado para obtener correo desde un servidor. Por ejemplo, es posible especificar en IMAP carpetas del lado servidor. Por otro lado, es más complejo que POP ya que permite visualizar los mensajes de manera remota y no descargando los mensajes como lo hace POP.
 
-Para instalar el servidor IMAP ejecutamos la siguiente instrucción:
+Para instalar el servidor IMAP ejecutamos la siguiente instrucción::
 
     apt-get install dovecot-imapd
 
