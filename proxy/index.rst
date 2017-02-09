@@ -1,5 +1,5 @@
-Servidor DHCP
-=============
+Servidor proxy/cache Squid
+==========================
 
 
 **Indice**
