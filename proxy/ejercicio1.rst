@@ -24,4 +24,8 @@ Ejercicio: Instalación y configuración básica de squid
 
 	http_access allow localnet
 
-Reinicamos, y comprobamos: miramos el fichero /var/log/squid3/access.log, y vemos las peticiones que se han guardado en la cache.
+Reinicamos, y comprobamos: miramos el fichero ``/var/log/squid3/access.log``, y vemos las peticiones que se han guardado en la cache.
+Puedes econtrar información de cómo leer los logs en las siguientes direcciones:
+
+* `linofee.org - Squid access.log <http://www.linofee.org/~jel/proxy/Squid/accesslog.shtml>`_
+* `Analizar los logs de access.log de squid  <https://enavas.blogspot.com.es/2009/10/analizar-los-logs-de-accesslog-de-squid.html>`_
