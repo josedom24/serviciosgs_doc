@@ -40,7 +40,7 @@ Y las siguientes si vamos a activar el antispam::
    		\%bypass_spam_checks, \@bypass_spam_checks_acl, \$bypass_spam_checks_re);
 
 
-En el fichero ``etc/amavis/conf.d/20-debian_defaults``, configuramos que hacer con los corros sospechosos, la configuración que viene por defecto es correcta pero podemos hacer algunos cambios, por ejemplo podemos dejar pasar el spam, aunque lo marquemos::
+En el fichero ``etc/amavis/conf.d/20-debian_defaults``, configuramos que hacer con los correos sospechosos, la configuración que viene por defecto es correcta pero podemos hacer algunos cambios, por ejemplo podemos dejar pasar el spam, aunque lo marquemos::
 
 	$final_spam_destiny = D_PASS;
 
