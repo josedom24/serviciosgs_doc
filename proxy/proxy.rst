@@ -1,4 +1,4 @@
-Gestionando el proxy de squid
+Gestionando el proxy de Squid
 =============================
 
 En este apartado vamos a ver como controlar el proxy por medio de ACL.
