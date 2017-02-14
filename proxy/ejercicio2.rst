@@ -7,9 +7,9 @@ Partimos de la siguiente situación: tenemos instalado squid3 en un servidor, un
 
 En este primer punto vamos a acceder a la página html, y sólo va a entrar en juego el parámetro de cabacera ``Last-Modified``. Una vez cacheada la página, si volvemos acceder a ella se preguntará al servidor si se ha modificado, el servidor responderá con la cabecera HTTP, y si la copia que tenemos es nueva se servirá directamente.
 
-    * En este caso al refrescar la página con F5 nos vamos encontrando en el fichero access.log con információn del tipo ``TCP_MEM_HIT`` o ``TCP_HIT``, es decir acierto en la cache.
-    * Si modificamos la página, el servidor cambiará el parámetro ``Last-modified`` y por tanto la copia que tenemos almacendas ya no sera válida, por lo que nos bajaremos del servidor la página modificada y la volveremos almacenar. En este caso nos encontraremos en el fichero access.log una línea del tipo ``TCP_REFRESH_MODIFIED``, indicando que la página accedida ha sido modificada.
-    * Si simulamos que se ha perdido la conexión con el servidor, parando el servicio apache2, aunque se intenta verificar con el servidor si la página ha sido modificada (``TCP_REFRESH_FAIL``), se seguirá sirviendo la copia que tenemos.
+* En este caso al refrescar la página con F5 nos vamos encontrando en el fichero access.log con információn del tipo ``TCP_MEM_HIT`` o ``TCP_HIT``, es decir acierto en la cache.
+* Si modificamos la página, el servidor cambiará el parámetro ``Last-modified`` y por tanto la copia que tenemos almacendas ya no sera válida, por lo que nos bajaremos del servidor la página modificada y la volveremos almacenar. En este caso nos encontraremos en el fichero access.log una línea del tipo ``TCP_REFRESH_MODIFIED``, indicando que la página accedida ha sido modificada.
+* Si simulamos que se ha perdido la conexión con el servidor, parando el servicio apache2, aunque se intenta verificar con el servidor si la página ha sido modificada (``TCP_REFRESH_FAIL``), se seguirá sirviendo la copia que tenemos.
 
 **Gestión de la cache por mecanismos de frescura**
 

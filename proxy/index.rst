@@ -12,5 +12,8 @@ Servidor proxy/cache Squid
    ejercicio2
    cache2
    proxy
-
+   ejercicio3
+   ejercicio4
+   ejercicio5
+   herramientas
    
