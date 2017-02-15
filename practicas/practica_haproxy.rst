@@ -139,3 +139,53 @@ Se usará un script PHP (sleep.php) que introduce un retardo mediante un bucle �
     cliente:~# ab -n 250 -c 50 http://172.22.x.x/sleep.php
 
 Envía 250 peticiones HTTP sobre la URI “dinámica”, manteniendo, respectivamente, 10 y 30 conexiones concurrentes. (aprox 5-7 minutos)
+
+.. note::
+
+    * **Tarea 1 (3 puntos)(Obligatorio)**: Ejecuta varias veces los comandos ab con cada una de las pruebas y calcula la media de los resultados obtenidos (Requests per second (número peticiones por segundo) ó Time per request (tiempo en milisegundos para procesar cada petición) para cada una de las cargas.
+
+Configurar y evaluar balanceo de carga con dos servidores Apache
+----------------------------------------------------------------
+
+1. Deshabilitar la redirección del puerto 80 de la máquina balanceador concatenaciones el siguiente comando iptables (HAproxy se encargará de retransmitir ese tráfico sin necesidad de redireccionar los puertos)
+2. Arrancar los servidores Apache de apache1 [10.10.10.11] y apache2 [10.10.10.22]
+3. Instalar HAproxy en balanceador
+4. Configurar HAproxy en balanceador (de momento sin soporte de sesiones persistentes)::
+
+     balanceador:~# cd /etc/haproxy
+     balanceador:/etc/haproxy/# mv haproxy.cfg haproxy.cfg.original
+     balanceador:/etc/haproxy/# nano haproxy.cfg        
+
+     global
+         daemon
+         maxconn 256
+         user    haproxy
+         group   haproxy
+         log     127.0.0.1       local0
+         log     127.0.0.1       local1  notice     
+
+     defaults
+         mode    http
+         log     global
+         timeout connect 5000ms
+         timeout client  50000ms
+         timeout server  50000ms        
+
+     listen granja_cda 
+         bind 193.147.87.47:80
+         mode http
+         stats enable
+         stats auth  cda:cda
+         balance roundrobin
+         server uno 10.10.10.11:80 maxconn 128
+         server dos 10.10.10.22:80 maxconn 128
+
+Define (en la sección listen) un “proxy inverso” de nombre granja_cda que:
+
+* trabajará en modo http (la otra alternativa es el modo tcp, pero no analiza las peticiones/respuestas HTTP, sólo retransmite paquetes TCP)
+* atendiendo peticiones en el puerto 80 del balanceador
+* con balanceo round-robin
+* que repartirá las peticiones entre dos servidores reales (de nombres uno y dos) en el puerto 80 de las direcciones 10.10.10.11 y 10.10.10.22
+* adicionalmente, habilita la consola Web de estadísticas, accesible con las credenciales cda:cda
+
+
