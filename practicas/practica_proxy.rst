@@ -9,7 +9,7 @@ Práctica: Servidor proxy/cache squid
 .. note::
 
 	* Muestra al profesor: Tareas 1,2,3,4,5,6 
-    
+
 Queremos instalar un servidor proxy/cache en nuestro servidor. Con ello vamos a poder controlar las páginas web a las que accedamos, además de acelerar nuestra navegación.
 
 Nos piden la configuración de un proxy/cache/filtro en nuestra infraestrucutra. Hemos elegido como proxy/cache squid3, y como filtro de contenido dansguardian. Tenemos que tener en cuenta las siguientes consideraciones:
@@ -48,7 +48,7 @@ Nos piden la configuración de un proxy/cache/filtro en nuestra infraestrucutra.
     * **Tarea 5 (2 puntos)**: Cambia la fecha del servidor e indica un fin de semana y comprueba que no hay conexión.
     * **Tarea 6 (3 puntos)**: Filtra el dominio youtube.com en la lista negra y prueba que realmente no se puede acceder.
     * **Tarea 7 (4 puntos)**: Documenta la instalación de sarg, y muestra al profesor las estadísticas de accceso al proxy con sarg.
-    Tarea 8 (4 puntos): Documenta la configuración de Dansguardian, muestra al profesor el funcionamiento.
+    * **Tarea 8 (4 puntos)**: Documenta la configuración de Dansguardian, muestra al profesor el funcionamiento.
 
 
 
