@@ -16,3 +16,4 @@ Prácticas
    practica_hosting
    practica_correo
    practica_proxy
+   practica_haproxy
