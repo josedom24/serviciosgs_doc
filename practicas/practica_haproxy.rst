@@ -118,3 +118,24 @@ Se realizarán varias pruebas de carga sobre el servidor Apache ubicado en la m�
 
     Nota: Desde la máquina cliente se puede abrir en un navegador web la URL http://172.22.x.x para comprobar que el servidor está arrancado y que la redirección del puerto 80 está funcionando.
 
+
+
+3. Lanzar las pruebas de carga iniciales sobre balanceador usando el herramienta Apache Benchmark
+
+*Prueba 1: Contenido estático*::
+
+    cliente:~# ab -n 2000 -c 10 http://172.22.x.x/index.html
+    cliente:~# ab -n 2000 -c 50 http://172.22.x.x/index.html
+    cliente:~# ab -n 2000 -c 100 http://172.22.x.x/index.html
+
+Envía 2000 peticiones HTTP sobre la URI "estática", manteniendo, respectivamente, 10 y 50 conexiones concurrentes.
+
+*Prueba 2: Scripts PHP*
+
+Se usará un script PHP (sleep.php) que introduce un retardo mediante un bucle “activo” de 2000000 iteraciones que busca forzar el uso de CPU con cálculos de hashes SHA1 y concatenaciones de cadenas::
+
+    cliente:~# ab -n 250 -c 10 http://172.22.x.x/sleep.php
+    cliente:~# ab -n 250 -c 30 http://172.22.x.x/sleep.php
+    cliente:~# ab -n 250 -c 50 http://172.22.x.x/sleep.php
+
+Envía 250 peticiones HTTP sobre la URI “dinámica”, manteniendo, respectivamente, 10 y 30 conexiones concurrentes. (aprox 5-7 minutos)
