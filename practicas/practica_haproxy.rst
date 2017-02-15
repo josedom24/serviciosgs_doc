@@ -110,7 +110,7 @@ Se realizarán varias pruebas de carga sobre el servidor Apache ubicado en la m�
 
     Nota: la regla iptables establece una redirección del puerto 80 de la máquina balanceador al mismo puerto de la máquina apache1 para el tráfico procedente de la red externa (interfaz de entrada eth0).
 
-2. Arrancar en apache1 [10.10.10.11] el servidor web Apache2:
+2. Arrancar en apache1 [10.10.10.11] el servidor web Apache2::
 
     apache1:~# systemctl start apache2
 
