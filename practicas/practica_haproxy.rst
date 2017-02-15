@@ -188,4 +188,41 @@ Define (en la sección listen) un “proxy inverso” de nombre granja_cda que:
 * que repartirá las peticiones entre dos servidores reales (de nombres uno y dos) en el puerto 80 de las direcciones 10.10.10.11 y 10.10.10.22
 * adicionalmente, habilita la consola Web de estadísticas, accesible con las credenciales cda:cda
 
+Más detalles en * `Opciones de configuración HAPproxy 1.5 <http://cbonte.github.io/haproxy-dconv/configuration-1.5.html>`_
 
+5. Iniciar HAproxy en balanceador: Antes de hacerlo es necesario habilitar en ``/etc/default/haproxy`` el arranque de HAproxy desde los scripts de inicio, estableciendo la variable ``ENABLED=1``
+
+6. Desde la máquina cliente abrir en un navegador web la URL http://172.22.x.x y recargar varias veces para comprobar como cambia el servidor real que responde las peticiones.
+
+.. warning::
+
+    Nota: Si no se ha deshabilitado la opción KeepAlive de Apache, es necesario esperar 5 segundos entre las recargas para que se agote el tiempo de espera para cerrar completamente la conexión HTTP y que pase a ser atendida por otro servidor.
+
+.. note::
+
+    * **Tarea 2 (1 puntos)(Obligatorio)**: Muestra al profesor y entrega capturas de pantalla que el balanceador está funcionando.
+
+7. Desde la máquina cliente repetir las pruebas de carga con ab. Los resultados deberían de ser mejores que con la prueba anterior con un servidor Apache único (al menos en el caso del script ``sleep.php``).
+
+.. note::
+
+    * **Tarea 3 (3 puntos)(Obligatorio)**: Ejecuta varias veces los comandos ab con cada una de las pruebas y calcula la media de los resultados obtenidos (Requests per second (número peticiones por segundo) ó Time per request (tiempo en milisegundos para procesar cada petición)) para cada una de las cargas. ¿Son mejores que con un solo servidor web?
+
+8. Desde la máquina cliente abrir en un navegador web la URL http://172.22.x.x/haproxy?stats para inspeccionar las estadísticas del balanceador HAProxy (pedirá un usuario y un password, ambos cda)
+
+.. note::
+
+    * **Tarea 4 (1 punto)**: Entrega una captura de pantalla donde se vea la página web de estadísticas de haproxy.
+
+
+9. Desde uno de los servidores (apache1 ó apache2), verificar los logs del servidor Apache::
+
+    apacheN:~# tail /var/log/apache2/error.log
+    apacheN:~# tail /var/log/apache2/access.log
+
+.. note::
+
+    * **Tarea 5 (1 punto)**: En todos los casos debería figurar como única dirección IP cliente la IP interna de la máquina balanceador [10.10.10.1]. ¿Por qué?
+
+Configurar la persistencia de conexiones Web (sticky sessions)
+--------------------------------------------------------------
