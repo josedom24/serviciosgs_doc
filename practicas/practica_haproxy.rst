@@ -8,7 +8,7 @@ Práctica: Balanceo de carga en servidores Apache con HAproxy
 
 .. note::
 
-	* Muestra al profesor: Tareas 1,2,3,4,5,6 
+	* Muestra al profesor: Tareas 1,2,3,7
     
 En primer lugar, construye con KVM con vagrant la siguiente infraestructura:
 
@@ -226,3 +226,69 @@ Más detalles en * `Opciones de configuración HAPproxy 1.5 <http://cbonte.githu
 
 Configurar la persistencia de conexiones Web (sticky sessions)
 --------------------------------------------------------------
+
+1. Detener HAproxy en la máquina balanceador
+2. Añadir las opciones de persistencia de conexiones HTTP (sticky cookies) al fichero de configuración::
+
+    balanceador:~# nano /etc/haproxy/haproxy.cfg
+
+Contenido a incluir: (añadidos marcados con ``<- aquí``)::
+
+    global
+         daemon
+         maxconn 256
+         user    haproxy
+         group   haproxy
+         log     127.0.0.1       local0
+         log     127.0.0.1       local1  notice         
+
+     defaults
+         mode    http
+         log     global
+         timeout connect 10000ms
+         timeout client  50000ms
+         timeout server  50000ms            
+
+     listen granja_cda 
+         bind 172.22.x.x:80 #aquí pon la dirección ip del balanceador
+         mode http
+         stats enable
+         stats auth  cda:cda
+         balance roundrobin
+         cookie PHPSESSID prefix                               # <- aquí
+         server uno 10.10.10.11:80 cookie EL_UNO maxconn 128   # <- aquí
+         server dos 10.10.10.22:80 cookie EL_DOS maxconn 128   # <- aquí
+
+El parámetro cookie especifica el nombre de la cookie que se usa como identificador único de la sesión del cliente (en el caso de aplicaciones web PHP se suele utilizar por defecto el nombre PHPSESSID). Para cada “servidor real” se especifica una etiqueta identificativa exclusiva mediante el parámetro cookie. Con esa información HAproxy reescribirá las cabeceras HTTP de peticiones y respuestas para seguir la pista de las sesiones establecidas en cada “servidor real” usando el nombre de cookie especificado (PHPSESSID):
+
+* conexión cliente -> balanceador HAproxy : cookie original + etiqueta de servidor
+* conexión balanceador HAproxy -> servidor : cookie original
+
+3. Iniciar HAproxy en la máquina balanceador
+4. En la máquina cliente, arrancar el sniffer de red whireshark y ponerlo en escucha sobre el interfaz eth0 (fijar como filtro la cadena http para que solo muestre las peticiones y respuestas HTTP).
+5. En la máquina cliente:
+    
+* desde el navegador web acceder varias veces a la URL http://172.22.x.x/sesion.php (comprobar el incremento del contador [variable de sesión])
+* acceder la misma URL desde el navegador en modo texto lynx (o desde una pestaña de "incógnito"’’" de Iceweasel para forzar la creación de una nueva sesión)::
+
+    cliente:~# lynx -accept-all-cookies http://172.22.x.x/sesion.php
+
+6. Detener la captura de tráfico en wireshark y compr.. note::obar las peticiones/respuestas HTTP capturadas.
+
+.. note::
+
+    * **Tarea 6 (3 puntos)**:Verificar la estructura y valores de las cookies PHPSESSID intercambiadas. En la primera respuesta HTTP (inicio de sesión), se establece su valor con un parámetro HTTP SetCookie en la cabecera de la respuesta. Las sucesivas peticiones del cliente incluyen el valor de esa cookie (parámetro HTTP Cookie en la cabecera de las peticiones)
+
+Configurar lbass en openstack
+-----------------------------
+
+1. Crea dos instancias en el cloud que sean servidor web y crea en cada una de ella un fichero index.html y sesion.php similares a los de la tarea enterior.
+2. Siguiendo la documentación ofrecida, configura un balanceador d carga en openstack.
+
+.. note::
+
+    * **Tarea 7 (2 puntos)(Obligatorio)**: Muestra al profesor y documenta el proceso de creación del balanceador de carga para comprobar el funcionamiento cuando accedemos a las páginas html.
+    * **Tarea 8 (3 puntos)**: Configura de manera adecuada el balanceador de carga para que tenga en cuenta la persistencia de sesiones. Muestra al profesor su funcionamiento accediendo al fichero sesion.php y documenta los cambios que has configurado.
+    * **Tarea 9 (3 puntos)**: Crea otra instancia con un servidor mysql, e instala en los servidores web un CMS wordpress que accedan a la misma base de datos. Comprueba que el balanceado se produce de manera adecuada
+
+
