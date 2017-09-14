@@ -15,7 +15,6 @@ En este primer apartado vamos a estudiar los siguientes apartados:
    [PDF] Introducción a los servicios de red <https://github.com/josedom24/serviciosgm_doc/raw/master/introduccion/doc/servicios_en_red.pdf>
    repaso
    python
-   vagrant
 
 ```
    
