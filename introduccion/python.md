@@ -5,7 +5,7 @@ Para automatizar muchas de las tareas que realizan los administrador de sistemas
 ```eval_rst
 .. note:: 
 
-	Si quieres más información puedes consultar la página [Python for system administrators](http://www.ibm.com/developerworks/aix/library/au-python).
+	Si quieres más información puedes consultar la página  `Python for system administrators <http://www.ibm.com/developerworks/aix/library/au-python>`_.
 ```
 
 ## Resumen de instrucciones
