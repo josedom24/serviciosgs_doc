@@ -82,7 +82,7 @@ usuario@maquina:~/vagrant$ vagrant halt
 usuario@maquina:~/vagrant$ vagrant destroy
 ```
 
-eval_rst
+```eval_rst
 .. warning:: 
 
     1. Entra en virtualbox y comprueba las características de la máuina que se ha creado.
