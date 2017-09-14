@@ -11,6 +11,7 @@ El objetivo principal de vagrant es aproximar los entornos de desarrollo y produ
 * **Práctica 1: Instalación de vagrant**
 
 Instalar virtualbox y vagrant:
+
     ```bash
     root@maquina:~$ apt-get install virtualbox
     root@maquina:~$ wget https://releases.hashicorp.com/vagrant/1.8.5/vagrant_1.8.5_x86_64.deb
