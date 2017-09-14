@@ -9,7 +9,6 @@ El objetivo principal de vagrant es aproximar los entornos de desarrollo y produ
 
 ## Práctica con vagrant
 
-
 * **Práctica 1: Instalación de vagrant**
 
 Instalar virtualbox y vagrant:
@@ -33,6 +32,7 @@ Si el box lo tenemos en la *nas* de nuestro instituto:
     ```bash
     usuario@maquina:~$ vagrant box add debian/jessie64 http://nas.gonzalonazareno.org/...
     ```
+
 ```eval_rst
 .. note:: Es importante fijarnos que lo estamos haciendo con usuarios sin privilegios. Cada usuario tendrás sus box propios.
 ```        
