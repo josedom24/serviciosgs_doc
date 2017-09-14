@@ -1,14 +1,14 @@
-Introducción a vagrant
-======================
+# Introducción a vagrant
+
 
 Vagrant es una aplicación libre desarrollada en ruby que nos permite crear y personalizar entornos de desarrollo livianos, reproducibles y portables. Vagrant nos permite automatizar la creación y gestión de máquinas virtuales. Las máquinas virtuales creadas por vagrant se pueden ejecutar con distintos gestores de máquinas virtuales (oficialmente VirtualBox, VMWare e Hyper-V), en nuestro ejemplo vamos a usar máquinas virtuales en VirtualBox.
 
 El objetivo principal de vagrant es aproximar los entornos de desarrollo y producción, de esta manera el desarrollador tiene a su disposición una manera  muy sencilla de desplegar una infraestructura similar a la que se va a tener en entornos de producción. A los administradores de sistemas les facilita la creación de infraestructuras de prueba y desarrollo.
 
-`Presentación: Vagrant y ansible. Una combinación explosiva (1ª parte) <http://iesgn.github.io/cloud/curso/u2/presentacion_vagrant>`_
+[Presentación: Vagrant y ansible. Una combinación explosiva (1ª parte)](http://iesgn.github.io/cloud/curso/u2/presentacion_vagrant)
 
-Prácica con vagrant
--------------------
+## Prácica con vagrant
+
 
 * **Práctica 1: Instalación de vagrant**
 
@@ -20,27 +20,29 @@ Instalar virtualbox y vagrant::
 
 * **Práctica 2: Instalación de un "box" debian/jessie**
 
-Nos descargamos desde el repositorio oficial el box de Debian Jessie de 64 bits, esto lo hacemos un usuario sin privilegios:::
+Nos descargamos desde el repositorio oficial el box de Debian Jessie de 64 bits, esto lo hacemos un usuario sin privilegios:
 
     usuario@maquina:~$ vagrant box add debian/jessie64
 
-Si el box lo tenemos en la *nas* de nuestro instituto:::
+Si el box lo tenemos en la *nas* de nuestro instituto:
 
     usuario@maquina:~$ vagrant box add debian/jessie64 http://nas.gonzalonazareno.org/...
 
+```eval_rst
 .. note:: Es importante fijarnos que lo estamos haciendo con usuarios sin privilegios. Cada usuario tendrás sus box propios.
-        
-Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la siguiente instrucción:::
+```        
+
+Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la siguiente instrucción:
 
     usuario@maquina:~$ vagrant box list
 
 * **Práctica 3: Creación de una máquina virtual**
 
-1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:::
+1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:
         
 	usuario@maquina:~/vagrant$ vagrant init
         
-2. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:::
+2. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:
 
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
@@ -50,30 +52,32 @@ Puedo ver la lista de boxes que tengo instalada en mi usuario ejecutando la sigu
                 config.vm.network :public_network,:bridge=>"eth0"
     end    
     
-3. Iniciamos la máquina:::
+3. Iniciamos la máquina:
 
     usuario@maquina:~/vagrant$ vagrant up
         
-4. Para acceder a la instancia:::
+4. Para acceder a la instancia:
   	
     usuario@maquina:~/vagrant$ vagrant ssh default
     	      
-5. Suspender, apagar o destruir:::
+5. Suspender, apagar o destruir:
     	
     usuario@maquina:~/vagrant$ vagrant suspend
     usuario@maquina:~/vagrant$ vagrant halt
     usuario@maquina:~/vagrant$ vagrant destroy
 
+```eval_rst
 .. warning:: 
 
     1. Entra en virtualbox y comprueba las características de la máuina que se ha creado.
     2. ¿Qué usuario tiene creado por defecto el sistema?¿Cómo se ejecutan intracciones de superusuario?
     3. ¿Cuantas tarjetas de red tiene?¿Para qué sirve la eth0?
     4. Investiga el funcionamiento de la instrucción ``vagrant ssh``. ¿Por que interfaz se conecta?¿Qué certificado se utiliza para acceder?
+```
 
 * **Práctica 4: Creación de varias máquinas virtuales**
 
-En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile con el siguiente contenido:::
+En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile con el siguiente contenido:
 
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
@@ -101,7 +105,7 @@ Si accedemos por ssh a nodo1 podremos hacer ping a nodo2.
 
 * **Práctica 5: Añadir un dico duro adicional y modificar la RAM a una máquina virtual**
 
-Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este contenido:::
+Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este contenido:
 
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
@@ -133,16 +137,15 @@ Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este c
         end
     end
 
-Como podemos ver al nodo1 le hemos modifcado el tamaño de la memoria RAM y en el nodo2 hemos añadido un disco duro de 1GB. Para que estos cambios tengan efecto debes ejecutar la instrucción:::
+Como podemos ver al nodo1 le hemos modifcado el tamaño de la memoria RAM y en el nodo2 hemos añadido un disco duro de 1GB. Para que estos cambios tengan efecto debes ejecutar la instrucción:
 
 	usuario@maquina:~/vagrant$ vagrant reload
 
-Para terminar, indicar que tenemos más parámetros de configuración que nos permiten configurar otros aspectos de la máquina virtual. Puedes encontrar más información en la `documentación oficial de vagrant <http://docs.vagrantup.com/v2/>`_.
+Para terminar, indicar que tenemos más parámetros de configuración que nos permiten configurar otros aspectos de la máquina virtual. Puedes encontrar más información en la [documentación oficial de vagrant](http://docs.vagrantup.com/v2/)
 
-Enlaces interesantes
---------------------
+## Enlaces interesantes
 
-* `Página oficial de Vagrant <http://www.vagrantup.com/>`_
-* `Gestionando máquinas virtuales con Vagrant <http://www.josedomingo.org/pledin/2013/09/gestionando-maquinas-virtuales-con-vagrant/>`_
-* `Boxes oficiales para Vagrant <https://atlas.hashicorp.com/boxes/search>`_
-* `Boxes no oficiales de Vagrant <http://www.vagrantbox.es/>`_
+* [Página oficial de Vagrant](http://www.vagrantup.com/)
+* [Gestionando máquinas virtuales con Vagrant](http://www.josedomingo.org/pledin/2013/09/gestionando-maquinas-virtuales-con-vagrant/)
+* [Boxes oficiales para Vagrant](https://atlas.hashicorp.com/boxes/search)
+* [Boxes no oficiales de Vagrant](http://www.vagrantbox.es/)

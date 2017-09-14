@@ -1,12 +1,12 @@
-Cuestionario de repaso
-=======================
+# Cuestionario de repaso
 
-Repaso TCP/IP
--------------
+
+## Repaso TCP/IP
+
 
 1. Teniendo en cuenta el siguiente esquema de red:
 
-	.. image:: img/cuestionario1.jpg
+	![cuestionario1](img/cuestionario1.jpg)
 
 	* Configura la interfaz de red de un cliente para tener acceso a internet, utiliza direccionamiento estático. ¿Qué diferencia hay entre dirección estática y dinámica? ¿Qué dirección del router es la pública? ¿Cuál es la privada? Define cada uno de los parámetros que has configurado: puerta de enlace, mascara de red,...
 
@@ -19,8 +19,8 @@ Repaso TCP/IP
 8. Si nuestro cliente tiene un sistema linux, ¿en qué fichero hemos configurado la red?¿y los servidores DNS?
 9. Muestra la configuración de red de tu ordenador de clase. ¿Qué servidor DNS se está utilizando.
 
-Repaso DNS
-----------
+## Repaso DNS
+
 
 10. ¿Qué herramientas se usa en linux para realizar una consulta DNS?¿Y en Windows? Pregunta en varios sistemas cuál es la dirección IP de www.marca.com. Realiza una consulta para saber los servidores DNS que conocen el dominio gonzalonazareno.org.
 11. ¿Qué ocurre si hacemos una consulta para averiguar la ip de dit.gonzalonazareno.org desde el ordenador del aula y desde el ordenador de tu casa? Razona la respuesta.
