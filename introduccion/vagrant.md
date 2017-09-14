@@ -46,41 +46,41 @@ usuario@maquina:~$ vagrant box list
 
 1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:
         
-```bash
-usuario@maquina:~/vagrant$ vagrant init
-```
+    ```bash
+    usuario@maquina:~/vagrant$ vagrant init
+    ```
         
 2. Modificamos el fichero Vagrantfile y los dejamos de la siguiente manera:
 
-```ruby
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-Vagrant.configure("2") do |config|
-            config.vm.box = "debian/jessie64"
-            config.vm.hostname = "mimaquina"
-            config.vm.network :public_network,:bridge=>"eth0"
-end    
-```
+    ```ruby
+    # -*- mode: ruby -*-
+    # vi: set ft=ruby :
+    Vagrant.configure("2") do |config|
+                config.vm.box = "debian/jessie64"
+                config.vm.hostname = "mimaquina"
+                config.vm.network :public_network,:bridge=>"eth0"
+    end    
+    ```
     
 3. Iniciamos la máquina:
 
-```bash
-usuario@maquina:~/vagrant$ vagrant up
-```
+    ```bash
+    usuario@maquina:~/vagrant$ vagrant up
+    ```
         
 4. Para acceder a la instancia:
   	
-```bash
-usuario@maquina:~/vagrant$ vagrant ssh default
-```
+    ```bash
+    usuario@maquina:~/vagrant$ vagrant ssh default
+    ```
     	      
 5. Suspender, apagar o destruir:
     	
-```bash
-usuario@maquina:~/vagrant$ vagrant suspend
-usuario@maquina:~/vagrant$ vagrant halt
-usuario@maquina:~/vagrant$ vagrant destroy
-```
+    ```bash
+    usuario@maquina:~/vagrant$ vagrant suspend
+    usuario@maquina:~/vagrant$ vagrant halt
+    usuario@maquina:~/vagrant$ vagrant destroy
+    ```
 
 ```eval_rst
 .. warning:: 
