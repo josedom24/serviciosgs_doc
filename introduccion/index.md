@@ -3,10 +3,10 @@
 
 En este primer apartado vamos a estudiar los siguientes apartados:
 
-	* ¿Qué son lo servicios de red?
-	* Vamos a recordar conceptos sobre redes, TCP/IP, DNS,...
-	* Python como lenguaje para el administrador de SI
-	* Herramienta (`vagrant <https://www.vagrantup.com/>`_) que nos va a permitir trabajar con nuestra infraestructura.
+* ¿Qué son lo servicios de red?
+* Vamos a recordar conceptos sobre redes, TCP/IP, DNS,...
+* Python como lenguaje para el administrador de SI
+* Herramienta (`vagrant <https://www.vagrantup.com/>`_) que nos va a permitir trabajar con nuestra infraestructura.
 
 
 ```eval_rst
