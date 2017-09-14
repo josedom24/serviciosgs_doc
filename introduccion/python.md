@@ -13,10 +13,12 @@ Para automatizar muchas de las tareas que realizan los administrador de sistemas
 Veamos algunas instrucciones que nos pueden ayudar en nuestrs scripts de administración:
 
 * **Trabajar con argumentos en la línea de comandos**: La mayoría de los script que realicemos recibiran la entrada por argumentos de la línea de comandos:
-
+	
+	```python
 	import sys
 	len (sys.argv) #Número de argumentos
 	sys.argv[1] #Acceso al segundo argumento
+	```
 
 * **Salir del programa**: Nos puede interesar que el programa termine baja alguna circunstancia:
 
