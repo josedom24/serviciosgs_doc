@@ -21,7 +21,7 @@ Instalar virtualbox y vagrant:
 * **Práctica 2: Instalación de un "box" debian/jessie**
 
 Nos descargamos desde el repositorio oficial el box de Debian Jessie de 64 bits, esto lo hacemos un usuario sin privilegios:
-
+    
     ```bash
     usuario@maquina:~$ vagrant box add debian/jessie64
     ```
