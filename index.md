@@ -16,5 +16,4 @@ El índice de contenidos que vamos a estudiar será:
 
     introduccion/index
 
-
-```eval_rst
+```
