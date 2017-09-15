@@ -18,18 +18,18 @@ root@maquina:~$ wget https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_
 root@maquina:~$ dpkg -i vagrant_1.8.5_x86_64.deb
 ```
 
-* **Práctica 2: Instalación de un "box" debian/strecht**
+* **Práctica 2: Instalación de un "box" debian/stretch**
 
-Nos descargamos desde el repositorio oficial el box de Debian strecht de 64 bits, esto lo hacemos un usuario sin privilegios:
+Nos descargamos desde el repositorio oficial el box de Debian stretch de 64 bits, esto lo hacemos un usuario sin privilegios:
 
 ```bash
-usuario@maquina:~$ vagrant box add debian/strecht64
+usuario@maquina:~$ vagrant box add debian/stretch64
 ```
 
 Si el box lo tenemos en la *nas* de nuestro instituto:
 
 ```bash
-usuario@maquina:~$ vagrant box add debian/strecht64 http://nas.gonzalonazareno.org/...
+usuario@maquina:~$ vagrant box add debian/stretch64 http://nas.gonzalonazareno.org/...
 ```
 
 ```eval_rst
@@ -56,7 +56,7 @@ usuario@maquina:~$ vagrant box list
     # -*- mode: ruby -*-
     # vi: set ft=ruby :
     Vagrant.configure("2") do |config|
-                config.vm.box = "debian/strecht64"
+                config.vm.box = "debian/stretch64"
                 config.vm.hostname = "mimaquina"
                 config.vm.network :public_network,:bridge=>"eth0"
     end    
@@ -102,12 +102,12 @@ En esta ocasión vamos a crear otro directorio y dentro un fichero Vagrantfile c
 Vagrant.configure("2") do |config|
 
   config.vm.define :nodo1 do |nodo1|
-    nodo1.vm.box = "debian/strecht64"
+    nodo1.vm.box = "debian/stretch64"
     nodo1.vm.hostname = "nodo1"
     nodo1.vm.network :private_network, ip: "10.1.1.101"
   end
   config.vm.define :nodo2 do |nodo2|
-    nodo2.vm.box = "debian/strecht64"
+    nodo2.vm.box = "debian/stretch64"
     nodo2.vm.hostname = "nodo2"
     nodo2.vm.network :public_network,:bridge=>"eth0"
     nodo2.vm.network :private_network, ip: "10.1.1.102"
@@ -132,7 +132,7 @@ Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este c
 Vagrant.configure("2") do |config|
 
   config.vm.define :nodo1 do |nodo1|
-    nodo1.vm.box = "debian/strecht64"
+    nodo1.vm.box = "debian/stretch64"
     nodo1.vm.hostname = "nodo1"
     nodo1.vm.network :private_network, ip: "10.1.1.101"
     nodo1.vm.provider :virtualbox do |v|
@@ -141,7 +141,7 @@ d  end
       
   disco = '.vagrant/midisco.vdi'
   config.vm.define :nodo2 do |nodo2|
-    nodo2.vm.box = "debian/strecht64"
+    nodo2.vm.box = "debian/stretch64"
     nodo2.vm.hostname = "nodo2"
     nodo2.vm.network :public_network,:bridge=>"eth0"
     nodo2.vm.network :private_network, ip: "10.1.1.102"
