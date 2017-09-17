@@ -15,7 +15,7 @@ Instalar virtualbox y vagrant:
 ```bash
 root@maquina:~$ apt-get install virtualbox
 root@maquina:~$ wget https://releases.hashicorp.com/vagrant/2.0.0/vagrant_2.0.0_x86_64.deb
-root@maquina:~$ dpkg -i vagrant_1.8.5_x86_64.deb
+root@maquina:~$ dpkg -i vagrant_2.0.0_x86_64.deb
 ```
 
 * **Práctica 2: Instalación de un "box" debian/stretch**
