@@ -44,7 +44,7 @@ usuario@maquina:~$ vagrant box list
 
 * **Práctica 3: Creación de una máquina virtual**
 
-1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacio con la instrucción:
+1. Nos creamos un directorio y dentro vamos a crear el fichero Vagrantfile, podemos crear uno vacío con la instrucción:
         
     ```bash
     usuario@maquina:~/vagrant$ vagrant init
@@ -85,10 +85,10 @@ usuario@maquina:~$ vagrant box list
 ```eval_rst
 .. warning:: 
 
-    1. Entra en virtualbox y comprueba las características de la máuina que se ha creado.
-    2. ¿Qué usuario tiene creado por defecto el sistema?¿Cómo se ejecutan intracciones de superusuario?
+    1. Entra en virtualbox y comprueba las características de la máquina que se ha creado.
+    2. ¿Qué usuario tiene creado por defecto el sistema?¿Cómo se ejecutan instrucciones de superusuario?
     3. ¿Cuantas tarjetas de red tiene?¿Para qué sirve la eth0?
-    4. Investiga el funcionamiento de la instrucción ``vagrant ssh``. ¿Por que interfaz se conecta?¿Qué certificado se utiliza para acceder?
+    4. Investiga el funcionamiento de la instrucción ``vagrant ssh``. ¿Por que interfaz se conecta? ¿Qué certificado se utiliza para acceder?
 ```
 
 * **Práctica 4: Creación de varias máquinas virtuales**
@@ -132,30 +132,32 @@ Por últimos vamos a crear un nuevo Vagranfile en un nuevo directorio con este c
 Vagrant.configure("2") do |config|
 
   config.vm.define :nodo1 do |nodo1|
-    nodo1.vm.box = "debian/stretch64"
+    nodo1.vm.box = "debian/jessie64"
     nodo1.vm.hostname = "nodo1"
     nodo1.vm.network :private_network, ip: "10.1.1.101"
     nodo1.vm.provider :virtualbox do |v|
-.customize ["modifyvm", :id, "--memory", 768]
-d  end
-      
+                    v.customize ["modifyvm", :id, "--memory", 768]
+            end
+
+  end
+
   disco = '.vagrant/midisco.vdi'
   config.vm.define :nodo2 do |nodo2|
-    nodo2.vm.box = "debian/stretch64"
+    nodo2.vm.box = "debian/jessie64"
     nodo2.vm.hostname = "nodo2"
     nodo2.vm.network :public_network,:bridge=>"eth0"
     nodo2.vm.network :private_network, ip: "10.1.1.102"
     nodo2.vm.provider :virtualbox do |v|
-.customize ["createhd", "--filename", disco, "--size", 1024]
-.customize ["storageattach", :id, "--storagectl", "SATA Controller",
+                    v.customize ["createhd", "--filename", disco, "--size", 1024]
+                    v.customize ["storageattach", :id, "--storagectl", "SATA Controller",
                      "--port", 1, "--device", 0, "--type", "hdd",
                      "--medium", disco]
-nd
+                    end
     end
 end
 ```
 
-Como podemos ver al nodo1 le hemos modifcado el tamaño de la memoria RAM y en el nodo2 hemos añadido un disco duro de 1GB. Para que estos cambios tengan efecto debes ejecutar la instrucción:
+Como podemos ver al `nodo1` le hemos modificado el tamaño de la memoria RAM y en el `nodo2` hemos añadido un disco duro de 1GB. Para que estos cambios tengan efecto debes ejecutar la instrucción:
 
 ```bash
 usuario@maquina:~/vagrant$ vagrant reload
@@ -168,4 +170,3 @@ Para terminar, indicar que tenemos más parámetros de configuración que nos pe
 * [Página oficial de Vagrant](http://www.vagrantup.com/)
 * [Gestionando máquinas virtuales con Vagrant](http://www.josedomingo.org/pledin/2013/09/gestionando-maquinas-virtuales-con-vagrant/)
 * [Boxes oficiales para Vagrant](https://atlas.hashicorp.com/boxes/search)
-* [Boxes no oficiales de Vagrant](http://www.vagrantbox.es/)
