@@ -25,11 +25,12 @@ Al trabajar con el servidor DHCP tenemos que conocer los siguientes conceptos:
 
 **Indice**
 
+```evar_rst
 .. toctree::
    
    enlaces
    dhcp
    cuestionario
    ejercicio1
+```
 
-   
