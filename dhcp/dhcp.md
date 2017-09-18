@@ -1,5 +1,4 @@
-¿Cómo funciona el servidor DHCP
-===============================
+# ¿Cómo funciona el servidor DHCP
 
 El protocolo de configuración dinámica de host (Dynamic Host Configuration Protocol – DHCP)  es una extensión de protocolo BOOTP que da más flexibilidad al administrar las direcciones IP.  Este protocolo puede usarse para configurar dinámicamente los parámetros esenciales TCP/IP de los hosts (estaciones de trabajo y servidores)  de una red.  El protocolo DHCP tiene dos elementos:
 
@@ -8,8 +7,7 @@ El protocolo de configuración dinámica de host (Dynamic Host Configuration Pro
 
 El host TCP/IP que solicita la información de configuración TCP/IP se denomina cliente DHCP y el host que provee dicha información se llama servidor DHCP. El DHCP se describe en la norma **RFC 2131** –Protocolo de configuración dinámica de host–.  A continuación, presentamos la operación del DHCP. 
 
-Administración de direcciones con el DHCP
------------------------------------------
+## Administración de direcciones con el DHCP
 
 El protocolo DHCP usa los siguientes 3 métodos para asignar las direcciones IP:
 
@@ -27,12 +25,11 @@ El método de asignación dinámica es muy útil para clientes DHCP que necesita
 
 Además la asignación dinámica de direcciones IP es un buen método para asignar direcciones IP a ordenadores que van a ser conectados por primera vez y en una red donde escasean las direcciones IP.  Si los ordenadores antiguos se retiran, sus direcciones IP pueden ser reutilizadas o reasignadas inmediatamente. Sin importar cuál método se elija, aún puede configurarse los parámetros IP de una sola vez desde un servidor central, en lugar de repetir la configuración TCP/IP para cada ordenador.
 
-Proceso de configuración de los clientes
-----------------------------------------
+## Proceso de configuración de los clientes
 
 Una vez que un cliente DHCP ha contactado con un servidor DHCP, a través de varios estados internos, negocia el uso y la duración de su dirección IP.  La forma de adquisición de la dirección IP por el cliente DHCP se explica mejor en términos de un diagrama de transición de estados (llamado también máquina de estado finito) .  La figura presenta este diagrama de transición de estados que explica la interacción entre el cliente y el servidor DHCP. 
 
-.. image:: img/dhcp.png
+![dhcp](img/dhcp.png)
 
 1. **Descubrimiento de un servidor DHCP (SELECTING)**
 

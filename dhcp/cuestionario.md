@@ -1,5 +1,4 @@
-Cuestionario DHCP
-=================
+# Cuestionario DHCP
 
 1. ¿Qué es un servidor DHCP?
 2. ¿Cómo hay que configurar un cliente DHCP?
@@ -35,8 +34,8 @@ Cuestionario DHCP
     * Para renovar una dirección IP y una nueva configuración de red
     * Para liberar la dirección IP
 19. ¿Qué es la lista de concesiones? ¿En qué fichero se guarda en Linux?
-20. En el servidor isc-dhcp en linux. ¿Qué índican los siguientes parámetros?:
+20. En el servidor isc-dhcp en linux. ¿Qué indican los siguientes parámetros?:
   
     * max-lease-time
     * default-lease-time
-21. En el cliente, ¿qué se guarda en los ficheros dhclient-???.lease?
+21. En el cliente, ¿qué se guarda en los ficheros `dhclient-???.lease`?
