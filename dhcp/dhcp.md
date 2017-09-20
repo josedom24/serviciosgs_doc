@@ -39,7 +39,7 @@ de este protocolo.  El mensaje DHCPDISCOVER usa la dirección IP de broadcast de
 DHCP relay que soporte la retransmisión de esta petición hacia las otras subredes.  El agente DHCP relay se describe en la norma RFC 1542. 
 
 Antes de enviar el mensaje broadcast DHCPDISCOVER, el cliente DHCP espera por un tiempo aleatorio –entre 1 a 10 segundos– para evitar una colisión con otro cliente DHCP, como en el caso
-que todos los clientes DHCP se inicialicen al mismo tiempo al recibir todos energía a la vez (como una pérdida o interrupción de la electricidad).
+que todos los clientes DHCP se inicial icen al mismo tiempo al recibir todos energía a la vez (como una pérdida o interrupción de la electricidad).
 
 2. **Aceptación de la asignación recibida (REQUESTING)**
 

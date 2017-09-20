@@ -31,5 +31,6 @@ Al trabajar con el servidor DHCP tenemos que conocer los siguientes conceptos:
    dhcp
    cuestionario
    ejercicio1
+   
 ```
 
