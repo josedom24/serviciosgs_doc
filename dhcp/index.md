@@ -25,7 +25,6 @@ Al trabajar con el servidor DHCP tenemos que conocer los siguientes conceptos:
 **Indice**
 
 ```eval_rst
-
 .. toctree::
 
    enlaces
