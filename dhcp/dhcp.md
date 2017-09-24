@@ -31,7 +31,7 @@ Una vez que un cliente DHCP ha contactado con un servidor DHCP, a través de var
 
 ![dhcp](img/dhcp.png)
 
-1. **Descubrimiento de un servidor DHCP (SELECTING)**
+**Descubrimiento de un servidor DHCP (SELECTING)**
 
 Cuando se inicializa el cliente DHCP, éste comienza en el estado de inicialización INIT.  El cliente DHCP desconoce sus parámetros IP y por eso envía un broadcast DHCPDISCOVER.  El mensaje
 DHCPDISCOVER se encapsula en un paquete UDP.  Se coloca el número 67  con puerta de destino UDP, el mismo utilizado por el servidor BOOTP, debido a que el protocolo DHCP es una extensión
@@ -41,7 +41,7 @@ DHCP relay que soporte la retransmisión de esta petición hacia las otras subre
 Antes de enviar el mensaje broadcast DHCPDISCOVER, el cliente DHCP espera por un tiempo aleatorio –entre 1 a 10 segundos– para evitar una colisión con otro cliente DHCP, como en el caso
 que todos los clientes DHCP se inicial icen al mismo tiempo al recibir todos energía a la vez (como una pérdida o interrupción de la electricidad).
 
-2. **Aceptación de la asignación recibida (REQUESTING)**
+**Aceptación de la asignación recibida (REQUESTING)**
 
 Después de enviar el mensaje broadcast DHCPDISCOVER, el cliente DHCP ingresa al estado SELECTING, donde recibe los mensajes DHCPOFFER de los servidores DHCP configurados para
 atenderlo. El tiempo que el cliente DHCP esperará por los mensajes DHCPOFFER depende de la implementación.  Si el cliente DHCP recibe varias respuestas DHCPOFFER, elegirá una.  En
@@ -52,7 +52,7 @@ dirección IP sugerida para verificar que no esté duplicada.  En caso de estarl
 
 Cuando la petición ARP se difunde sobre la red, el cliente usa su propia dirección de hardware en el campo de dirección fuente de hardware del ARP, pero coloca el valor de 0 en el campo de dirección fuente IP.  Esta dirección de valor 0 se utiliza en lugar de la dirección IP sugerida, para no confundir a las memorias caché ARP de otros hosts. 
 
-3. **Duración de la concesión (BOUND)**
+**Duración de la concesión (BOUND)**
 
 Cuando se acepta el DHCPACK proveniente del servidor DHCP, se colocan tres valores de temporización y el cliente DHCP se mueve al estado BOUND (asociado) . 
 
@@ -76,16 +76,16 @@ Si este tiempo es T0, entonces los valores de expiración se calculan así:
 La RFC 2131 recomienda que se debe añadir un factor a T1 y T2 para evitar que varios clientes
 DHCP expiren sus temporizadores al mismo tiempo. 
 
-4. **Renovación de la concesión (RENEWING)**
+**Renovación de la concesión (RENEWING)**
 
 Después de la expiración del temporizador T1, el cliente DHCP se mueve del estado BOUND al estado RENEWING (renovación) .  En este último estado se debe negociar un nuevo alquiler para la dirección IP designada, entre el cliente DHCP y el servidor DHCP que originalmente le asignó la dirección IP. Si el servidor DHCP original, por algún motivo, no renueva el alquiler, le enviará un mensaje DHCPNACK y el cliente DHCP se moverá al estado INIT y intentará obtener una nueva dirección IP. En el caso contrario, si el servidor DHCP original envía un mensaje DHCPACK, éste contendrá la duración del nuevo alquiler. Entonces, el cliente DHCP coloca los valores de sus temporizadores y se moverá al estado BOUND.
 
-5. **Estado de reenganche (RENEWING)**
+**Estado de reenganche (RENEWING)**
 
 Si el temporizador T2 (tiempo de reenganche) expira mientras el cliente DHCP está esperando en el estado RENEWING una respuesta sea DHCPACK o DHCPNACK proveniente del servidor DHCP
 original, el cliente DHCP se moverá al estado REBINDING. El servidor original DHCP podría no haber respondido porque estaría apagado o porque el enlace con la red habría caído. Nótese en las ecuaciones previas que T2 es mayor que T1, de modo que el cliente DHCP espera que el servidor original DHCP renueve el alquiler por un tiempo igual a T2 – T1.
 
-6. **Extensión de la concesión**
+**Extensión de la concesión**
 
 Al expirar el temporizador T2 (tiempo de reenganche), el cliente DHCP enviará un DHCPREQUEST a la red para contactar con cualquier servidor DHCP para extender el alquiler, con
 lo cual pasará al estado REBINDING. El cliente DHCP envía este mensaje broadcast DHCPREQUEST porque presume que, luego de haber esperado T2 – T1 segundos en el estado RENEWING, el servidor DHCP original no está disponible, por lo cual tratará de contactar con otro servidor DHCP para que le responda.
@@ -94,7 +94,7 @@ Si no hay servidor DHCP disponible para renovar alquiler luego de expirar el tem
 Nótese que el cliente DHCP intentó renovar el alquiler primero con el servidor original y luego con cualquier otro servidor en la red.
 
 
-7. **Expiración de la concesión**
+**Expiración de la concesión**
 
 Al acabar el alquiler (T3 expira), el cliente DHCP debe devolver su dirección IP y cesar toda acción con dicha dirección IP en la red.
 El cliente DHCP no siempre tiene que esperar la expiración del alquiler para terminar el uso de una dirección IP.
