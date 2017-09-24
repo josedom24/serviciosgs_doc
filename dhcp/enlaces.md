@@ -6,7 +6,7 @@
 * [Artículo: How to Install the DHCP Server on Ubuntu 12.04LTS](https://rbgeek.wordpress.com/2012/04/29/how-to-install-the-dhcp-server-on-ubuntu-12-04lts/)
 * [Servidor dhcp en Windows 2008 Server](https://github.com/josedom24/serviciosgs_doc/raw/master/dhcp/doc/dhcp_win.pdf)
 
-## DHCPv6
+### DHCPv6
 
 * [Una de IPv6, por favor (1)](http://www.linuxtecnico.es/2012/11/una-de-ipv6-por-favor-1.html)
 * [RA y DCHVPv6 Cisco Academy](http://ecovi.uagro.mx/ccna2/course/module10/index.html#10.2.1.1)
