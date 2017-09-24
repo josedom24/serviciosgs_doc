@@ -8,6 +8,7 @@
 
 ## DHCPv6
 
+* [Una de IPv6, por favor (1)](http://www.linuxtecnico.es/2012/11/una-de-ipv6-por-favor-1.html)
 * [RA y DCHVPv6 Cisco Academy](http://ecovi.uagro.mx/ccna2/course/module10/index.html#10.2.1.1)
 * [DHCPv6: Stateful Address Autoconfiguration on Linux (Part 1: radvd)](https://linuxmonk.ch/wordpress/index.php/2013/dhcpv6-stateful-address-autoconfiguration-on-linux-part-1-radvd/)
 * [DHCPv6 Based IPv6 Access Services](https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/enterprise-ipv6-solution/whitepaper_c11-689821.html)
