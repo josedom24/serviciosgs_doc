@@ -13,8 +13,10 @@ El protocolo DHCP usa los siguientes 3 métodos para asignar las direcciones IP:
 
 **a) Asignación manual**
 	El administrador de red pone manualmente la dirección IP del cliente DHCP en el servidor DHCP. El DHCP se usa para dar al cliente DHCP el valor de esta dirección IP configurada manualmente. 
+
 **b) Asignación automática**
 	No se requiere asignar manualmente direcciones IP.  El servidor DHCP asigna al cliente DHCP, en el primer contacto, una dirección IP permanente que no podrá reutilizar ningún otro cliente DHCP. 
+	
 **c) Asignación dinámica**
 	El DHCP asigna una dirección IP al cliente DHCP por un tiempo determinado.  Después que expire este lapso, se revoca la dirección IP y el cliente DHCP tiene que devolverla.  Si el cliente aún necesita una dirección IP para efectuar sus operaciones, deberá solicitarla nuevamente. 
 
