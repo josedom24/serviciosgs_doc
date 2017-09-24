@@ -12,5 +12,6 @@ El índice de contenidos que vamos a estudiar será:
    :maxdepth: 2
 
    introduccion/index
-   
+   dhcp/index
+
 ```
