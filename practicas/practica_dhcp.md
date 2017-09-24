@@ -84,8 +84,11 @@ Configura el servidor dhcp en el ordenador "servidor" para que de servicio a los
 
 Vamos a usar el primer escenario para configurar en el cliente el programa `radvd` para comprobar como los clientes se autoconfiguran con una dirección ipv6 (SLAAC (Stateless Address Autoconfiguration)). Vamos a trabajar con el prefijo `2001:abcd::/64`.
 
+```eval_rst
+.. warning::
 	* **Tarea 12 (1 punto)(Obligatorio):** Configura de manera adecuada en el servidor el programa `radvd` y comprueba que los clientes (Linux y Windows) se configuran coun ipv6 global.
 	* **Tarea 13 (1 punto)(Obligatorio):** Configura `radvd` para entregar también el servidor DNS (RDNSS) y el campo *search* (SNSSL). Comprueba qué esos datos lo configura el cliente Linux. ¿Y el cliente Windows?
+```
 
 ### DCHPv6
 
@@ -94,12 +97,15 @@ Configura en el servidor isc-dhcp-server una zona para repartir los siguientes e
 * Un rango de direcciones: `2001:abcd::1000` hasta `2001:abcd::2000`
 * El DNS y el campo *search*.
 
+```eval_rst
+.. warning::
 	* **Tarea 14 (2 puntos)(Obligatorio):** Configura de manera adecuada en el servidor dhcpv6 y comprueba que los clientes (Linux y Windows) se configuran con ipv6 global.
-	
+```
 ### Delegación de prefijo (PD)
 
 En nuestra red tenemos un servidor DHCPv6 que reparte un prefijo por cada petición, esto nos puede servir para crear un router dentro de nuestra red interna que reparta direcciones ipv6 con un determinado prefijo.
-
+```eval_rst
+.. warning::
 	* **Tarea 15 (2 puntos):** Configura en tu servidor un cliente dibbler-dhcp que es capaz de recoger el prefijo delegado por nuestro servidor `macaco`. Condigura `radvd` para que reparta direcciones con ese prefijo. Comprueba que los clientes (Linux y Windows) se configuran con ipv6 global. Realiza un ping desde el cliente a la dirección `2001:ccba:470::1` que es la de macaco.
-
+```
 
