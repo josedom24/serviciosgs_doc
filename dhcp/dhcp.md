@@ -63,7 +63,7 @@ Cuando se acepta el DHCPACK proveniente del servidor DHCP, se colocan tres valor
 El DHCPACK siempre trae consigo el valor de T3.  Los valores de T1 y T2 se configuran en el servidor DHCP; de no ser así, se usan los valores por defecto siguientes:
 
 	* T1 = 0,5 x T3. 
-	* T2 = 0,87 5 x T3. 
+	* T2 = 0,875 x T3. 
 
 El tiempo actual en que los temporizadores expiran se calcula añadiendo el valor del temporizador al tiempo en que se envió el mensaje DHCPREQUEST, el cual generó la respuesta DHCPACK. 
 
