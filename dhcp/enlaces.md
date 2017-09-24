@@ -5,3 +5,9 @@
 * [Internet Systems Consortium - dhcp](http://www.isc.org/downloads/dhcp/)
 * [Artículo: How to Install the DHCP Server on Ubuntu 12.04LTS](https://rbgeek.wordpress.com/2012/04/29/how-to-install-the-dhcp-server-on-ubuntu-12-04lts/)
 * [Servidor dhcp en Windows 2008 Server](https://github.com/josedom24/serviciosgs_doc/raw/master/dhcp/doc/dhcp_win.pdf)
+
+## DHCPv6
+
+* [RA y DCHVPv6 Cisco Academy](http://ecovi.uagro.mx/ccna2/course/module10/index.html#10.2.1.1)
+* [DHCPv6: Stateful Address Autoconfiguration on Linux (Part 1: radvd)](https://linuxmonk.ch/wordpress/index.php/2013/dhcpv6-stateful-address-autoconfiguration-on-linux-part-1-radvd/)
+* [DHCPv6 Based IPv6 Access Services](https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/enterprise-ipv6-solution/whitepaper_c11-689821.html)
