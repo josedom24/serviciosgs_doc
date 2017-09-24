@@ -13,5 +13,6 @@ El índice de contenidos que vamos a estudiar será:
 
    introduccion/index
    dhcp/index
+   practicas/index
 
 ```
