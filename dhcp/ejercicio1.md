@@ -1,6 +1,5 @@
 # Ejercicio: Instalación y configuración del servidor dhcp en linux
 
-
 Después de leer la documentación, instala el servidor dhcp. Recuerda que al inicializar el servicio nos dará un error, esto es debido a que no hemos configurado el servidor.
 
 ## Instalación del servidor isc-dhcp-server
@@ -71,7 +70,7 @@ service isc-dhcp-server restart
 
 Sólo falta configurar los clientes para que tomen la configuración de red de forma dinámica.
 
-```evat_rst
+```eval_rst
 .. note::
 
 	En Windows la instrucción ``ipconfig /release`` libera la concesión, la instrucción ``ipconfig /renew`` la renueva. En linux el comando para liberar la concesión es ``dhclient -r`` y el que nos permite renovarla será ``dhclient``.
