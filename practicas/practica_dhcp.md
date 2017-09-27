@@ -3,7 +3,7 @@
 ```eval_rst
 .. note::
 
-	**(15 tareas - 23 puntos)(7 tareas obligatorias - 11 puntos)**
+	**(16 tareas - 25 puntos)(7 tareas obligatorias - 11 puntos)**
 
 .. note::
 
@@ -100,12 +100,13 @@ Configura en el servidor isc-dhcp-server una zona para repartir los siguientes e
 ```eval_rst
 .. warning::
 	* **Tarea 14 (2 puntos)(Obligatorio):** Configura de manera adecuada en el servidor dhcpv6 y comprueba que los clientes (Linux y Windows) se configuran con ipv6 global.
+	* **Tarea 15 (1 punto):** Configura una reserva para que el cliente linux se configure con la dirección `2001:abcd::a`.
 ```
 ### Delegación de prefijo (PD)
 
 En nuestra red tenemos un servidor DHCPv6 que reparte un prefijo por cada petición, esto nos puede servir para crear un router dentro de nuestra red interna que reparta direcciones ipv6 con un determinado prefijo.
 ```eval_rst
 .. warning::
-	* **Tarea 15 (2 puntos):** Configura en tu servidor un cliente dibbler-dhcp que es capaz de recoger el prefijo delegado por nuestro servidor `macaco`. Condigura `radvd` para que reparta direcciones con ese prefijo. Comprueba que los clientes (Linux y Windows) se configuran con ipv6 global. Realiza un ping desde el cliente a la dirección `2001:ccba:470::1` que es la de macaco.
+	* **Tarea 16 (3 puntos):** Configura en tu servidor un cliente dibbler-dhcp que es capaz de recoger el prefijo delegado por nuestro servidor `macaco`. Condigura `radvd` para que reparta direcciones con ese prefijo. Comprueba que los clientes (Linux y Windows) se configuran con ipv6 global. Realiza un ping desde el cliente a la dirección `2001:ccba:470::1` que es la de macaco.
 ```
 
