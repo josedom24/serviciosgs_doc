@@ -1,4 +1,4 @@
-# Práctica: Servidor WEB Apache 2.4
+# Práctica: Servidor Web Apache 2.4
 
 ```eval_rst
 .. note::

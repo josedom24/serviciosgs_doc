@@ -1,4 +1,4 @@
-# Práctica: Servidor WEB Nginx
+# Práctica: Servidor Web Nginx
 
 ```eval_rst
 .. note::
