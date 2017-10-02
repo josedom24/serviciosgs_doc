@@ -15,17 +15,17 @@
     	http://dit.gonzalonazareno.org/moodle/index.php
     	http://dit http://www.debian.org/index.html
 
-	Observa con **HttpFox** cuantas peticiones se realizan al acceder a estas páginas.
+	Observa con [HttpFox](https://addons.mozilla.org/es/firefox/addon/httpfox/) cuantas peticiones se realizan al acceder a estas páginas.
 
 3. Envío de información al servidor, comprueba como se manda información al servidor mediante el método GET en la URL:
 
-    	http://xxxxxxxxxxxxxxxxxxx/ejget.php?valor=hola
+    	http://playerone.josedomingo.org/ejget.php?valor=hola
     	http://dit.gonzalonazareno.org/moodle/course/view.php?id=4
 
 	Usando el comando GET manda tu nombre a la página: 
 
-    	http://xxxxxxxxxxxxxxxxxxx/ejget.php
+    	http://playerone.josedomingo.org/ejget.php
         
 	Usando el comando POST (que envia el contenido en el cuerpo) manda tu nombre a la página:
 
-    	http://xxxxxxxxxxxxxxxxxxx/ejpost.php
+    	http://playerone.josedomingo.org/ejpost.php
