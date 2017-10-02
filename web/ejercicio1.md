@@ -10,12 +10,14 @@
 
 	Utiliza el plugin de firefox **HttpFox** para identificar las cabeceras de las peticiones y de las respuestas.
 
+
 2. Utilizando el método GET obtén el contenido de la página:
 
     	http://dit.gonzalonazareno.org/moodle/index.php
     	http://dit http://www.debian.org/index.html
 
 	Observa con [HttpFox](https://addons.mozilla.org/es/firefox/addon/httpfox/) cuantas peticiones se realizan al acceder a estas páginas.
+
 
 3. Envío de información al servidor, comprueba como se manda información al servidor mediante el método GET en la URL:
 
