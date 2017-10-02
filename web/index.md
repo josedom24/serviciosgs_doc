@@ -9,12 +9,12 @@ En este bloque del módulo vamos a estudiar el servidor Web, programa software q
 		* Virtual Hosting
 		* Mapeo de URL
 		* Autentificación y control de acceso
-		* Módulos en Apache
+		* Módulos
 		* Módulos de multiprocesamiento
 		* Ejecución de scripts en el servidor: PHP, Python,...
 	
 **Indice**
-
+```eval_rst
 .. toctree::
    
    enlaces
@@ -25,4 +25,4 @@ En este bloque del módulo vamos a estudiar el servidor Web, programa software q
    ejercicio5
    ejercicio6
    ejercicio7
-   
+```
