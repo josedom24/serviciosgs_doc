@@ -15,7 +15,7 @@ Para controlar el servicio apache2 podemos usar (para más [información](http:/
 
 3. Comprueba la directiva donde indicamos el puerto de escucha del servidor. Modifica el puerto de escucha para que sea el 8080. Comprueba el acceso al servidor desde un navegador.
 
-# Estructura de los ficheros de configuración
+## Estructura de los ficheros de configuración
 
 El fichero principal de configuración de Apache2 es `/etc/apache2/apache2.conf`. En ese fichero se incluyen los ficheros que forman parte de la configuración de Apache2:
 
@@ -31,17 +31,17 @@ El fichero principal de configuración de Apache2 es `/etc/apache2/apache2.conf`
 Por defecto se indican las opciones de configuración del directorio `/var/www` y de todos sus subdirectorios, por lo tanto los `DocumentRoot` de los virtualhost que se crean deben ser subdirectorios del este directorio:
 
 	<Directory /var/www/>
-	        Options Indexes FollowSymLinks
-	        AllowOverride None
-	        Require all granted
+	    Options Indexes FollowSymLinks
+	    AllowOverride None
+	    Require all granted
 	</Directory>
 
 Podemos indicar como directorio raíz de nuestros virtualhost otro directorio (tenemos que descomentar):
 
 	#<Directory /srv/>
-	#       Options Indexes FollowSymLinks
-	#       AllowOverride None
-	#       Require all granted
+	#    Options Indexes FollowSymLinks
+	#    AllowOverride None
+	#    Require all granted
 	#</Directory>
 
 
