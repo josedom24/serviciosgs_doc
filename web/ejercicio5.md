@@ -18,12 +18,12 @@ En **apache2.4** se utilizan las siguientes directivas: [Require](https://httpd.
 El servidor web Apache puede acompañarse de distintos módulos para proporcionar diferentes modelos de autenticación.
 La primera forma que veremos es la más simple. Usamos para ello el módulo de autenticación básica que viene instalada "de serie" con cualquier Apache: [mod_auth_basic](http://httpd.apache.org/docs/2.4/es/mod/mod_auth_basic.html). La configuración que tenemos que añadir en el fichero de definición del Virtual Host a proteger podría ser algo así:
 
-   <Directory "/var/www/miweb/privado">
-     AuthUserFile "/etc/apache2/claves/passwd.txt"
-     AuthName "Palabra de paso"
-     AuthType Basic
-     Require valid-user
-   </Directory>
+  <Directory "/var/www/miweb/privado">
+    AuthUserFile "/etc/apache2/claves/passwd.txt"
+    AuthName "Palabra de paso"
+    AuthType Basic
+    Require valid-user
+  </Directory>
 
 El método de autentificación básica se indica en la directiva [AuthType](http://httpd.apache.org/docs/2.4/es/mod/core.html#authtype).  
 
@@ -34,7 +34,7 @@ El método de autentificación básica se indica en la directiva [AuthType](http
 
 El fichero de contraseñas se genera mediante la utilidad ``htpasswd``. Su sintaxis es bien sencilla. Para añadir un nuevo usuario al fichero operamos así:
 
-    # htpasswd /etc/apache2/claves/passwd.txt carolina
+    $ htpasswd /etc/apache2/claves/passwd.txt carolina
     New password:
     Re-type new password:
     Adding password for user carolina
@@ -91,16 +91,16 @@ La autentificación tipo digest soluciona el problema de la transferencia de con
 
 Luego incluimos una sección como esta en el fichero de configuración de nuestro Virtual Host:
 
-   <Directory "/var/www/miweb/privado">
-      AuthType Digest
-      AuthName "dominio"
-      AuthUserFile "/etc/claves/digest.txt"
-      Require valid-user
-   </Directory>
+  <Directory "/var/www/miweb/privado">
+     AuthType Digest
+     AuthName "dominio"
+     AuthUserFile "/etc/claves/digest.txt"
+     Require valid-user
+  </Directory>
 
 Como vemos, es muy similar a la configuración necesaria en la autenticación básica. La directiva ``AuthName`` que en la autenticación básica se usaba para mostrar un mensaje en la ventana que pide el usuario y contraseña, ahora se usa también para identificar un nombre de dominio (realm) que debe de coincidir con el que aparezca después en el fichero de contraseñas. Dicho esto, vamos a generar dicho fichero con la utilidad htdigest:
 
-    # htdigest -c /etc/claves/digest.txt dominio josemaria
+    $ htdigest -c /etc/claves/digest.txt dominio josemaria
     Adding password for josemaria in realm dominio.
     New password:
     Re-type new password:
@@ -116,13 +116,15 @@ Cuando desde el cliente intentamos acceder a una URL que esta controlada por el 
 
 1. El servidor manda una respuesta del tipo 401 *HTTP/1.1 401 Authorization Required* con  una cabecera *WWW-Authenticate* al cliente de la forma:
 
+    ```bash
     WWW-Authenticate: Digest realm="dominio", 
-                      nonce="cIIDldTpBAA=9b0ce6b8eff03f5ef8b59da45a1ddfca0bc0c485", 
-                      algorithm=MD5, 
-                      qop="auth"
+                     nonce="cIIDldTpBAA=9b0ce6b8eff03f5ef8b59da45a1ddfca0bc0c485", 
+                     algorithm=MD5, 
+                     qop="auth"
 
 2. El navegador del cliente muestra una ventana emergente preguntando por el nombre de usuario y contraseña y cuando se rellena se manda una petición con una cabecera *Authorization*
 
+    ```bash
     Authorization	Digest username="jose", 
                     realm="dominio", 
                     nonce="cIIDldTpBAA=9b0ce6b8eff03f5ef8b59da45a1ddfca0bc0c485",
