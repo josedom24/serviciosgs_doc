@@ -131,11 +131,13 @@ Como vemos en la documentación podemos preguntar por varios parámetros , entre
 
 * **%{HTTP_USER_AGENT}**: Información del cliente que accede. Por ejemplo, podemos mostrar una página distinta para cada navegador:
 
+    ```bash
     RewriteCond %{HTTP_USER_AGENT} ^Mozilla
     RewriteRule ^/$ /index.max.html [L]
     RewriteCond %{HTTP_USER_AGENT} ^Lynx
     RewriteRule ^/$ /index.min.html [L]
     RewriteRule ^/$ /index.html [L]
+    ```
 
 * **%{QUERY_STRING}**: Guarda la cadena de parámetros de una URL dinámica.Por ejemplo:
 
@@ -154,17 +156,21 @@ Sin embargo se quiere seguir utilizando la misma forma de traducir:
 
 * **%{REMOTE_ADDR}**: Dirección de destino. Por ejemplo puedo denegar el acceso a una dirección:
 
+    ```bash
     RewriteCond %{REMOTE_ADDR} 145.164.1.8
     RewriteRule ^(.*)$ / [R,NC,L]
+    ```
 
 También podemos controlar la reescritura de URL según la hora y la fecha, para saber más lee este [artículo](http://www.askapache.com/htaccess/time_hour-rewritecond-time.html).
 
 * **%{HTTP_REFERER}**: Guarda la URL que accede a nuestra página y %{REQUEST_URI} guarda la URI, URL sin nombre de dominio. Podemos evitar el Hot_Linking, o uso de recursos de tu servidor desde otra web. Por ejemplo, un caso muy común es usar imágenes alojadas en tu servidor puestas en otras web. Para ello podemos escribir el siguiente ``.htaccess``:
 
+    ```bash
     RewriteCond %{HTTP_REFERER} !^$
     RewriteCond %{HTTP_REFERER} !^http://(www\.)?dominio\.com/ [NC]
     RewriteCond %{REQUEST_URI} !hotlink\.(gif|png) [NC]
     RewriteRule .*\.(gif|jpg|png)$ http://www.dominio.com/image/hotlink.png [NC]
+    ```
 
 En el anterior ejemplo el primer ``RewriteCond`` permite la solicitud directa pero no desde otras páginas (referrer vacío). La siguiente línea indica que si el navegador ha enviado una cabecera ``Referrer`` y esta no contiene la palabra "dominio.com" se ejecutará el ``RewriteRule``. La ultima instrucción ``RewriteCond`` indica que si en la url solicitada se encuentra el nombre de la imagen "hotlink" no se realizará el ``RewriteRule``; esto se pone porque la imagen hotlink.png va a ser la que vamos a usar en ``RewriteRule`` y si no ponemos este ``RewriteCond`` también sería redirigida la solicitud a esta imagen. La última instrucción del ejemplo es el ``RewriteRule`` que indica que cualquier solicitud a una imagen desde otro referrer será reescrita en el servidor hacia la imagen hotlink.png y esta será la imagen que se vea en la web que te esté intentando robar la imagen.
 
