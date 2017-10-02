@@ -18,12 +18,14 @@ En **apache2.4** se utilizan las siguientes directivas: [Require](https://httpd.
 El servidor web Apache puede acompañarse de distintos módulos para proporcionar diferentes modelos de autenticación.
 La primera forma que veremos es la más simple. Usamos para ello el módulo de autenticación básica que viene instalada "de serie" con cualquier Apache: [mod_auth_basic](http://httpd.apache.org/docs/2.4/es/mod/mod_auth_basic.html). La configuración que tenemos que añadir en el fichero de definición del Virtual Host a proteger podría ser algo así:
 
+  ```bash
   <Directory "/var/www/miweb/privado">
     AuthUserFile "/etc/apache2/claves/passwd.txt"
     AuthName "Palabra de paso"
     AuthType Basic
     Require valid-user
   </Directory>
+  ```
 
 El método de autentificación básica se indica en la directiva [AuthType](http://httpd.apache.org/docs/2.4/es/mod/core.html#authtype).  
 
