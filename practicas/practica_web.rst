@@ -1,5 +1,5 @@
-Práctica: Servidor WEB
-======================
+# Práctica: Servidor WEB Apache 2.4
+
 
 .. note::
 
