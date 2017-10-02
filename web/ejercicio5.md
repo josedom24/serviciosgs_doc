@@ -91,12 +91,14 @@ La autentificación tipo digest soluciona el problema de la transferencia de con
 
 Luego incluimos una sección como esta en el fichero de configuración de nuestro Virtual Host:
 
+  ```bash
   <Directory "/var/www/miweb/privado">
      AuthType Digest
      AuthName "dominio"
      AuthUserFile "/etc/claves/digest.txt"
      Require valid-user
   </Directory>
+  ```
 
 Como vemos, es muy similar a la configuración necesaria en la autenticación básica. La directiva ``AuthName`` que en la autenticación básica se usaba para mostrar un mensaje en la ventana que pide el usuario y contraseña, ahora se usa también para identificar un nombre de dominio (realm) que debe de coincidir con el que aparezca después en el fichero de contraseñas. Dicho esto, vamos a generar dicho fichero con la utilidad htdigest:
 
