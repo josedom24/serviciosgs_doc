@@ -55,11 +55,15 @@ Cuando desde el cliente intentamos acceder a una URL que esta controlada por el 
 
 1. El servidor manda una respuesta del tipo 401 *HTTP/1.1 401 Authorization Required* con  una cabecera *WWW-Authenticate* al cliente de la forma:
 
+    ```bash
     WWW-Authenticate: Basic realm="Palabra de paso"
+    ```
 
 2. El navegador del cliente muestra una ventana emergente preguntando por el nombre de usuario y contraseña y cuando se rellena se manda una petición con una cabecera *Authorization*
 
+    ```bash
     Authorization: Basic am9zZTpqb3Nl
+    ```
 
 En realidad la información que se manda es el nombre de usuario y la contraseña en base 64, que se puede decodificar fácilmente con cualquier [utilidad](http://www.base64decode.org/).
 
@@ -74,13 +78,13 @@ En realidad la información que se manda es el nombre de usuario y la contraseñ
 4. Crea un directorio llamado privado2 en el host virtual default, que permita el acceso sólo a juan y a ana.
 
 5. Crea un directorio llamado privado3 en el host virtual default, que permita el acceso sólo los usuarios del grupo1.
-
-La directiva [satisfy](http://httpd.apache.org/docs/2.4/mod/core.html#satisfy) controla como el se debe comportar el servidor cuando tenemos autorizaciones a nives de host (Require, RequireAll,...) y tenemos autorizaciones de usuarios (require).
-
+  La directiva [satisfy](http://httpd.apache.org/docs/2.4/mod/core.html#satisfy) controla como el se debe comportar el servidor cuando tenemos autorizaciones a nives de host (Require, RequireAll,...) y tenemos autorizaciones de usuarios (require).
 6. El directorio privado3 del ejercicio5 haz que sólo sea accesible desde el localhost, y estudia como se comporta la autorización si ponemos:
-
+    
+    ```bash
     satisfy any
     satisfy all
+    ```
 
 ## Autentificación tipo digest
 
