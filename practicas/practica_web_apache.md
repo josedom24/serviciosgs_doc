@@ -7,7 +7,7 @@
 
 .. note::
 
-	* Muestra al profesor: *Tarea 4, Tarea 9 y Tarea 16*
+	* Muestra al profesor: *Tarea 4, Tarea 9 y Tarea 13*
 
 .. warning::
 
