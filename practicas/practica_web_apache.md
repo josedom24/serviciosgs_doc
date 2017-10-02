@@ -3,7 +3,7 @@
 ```eval_rst
 .. note::
 
-	**(18 tareas - 25 puntos)(8 tareas obligatorias - 11 puntos)**
+	**(14 tareas - 18 puntos)(8 tareas obligatorias - 11 puntos)**
 
 .. note::
 
