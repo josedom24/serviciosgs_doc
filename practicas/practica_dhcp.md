@@ -3,7 +3,7 @@
 ```eval_rst
 .. note::
 
-	**(16 tareas - 25 puntos)(7 tareas obligatorias - 11 puntos)**
+	**(16 tareas - 25 puntos)(6 tareas obligatorias - 10 puntos)**
 
 .. note::
 
@@ -87,7 +87,7 @@ Vamos a usar el primer escenario para configurar en el cliente el programa `radv
 ```eval_rst
 .. warning::
 	* **Tarea 12 (1 punto)(Obligatorio):** Configura de manera adecuada en el servidor el programa `radvd` y comprueba que los clientes (Linux y Windows) se configuran coun ipv6 global.
-	* **Tarea 13 (1 punto)(Obligatorio):** Configura `radvd` para entregar también el servidor DNS (RDNSS) y el campo *search* (SNSSL). Comprueba qué esos datos lo configura el cliente Linux. ¿Y el cliente Windows?
+	* **Tarea 13 (1 punto):** Configura `radvd` para entregar también el servidor DNS (RDNSS) y el campo *search* (SNSSL). Comprueba qué esos datos lo configura el cliente Linux. ¿Y el cliente Windows?
 ```
 
 ### DCHPv6
