@@ -13,3 +13,4 @@
 * [DHCPv6: Stateful Address Autoconfiguration on Linux (Part 1: radvd)](https://linuxmonk.ch/wordpress/index.php/2013/dhcpv6-stateful-address-autoconfiguration-on-linux-part-1-radvd/)
 * [DHCPv6 Based IPv6 Access Services](https://www.cisco.com/c/en/us/products/collateral/ios-nx-os-software/enterprise-ipv6-solution/whitepaper_c11-689821.html)
 * [resolvconf: Gestionando /etc/resolv.conf](https://enavas.blogspot.com.es/2012/11/resolvconf-gestionando-etcresolvconf.html)
+* [IPv6 and DNS](https://www.ipsidixit.net/2010/04/02/243/)
