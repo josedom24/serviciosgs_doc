@@ -73,8 +73,8 @@ Date de alta en un **proveedor de hosting**. ¿Si necesitamos configurar el serv
 ```eval_rst
 .. warning::
 
-	* **Tarea 13 (2 puntos)(Obligatorio):** Módulo *userdir*: Activa y configura el módulo *userdir*, que permite que cada usuario del sistema tenga la posibilidad de tener un directorio (por defecto se llama ``public_html``) donde alojar su página web. Publica una página de un usuario, y accede a la misma.
-	* **Tarea 14 (2 puntos):** Vamos a volver a nuestro hosting en CDMON, vamos a crear una carpeta php donde vamos a tener un fichero index.php con el siguiente contenido::
+	* **Tarea 13 (2 puntos)(Obligatorio):** Módulo *userdir*: Activa y configura el módulo *userdir*, que permite que cada usuario del sistema tenga la posibilidad de tener un directorio (por defecto se llama ``public_html``) donde alojar su página web. Publica una página de un usuario, y accede a la misma. Esta tarea la tienes que hacer en tu servidor.
+	* **Tarea 14 (2 puntos):** En tu servidor crea una carpeta ``php`` donde vamos a tener un fichero ``index.php`` con el siguiente contenido::
 
 		<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 		<html xmlns="http://www.w3.org/1999/xhtml">
