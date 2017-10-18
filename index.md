@@ -9,11 +9,12 @@ El índice de contenidos que vamos a estudiar será:
 
 ```eval_rst
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
 
    introduccion/index
    dhcp/index
    web/index
+   dns/index
    practicas/index
 
 ```
