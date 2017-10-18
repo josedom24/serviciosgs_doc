@@ -1,5 +1,5 @@
-Servidor DNS
-============
+# Servidor DNS
+
 
 En este bloque vamos a estudiar cómo funciona el protocolo DNS, y vamos a configurar distisntos servidores DNS. El DNS se utiliza para distintos propósitos. Los más comunes son:
 
@@ -19,6 +19,7 @@ Los contenidos que vamos a estudiar en este bloque serán:
 
 **Indice**
 
+```eval_rst
 .. toctree::
    
    enlaces
@@ -30,3 +31,4 @@ Los contenidos que vamos a estudiar en este bloque serán:
    ejercicio6
    ejercicio7
    
+```
