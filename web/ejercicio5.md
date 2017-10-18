@@ -3,10 +3,9 @@
 
 ## Control de acceso
 
-
 El **Control de acceso** en un servidor web nos permite determinar desde donde podemos acceder a los recursos del servidor.
 
-En **apache2.2** se utilizan las siguientes directivas: [order](http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#order), [allow](http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#allow) y [deny](http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#deny). Un buen manual para que quede más claro lo puedes encontrar en este [enlace](http://systemadmin.es/2011/04/la-directiva-order-de-apache).
+En **apache2.2** se utilizan las siguientes directivas: [order](http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#order), [allow](http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#allow) y [deny](http://httpd.apache.org/docs/2.2/mod/mod_authz_host.html#deny). Un buen manual para que quede más claro lo puedes encontrar en este [enlace](http://systemadmin.es/2011/04/la-directiva-order-de-apache).  La directiva [satisfy](http://httpd.apache.org/docs/2.2/mod/core.html#satisfy) controla como el se debe comportar el servidor cuando tenemos autorizaciones de control de acceso (allow, deny,...) y tenemos autorizaciones de usuarios (require).
 
 En **apache2.4** se utilizan las siguientes directivas: [Require](https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#require), [RequireAll](https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requireall), [RequireAny](https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requireany) y [RequireNone](https://httpd.apache.org/docs/2.4/es/mod/mod_authz_core.html#requirenone)
 
@@ -80,7 +79,6 @@ En realidad la información que se manda es el nombre de usuario y la contraseñ
 4. Crea un directorio llamado privado2 en el host virtual default, que permita el acceso sólo a juan y a ana.
 
 5. Crea un directorio llamado privado3 en el host virtual default, que permita el acceso sólo los usuarios del grupo1.
-  La directiva [satisfy](http://httpd.apache.org/docs/2.4/mod/core.html#satisfy) controla como el se debe comportar el servidor cuando tenemos autorizaciones a nives de host (Require, RequireAll,...) y tenemos autorizaciones de usuarios (require).
 6. El directorio privado3 del ejercicio5 haz que sólo sea accesible desde el localhost, y estudia como se comporta la autorización si ponemos:
     
     ```bash
