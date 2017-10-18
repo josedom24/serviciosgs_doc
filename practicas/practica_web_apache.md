@@ -3,7 +3,7 @@
 ```eval_rst
 .. note::
 
-	**(14 tareas - 18 puntos)(8 tareas obligatorias - 11 puntos)**
+	**(17 tareas - 21 puntos)(8 tareas obligatorias - 11 puntos)**
 
 .. note::
 
@@ -115,4 +115,14 @@ Date de alta en un **proveedor de hosting**. ¿Si necesitamos configurar el serv
 	Prueba la página utilizando parámetros en la URL (parámetros GET), por ejemplo: ``http://nombre_página/php/index.php?monto=100&pais=Libra``
 
 	Configura mediante un fichero ``.htaccess``, la posibilidad de acceder a la URL **http://nombre_página/php/moneda/cantidad**, donde moneda indica el nombre de la moneda a la que queremos convertir (Dolar,Libra,Yen) y cantidad indica los euros que queremos convertir.
+```
+
+## IPv6
+
+```eval_rst
+.. warning::
+
+	* **Tarea 14 (1 punto): Comprueba que el servidor web con la configuración por defecto está escuchando por el puerto 80 en ipv6.
+	* **Tarea 15 (1 punto): Configura la máquina para que tenga una ipv6 global. Activa el virtualhost por defecto y accede a la página principal utilizando la ipv6 global que tiene asignada.
+	* **Tarea 16 (1 punto): Configura la resolución estática para acceder a los virtualhost utilizando ipv6.
 ```

@@ -3,7 +3,7 @@
 ```eval_rst
 .. note::
 
-	**(9 tareas - 10 puntos)(6 tareas obligatorias - 8 puntos)**
+	**(12 tareas - 13 puntos)(6 tareas obligatorias - 8 puntos)**
 
 .. note::
 
@@ -56,3 +56,12 @@ Cambia la configuración del sitio web ``www.iesgn.org`` para que se comporte de
 	* **Tarea 9 (1 punto):** Vamos a combianar el control de acceso (tarea 6) y la autentificación (tareas 7 y 8), y vamos a configurar el virtual host para que se comporte de la siguiente manera: el acceso a la URL ``departamentos.iesgn.org/secreto`` se hace forma directa desde la intranet, desde la red pública te pide la autentificación. Muestra el resultado al profesor.
 ```
 
+## IPv6
+
+```eval_rst
+.. warning::
+
+	* **Tarea 14 (1 punto): Comprueba que el servidor web con la configuración por defecto está escuchando por el puerto 80 en ipv6.
+	* **Tarea 15 (1 punto): Configura la máquina para que tenga una ipv6 global. Activa el virtualhost por defecto y accede a la página principal utilizando la ipv6 global que tiene asignada.
+	* **Tarea 16 (1 punto): Configura la resolución estática para acceder a los virtualhost utilizando ipv6.
+```
