@@ -1,5 +1,5 @@
-Ejercicio: DNSmasq como DNS cache/forward en una red local
-==========================================================
+# Ejercicio: DNSmasq como DNS cache/forward en una red local
+
 
 El paquete ``dnsmasq`` permite poner en marcha un servidor DNS de una forma muy sencilla. Simplemente instalando y arrancando el servicio dnsmasq, sin realizar ningún tipo de configuración adicional, nuestro PC se convertirá en un servidor caché DNS y además, resolverá los nombres que tengamos configurados en el archivo /etc/hosts de nuestro servidor. La resolución funcionará tanto en sentido directo como en sentido inverso, es decir, resolverá la IP dado un nombre de PC y el nombre del PC dada la IP.
 
@@ -17,6 +17,7 @@ Una vez instalado, el paquete, editamos el fichero ``/etc/dnsmasq.conf`` y modif
 
 Finalmente reiniciamos el servicio.
 
+```eval_rst
 .. warning::
 
 	1. Configura los clientes para que utilicen el servidor DNS que has instalado.
@@ -26,3 +27,4 @@ Finalmente reiniciamos el servicio.
 		* La dirección IP de ``www.josedomingo.org``	
 
 	3. Comprueba que se puede entrar en las páginas webs
+```
