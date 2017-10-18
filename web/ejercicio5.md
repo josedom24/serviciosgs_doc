@@ -79,13 +79,9 @@ En realidad la información que se manda es el nombre de usuario y la contraseñ
 4. Crea un directorio llamado privado2 en el host virtual default, que permita el acceso sólo a juan y a ana.
 
 5. Crea un directorio llamado privado3 en el host virtual default, que permita el acceso sólo los usuarios del grupo1.
-6. El directorio privado3 del ejercicio5 haz que sólo sea accesible desde el localhost, y estudia como se comporta la autorización si ponemos:
+6. El directorio privado3 del ejercicio5 haz que sólo sea accesible desde el localhost.
     
-    ```bash
-    satisfy any
-    satisfy all
-    ```
-
+ 
 ## Autentificación tipo digest
 
 La autentificación tipo digest soluciona el problema de la transferencia de contraseñas en claro sin necesidad de usar SSL.  El procedimiento, como veréis, es muy similar al tipo básico pero cambiando algunas de las directivas y usando la utilidad ``htdigest`` en lugar de ``htpassword`` para crear el fichero de contraseñas. El módulo de autenticación necesario suele venir con Apache pero no habilitado por defecto. Para activarlo usamos la utilidad ``a2enmod`` y, a continuación reiniciamos el servidor Apache:
