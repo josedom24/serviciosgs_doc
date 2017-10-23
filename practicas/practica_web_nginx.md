@@ -61,7 +61,7 @@ Cambia la configuración del sitio web ``www.iesgn.org`` para que se comporte de
 ```eval_rst
 .. warning::
 
-	* **Tarea 14 (1 punto): Comprueba que el servidor web con la configuración por defecto está escuchando por el puerto 80 en ipv6.
-	* **Tarea 15 (1 punto): Configura la máquina para que tenga una ipv6 global. Activa el virtualhost por defecto y accede a la página principal utilizando la ipv6 global que tiene asignada.
-	* **Tarea 16 (1 punto): Configura la resolución estática para acceder a los virtualhost utilizando ipv6.
+	* **Tarea 10 (1 punto)**: Comprueba que el servidor web con la configuración por defecto está escuchando por el puerto 80 en ipv6.
+	* **Tarea 11 (1 punto)**: Configura la máquina para que tenga una ipv6 global. Activa el virtualhost por defecto y accede a la página principal utilizando la ipv6 global que tiene asignada.
+	* **Tarea 12 (1 punto)**: Configura la resolución estática para acceder a los virtualhost utilizando ipv6.
 ```
