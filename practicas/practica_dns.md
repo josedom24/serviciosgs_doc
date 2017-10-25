@@ -28,7 +28,7 @@ Instala el servidor dns **dnsmasq** en ``pandora.iesgn.org`` y configúralo para
 	* **Tarea 1 (2 punto)(Obligatorio):** Modifica los clientes para que utilicen el nuevo servidor dns. Realiza una consulta a www.iesgn.org, y a www.josedomingo.org. Realiza una prueba de funcionamiento para comprobar que el servidor dnsmasq funciona como cache dns. Muestra el fichero ``hosts`` del cliente para demostrar que no estás utilizando resolución estática. ¿Se puede realizar resolución inversa?. Documenta la tarea en redmine.
 ```
 
-# Servidor bind9 
+## Servidor bind9 
 
 Desinstala el servidor **dnsmasq** del ejercicio anterior e instala un servidor dns **bind9**.  Las características del servidor DNS que queremos instalar son las siguientes:
 
@@ -53,7 +53,7 @@ Desinstala el servidor **dnsmasq** del ejercicio anterior e instala un servidor 
 		* La dirección ipv6 de ``pandora.iesgn.org``
 ```
 
-# Servidor DNS esclavo
+## Servidor DNS esclavo
 
 El servidor DNS actual funciona como **DNS maestro**. Vamos a instalar un nuevo servidor DNS que va a estar configurado como **DNS esclavo** del anterior, donde se van a ir copiando periódicamente las zonas del DNS maestro. Suponemos que el nombre del servidor DNS esclavo se va llamar ``afrodita.iesgn.org``.
 
@@ -75,7 +75,7 @@ El servidor DNS actual funciona como **DNS maestro**. Vamos a instalar un nuevo 
 		* Posteriormente apaga el servidor maestro y vuelve a realizar una consulta desde el cliente ¿quién responde?
 ```
 
-# Delegación de dominios
+## Delegación de dominios
 
 Tenemos un servidor DNS que gestiona la zona correspondiente al nombre de dominio ``iesgn.org``, en esta ocasión queremos delegar el subdominio ``informatica.iesgn.org`` para que lo gestione otro servidor DNS. Por lo tanto tenemos un escenario con dos servidores DNS:
 
