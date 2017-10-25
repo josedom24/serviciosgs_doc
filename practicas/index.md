@@ -8,4 +8,5 @@
    practica_dhcp
    practica_web_apache
    practica_web_nginx
+   practica_dns
 ```
