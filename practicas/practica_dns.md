@@ -66,9 +66,9 @@ El servidor DNS actual funciona como **DNS maestro**. Vamos a instalar un nuevo 
 		* Comprueba si la configuración de named.conf tiene algún error con el comando adecuado.
 		* Reinicia los servidores y comprueba en los logs si hay algún error. **No olvides incrementar el número de serie en el registro SOA si has modificado la zona en el maestro**.
 		* Muestra la salida del log donde se demuestra que se ha realizado la transferencia de zona.
-	* **Tarea 5 (3 puntos):** Docuemnta los siguientes apartados:
+	* **Tarea 5 (3 puntos):** Documenta los siguientes apartados:
 		* Configura un cliente para que utilice los dos servidores como servidores DNS.
-		* Realiza una consulta con dig tanto al maestro como al esclavo para comprobar que las respuestas son autorizadas. ¿En qué te tienes que fijar?
+		* Realiza una consulta con ``dig`` tanto al maestro como al esclavo para comprobar que las respuestas son autorizadas. ¿En qué te tienes que fijar?
 		* Solicita una copia completa de la zona desde el cliente ¿qué tiene que ocurrir?. Solicita una copia completa desde el esclavo ¿qué tiene que ocurrir?
 	* **Tarea 6 (2 puntos):** Muestra al profesor el funcionamiento del DNS esclavo:
 		* Realiza una consulta desde el cliente y comprueba que servidor está respondiendo.
