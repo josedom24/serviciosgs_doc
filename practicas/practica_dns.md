@@ -63,7 +63,7 @@ El servidor DNS actual funciona como **DNS maestro**. Vamos a instalar un nuevo 
 	* **Tarea 4 (3 puntos):** Realiza la instalación del servidor DNS esclavo. Documenta los siguientes apartados:
 		* Entrega la configuración de las zonas del maestro y del esclavo.
 		* Comprueba si las zonas definidas en el maestro tienen algún error con el comando adecuado.
-		* Comprueba si la configuración de named.conf tiene algún error con el comando adecuado.
+		* Comprueba si la configuración de ``named.conf`` tiene algún error con el comando adecuado.
 		* Reinicia los servidores y comprueba en los logs si hay algún error. **No olvides incrementar el número de serie en el registro SOA si has modificado la zona en el maestro**.
 		* Muestra la salida del log donde se demuestra que se ha realizado la transferencia de zona.
 	* **Tarea 5 (3 puntos):** Documenta los siguientes apartados:
@@ -91,7 +91,7 @@ Los nombres que vamos a tener en ese subdominio son los siguientes:
 ```eval_rst
 .. warning::
 
-	* **Tarea 7 (4 puntos):** Realiza la instalación y configuración del nuevo servidor dns con las características anteriomente señaladas. Muestra el resultado al profesor.
+	* **Tarea 7 (4 puntos):** Realiza la instalación y configuración del nuevo servidor dns con las características anteriormente señaladas. Muestra el resultado al profesor.
 	* **Tarea 8 (3 puntos):** Realiza las consultas dig/neslookup desde los clientes preguntando por los siguientes:	
 
 		* Dirección de ``www.informatica.iesgn.org``, ``ftp.informatica.iesgn.org``
