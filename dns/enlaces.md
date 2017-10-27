@@ -20,3 +20,4 @@
 * [Servidor DNS dinámico](https://github.com/josedom24/serviciosgs_doc/raw/master/dns/doc/ddns.pdf)
 * [Esquema: Proceso DNS dinámico [jpg]](https://github.com/josedom24/serviciosgs_doc/raw/master/dns/doc/ddns.jpg)
 * [DNS dinámico (Desde lo alto del cerro)](http://albertomolina.wordpress.com/2008/11/14/dns-dinamico/)
+* [Zonas inversas IPv6](https://blog.hbis.fr/2013/11/22/bind-reverse_ipv6/)
