@@ -1,13 +1,9 @@
-Práctica: Configuración de servidores GNU/Linux
-===============================================
+# Práctica: Configuración de servidores GNU/Linux
 
+```eval_rst
 .. note::
 
     (12 tareas - 20 puntos)(6 tareas obligatorias - 7 puntos)
-
-.. note::
-
-    Muestra al profesor: *tarea 6, tarea 8 y tarea 11* 
 
 .. warning::
 
@@ -36,16 +32,17 @@ Práctica: Configuración de servidores GNU/Linux
         * ``informatica.josedom.gonzalonazareno.org``
 
     * El servidor de base de datos va a estar instalado en ``silvestre.josedom.gonzalonazareno.org``
+```
 
-
-Servidor DNS
-------------
+## Servidor DNS
 
 Vamos a instalar un sevidor dns que nos permita gestionar la resolución directa e inversa de nuestros nombres. Cada alumno va a poseer un servidor dns con autoridad sobre un subdominio de nuestro dominio principal *gonzalonazareno.org*, que se llamará ``tu_nombre.gonzalonazareno.org``.
 
+```eval_rst
 .. note::
 
     Indica al profesor el nombre de tu dominio para que pueda realizar la delegación en el servidor DNS principal *papion*.
+```
 
 **Instalación del servidor DNS**
 
@@ -55,6 +52,7 @@ El servidor DNS se va a instalar en el servidor 2. Y en un primer momento se con
     * El servidor debe resolver el nombre de los tres servidores.
     * Se debe configurar las zonas de resolución inversa.
 
+```eval_rst
 .. note::
 
     * Debes determinar si la resolución directa se hace con dirección ip fijas o flotantes del cloud depediendo del servicio que se este prestando.
@@ -69,6 +67,7 @@ El servidor DNS se va a instalar en el servidor 2. Y en un primer momento se con
       * El servidor DNS con autoridad sobre la zona del dominio ``tu_nombre.gonzalonazareno.org``
       * La dirección IP de los tres servidores
       * Un resolución inversa de IP fija, y otra resolución inversa de IP flotante.
+```
 
 Nos gustaría poder dar de alta nuevos nombres en el servidor DNS. Para ello vas a crear un scipt en python que nos permita añadir o borrar registros en las zonas de nuestro servidor.
 
@@ -95,16 +94,17 @@ Ejemplos
 
 Todos los registros creados o borrados pertenecen a las zonas ``tu_nombre.gonzalonazareno.org``. Se debe modificar la zona inversa en los casos necesarios. El script debe reinciar el servidor bind9.
 
+```eval_rst
 .. warning::
 
     * **Tarea 3 (3 puntos):** Entrega el repositorio github donde has desarrollado el script y realiza un ejemplo al profesor.
+```
 
-
-Servidor Web
-------------
+## Servidor Web
 
 En nuestro servidor3 vamos a instalar un servidor Web apache2 con las siguientes características.
 
+```eval_rst
 .. warning::
 
     * **Tarea 4 (1 punto)(Obligatorio):** Nuestro servidor va  a tener dos hosts virtuales: ``www.tu_nombre.gonzalonazareno.org`` y ``informatica.tu_nombre.gonzalonazareno.org``. Explica los pasos fundamentales para realizar los dos virtual hosts.
@@ -115,14 +115,15 @@ En nuestro servidor3 vamos a instalar un servidor Web apache2 con las siguientes
     * **Tarea 9 (3 puntos):** Para llevar una estadistica de visitas y accesos instala la aplicación awstats en el servidor. Configura el cron para que la estadistíca se vaya actualizando. Debes realizar dos estadísticas, una para cada host virtual.
     * **Tarea 10 (3 puntos):** En el directorio ``/srv/isos`` tenemos una colección de imágenes isos, queremos acceder a ella en la dirección ``informatica.tu_nombre.gonzalonazareno.org/isos``. Esta dirección debe ser sólo accesible desde la intranet, si accedemos desde fuera tenemos que autentificarnos (digest) con un usuario.
 
+```
 
-Servidor de Base de Datos
--------------------------
+## Servidor de Base de Datos
 
 En nuestro servidor1 vamos a instalar un servidor de base de datos mysql.
 
+```eval_rst
 .. warning::
 
     * **Tarea 11 (1 punto)(Obligatorio):** Configura el servidor para que sea accesible por los equipos de la red local. Muestra al profesor una conexión a la base de datos desde el servidor3.
     * **Tarea 12 (2 puntos):** Instala en el servidor3 la aplicación phpmyadmin que nos permite gestionar las bases de datos de nuestro servidor. Esta aplicación sólo será accesible desde la URL ``www.tu_nombre.gonzalonazareno.org/basededatos``. Muestra el acceso al profesor.
-
+```
