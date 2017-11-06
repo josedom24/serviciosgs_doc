@@ -11,9 +11,9 @@
 
     El objetivo de esta práctica es montar una infraestrucuta de servicios que se mantenga en el tiempo y que nos sirva para montar servicios y aplicaciones en los distintos módulos durante el curso. Esta práctica la tenéis que realizar en la infraestructura de máquinas que hemos creado en el cloud para todas los módulos. En cualquier momento del curso los servicios que instalemos en esta práctica deben estar funcionando de manera adecuada.
 
-    * Servidor1: homer (Ubuntu)
-    * Servidor2: barney (Debian)
-    * Servidor3: lisa (CentOs)
+    * Servidor1: minnie (Ubuntu)
+    * Servidor2: mickie (Debian)
+    * Servidor3: donald (CentOs)
 
 .. warning::
 
@@ -21,9 +21,9 @@
 
     Los nombres de los equipos van a ser:
 
-        * ``homer.josedom.gonzalonazareno.org``
-        * ``barney.josedom.gonzalonazareno.org``
-        * ``lisa.josedom.gonzalonazareno.org``
+        * ``minnie.josedom.gonzalonazareno.org``
+        * ``mickie.josedom.gonzalonazareno.org``
+        * ``donald.josedom.gonzalonazareno.org``
 
     * El servidor DNS va a estar instalado en ``barney.josedom.gonzalonazareno.org``
     * El servidor web va a estar instalado en ``lisa.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
