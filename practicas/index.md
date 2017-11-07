@@ -9,4 +9,5 @@
    practica_web_apache
    practica_web_nginx
    practica_dns
+   practica_linux_server
 ```
