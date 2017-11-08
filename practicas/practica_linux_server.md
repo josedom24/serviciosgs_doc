@@ -11,8 +11,8 @@
 
     El objetivo de esta práctica es montar una infraestrucuta de servicios que se mantenga en el tiempo y que nos sirva para montar servicios y aplicaciones en los distintos módulos durante el curso. Esta práctica la tenéis que realizar en la infraestructura de máquinas que hemos creado en el cloud para todas los módulos. En cualquier momento del curso los servicios que instalemos en esta práctica deben estar funcionando de manera adecuada.
 
-    * Servidor1: minnie (Ubuntu)
-    * Servidor2: mickie (Debian)
+    * Servidor1: mickie (Debian)
+    * Servidor2: minnie (Ubuntu)
     * Servidor3: donald (CentOs)
 
 .. warning::
@@ -25,13 +25,13 @@
         * ``mickie.josedom.gonzalonazareno.org``
         * ``donald.josedom.gonzalonazareno.org``
 
-    * El servidor DNS va a estar instalado en ``barney.josedom.gonzalonazareno.org``
-    * El servidor web va a estar instalado en ``lisa.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
+    * El servidor DNS va a estar instalado en ``mickie.josedom.gonzalonazareno.org``
+    * El servidor web va a estar instalado en ``donald.josedom.gonzalonazareno.org``, y vamos a tener dos páginas webs:
         
         * ``www.josedom.gonzalonazareno.org``
         * ``informatica.josedom.gonzalonazareno.org``
 
-    * El servidor de base de datos va a estar instalado en ``silvestre.josedom.gonzalonazareno.org``
+    * El servidor de base de datos va a estar instalado en ``minnie.josedom.gonzalonazareno.org``
 ```
 
 ## Servidor DNS
@@ -46,9 +46,9 @@ Vamos a instalar un sevidor dns que nos permita gestionar la resolución directa
 
 **Instalación del servidor DNS**
 
-El servidor DNS se va a instalar en el servidor 2. Y en un primer momento se configurará de la siguiente manera:
+El servidor DNS se va a instalar en el servidor1 (mickie). Y en un primer momento se configurará de la siguiente manera:
 
-    * El servidor DNS se llama ``servidor2.tu_nombre.gonzalonazareno.org`` y va a ser el servidor con autoridad para la zona ``tu_nombre.gonzalonazareno.org``.
+    * El servidor DNS se llama ``mickie.tu_nombre.gonzalonazareno.org`` y va a ser el servidor con autoridad para la zona ``tu_nombre.gonzalonazareno.org``.
     * El servidor debe resolver el nombre de los tres servidores.
     * Se debe configurar las zonas de resolución inversa.
 
@@ -102,7 +102,7 @@ Todos los registros creados o borrados pertenecen a las zonas ``tu_nombre.gonzal
 
 ## Servidor Web
 
-En nuestro servidor3 vamos a instalar un servidor Web apache2 con las siguientes características.
+En nuestro servidor3 (donald) vamos a instalar un servidor Web apache2 con las siguientes características.
 
 ```eval_rst
 .. warning::
@@ -119,11 +119,11 @@ En nuestro servidor3 vamos a instalar un servidor Web apache2 con las siguientes
 
 ## Servidor de Base de Datos
 
-En nuestro servidor1 vamos a instalar un servidor de base de datos mysql.
+En nuestro servidor2 (minnie) vamos a instalar un servidor de base de datos mysql.
 
 ```eval_rst
 .. warning::
 
-    * **Tarea 11 (1 punto)(Obligatorio):** Configura el servidor para que sea accesible por los equipos de la red local. Muestra al profesor una conexión a la base de datos desde el servidor3.
-    * **Tarea 12 (2 puntos):** Instala en el servidor3 la aplicación phpmyadmin que nos permite gestionar las bases de datos de nuestro servidor. Esta aplicación sólo será accesible desde la URL ``www.tu_nombre.gonzalonazareno.org/basededatos``. Muestra el acceso al profesor.
+    * **Tarea 11 (1 punto)(Obligatorio):** Configura el servidor para que sea accesible por los equipos de la red local. Muestra al profesor una conexión a la base de datos desde el servidor3 (donald).
+    * **Tarea 12 (2 puntos):** Instala en el servidor3 (donald) la aplicación phpmyadmin que nos permite gestionar las bases de datos de nuestro servidor. Esta aplicación sólo será accesible desde la URL ``www.tu_nombre.gonzalonazareno.org/basededatos``. Muestra el acceso al profesor.
 ```
