@@ -2,7 +2,7 @@
 
 ## PHP-FPM
 
-FPM (FastCGI Process Manager) es una implementación alternativa al PHP FastCGI. FPM se encarga de interpretar código PHP. Aunque normalmente se utiliza junto a un servidor web (Apache2 o ngnix) vamos a hacer en primer lugar una instlación del proceso y vamos a estudiar algunos parámetros de configuración y vamos a ver su funcionamiento.
+FPM (FastCGI Process Manager) es una implementación alternativa al PHP FastCGI. FPM se encarga de interpretar código PHP. Aunque normalmente se utiliza junto a un servidor web (Apache2 o ngnix) vamos a hacer en primer lugar una instalación del proceso y vamos a estudiar algunos parámetros de configuración y vamos a ver su funcionamiento.
 
 Para instalarlo en Debian 9:
 
@@ -18,7 +18,7 @@ La configuración de php está dividida según desde se use:
 * `/etc/php/7.0/fpm`: Configuración de php para php-fpm
 * `/etc/php/7.0/mods-available`: Módulos disponibles de php que puedes estar configurados en cualquiera de los escenarios anteriores.
 
-Fíjemos en la configuración de php para php-fpm:
+Si nos fijamos en la configuración de php para php-fpm:
 
 * `/etc/php/7.0/fpm/conf.d`: Módulos instalados en esta configuración de php (enlaces simbólicos a `/etc/php/7.0/mods-available`).
 * `/etc/php/7.0/fpm/php-fpm.conf`: Configuración general de php-fpm.
@@ -36,7 +36,7 @@ Por defecto tenemos un pool cuya configuración la encontramos en `/etc/php/7.0/
 		listen = 127.0.0.1:9000
 	* En el caso en que queramos que escuche en cualquier dirección:
 		listen = 9000
-		
+
 * Directivas de procesamiento, gestión de procesos: 
 	* `pm`: Por defecto igual a `dynamic` (el número de procesos se crean y destruyen de forma dinámica). Otos valores: `static` o `ondemand`.
 	* Otras directivas: `pm.max_children`, `pm.start_servers`, `pm.min_spare_servers`,...
