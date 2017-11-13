@@ -14,44 +14,37 @@ Con esto hemos instalado php 7.0 y php-fpm. Veamos primeros algunos ficheros de 
 
 La configuración de php está dividida según desde se use:
 
-	* `/etc/php/7.0/cli`: Configuración de php para `php7.0-cli`, cuando se utiliza php desde la línea de comandos.
-	* `/etc/php/7.0/fpm`: Configuración de php para php-fpm
-	* `/etc/php/7.0/mods-available`: Módulos disponibles de php que puedes estar configurados en cualquiera de los escenarios anteriores.
+* `/etc/php/7.0/cli`: Configuración de php para `php7.0-cli`, cuando se utiliza php desde la línea de comandos.
+* `/etc/php/7.0/fpm`: Configuración de php para php-fpm
+* `/etc/php/7.0/mods-available`: Módulos disponibles de php que puedes estar configurados en cualquiera de los escenarios anteriores.
 
 Fíjemos en la configuración de php para php-fpm:
 
-	* `/etc/php/7.0/fpm/conf.d`: Módulos instalados en esta configuración de php (enlaces simbólicos a `/etc/php/7.0/mods-available`).
-	* `/etc/php/7.0/fpm/php-fpm.conf`: Configuración general de php-fpm.
-	* `/etc/php/7.0/fpm/php.ini`: Configuración de php para este escenario.
-	* `/etc/php/7.0/fpm/pool.d`: Directorio con distintos pool de configuración. Cada aplicación puede tener una configuración distinta (procesos distintos) de php-fpm.
+* `/etc/php/7.0/fpm/conf.d`: Módulos instalados en esta configuración de php (enlaces simbólicos a `/etc/php/7.0/mods-available`).
+* `/etc/php/7.0/fpm/php-fpm.conf`: Configuración general de php-fpm.
+* `/etc/php/7.0/fpm/php.ini`: Configuración de php para este escenario.
+* `/etc/php/7.0/fpm/pool.d`: Directorio con distintos pool de configuración. Cada aplicación puede tener una configuración distinta (procesos distintos) de php-fpm.
 
 Por defecto tenemos un pool cuya configuración la encontramos en `/etc/php/7.0/fpm/pool.d/www.conf`, en este fichero podemos configurar muchos parámetros, algunos más importantes son:
 
-	* `[www]`: Es el nombre del pool, si tenemos varios, cada uno tiene que tener un nombre.
-	* `user` y `grorup`: Usuario y gupo con el que se va ejecutar los procesos.
-	* `listen`: Se indica el socket unix o el socket TCP donde van a escuchar los procesos:
-		* Por defecto, escucha por un socket unix:
+* `[www]`: Es el nombre del pool, si tenemos varios, cada uno tiene que tener un nombre.
+* `user` y `grorup`: Usuario y gupo con el que se va ejecutar los procesos.
+* `listen`: Se indica el socket unix o el socket TCP donde van a escuchar los procesos:
+	* Por defecto, escucha por un socket unix:
+		listen = /run/php/php7.0-fpm.sock
+	* Si queremos que escuche por un socket TCP:
+		listen = 127.0.0.1:9000
+	* En el caso en que queramos que escuche en cualquier dirección:
+		listen = 9000
+		
+* Directivas de procesamiento, gestión de procesos: 
+	* `pm`: Por defecto igual a `dynamic` (el número de procesos se crean y destruyen de forma dinámica). Otos valores: `static` o `ondemand`.
+	* Otras directivas: `pm.max_children`, `pm.start_servers`, `pm.min_spare_servers`,...
 
-			listen = /run/php/php7.0-fpm.sock
+* `pm.status_path = /status`: No es necesaria, pero vamos a ctivar la URL de `status` para comprobar el estado del proceso.
 
-		* Si queremos que escuche por un socket TCP:
-
-			listen = 127.0.0.1:9000
-
-		* En el caso en que queramos que escuche en cualquier dirección:
-
-			listen = 9000
-
-	* Directivas de procesamiento, gestión de procesos: 
-
-		* `pm`: Por defecto igual a `dynamic` (el número de procesos se crean y destruyen de forma dinámica). Otos valores: `static``o `òndemand`.
-		* Otras directivas: `pm.max_children`, `pm.start_servers`, `pm.min_spare_servers`,...
-
-	* `pm.status_path = /status`: No es necesaria, pero vamos a ctivar la URL de `status` para comprobar el estado del proceso.
-
-	Por último reinciamos el servicio:
-
-		systemctl restart php7.0-fpm
+Por último reinciamos el servicio:
+	systemctl restart php7.0-fpm
 
 ### Pruebas de funcionamiento
 
