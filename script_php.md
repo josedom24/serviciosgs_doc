@@ -111,3 +111,45 @@ Por último reiniciamos el servicio:
 		SCRIPT_NAME=/holamundo.php SCRIPT_FILENAME=/holamundo.php REQUEST_METHOD=GET cgi-fcgi -bind -connect 127.0.0.1:9000
 
 
+### Configuración de Apache2 con php-fpm
+
+Podemos hacerlo de dos maneras:
+
+	* Si php-fpm está escuchando en un socket TCP:
+	
+		ProxyPassMatch ^/(.*\.php)$ fcgi://127.0.0.1:9000/var/www/html/$1
+
+	* Si php-fpm está escuchando en un socket UNIX:
+	
+		ProxyPassMatch ^/(.*\.php)$ unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/var/www/html
+
+Otra forma de hacerlo es la siguiente:
+
+	* Si php-fpm está escuchando en un socket TCP:
+
+		<FilesMatch "\.php$">
+		    SetHandler  "proxy:fcgi://127.0.0.1:9000"
+		</FilesMatch>
+
+	* Si php-fpm está escuchando en un socket UNIX:
+
+		<FilesMatch "\.php$">
+    	    SetHandler  "proxy:unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/"
+		</FilesMatch>
+
+
+### Configuración de Nginx con php-fpm
+
+En el virtualhost descomentamos las siguientes líneas:
+
+  	location ~ \.php$ {
+                include snippets/fastcgi-php.conf;
+
+                # With php-fpm (or other unix sockets):
+                #fastcgi_pass unix:/var/run/php/php7.0-fpm.sock;
+                # With php-cgi (or other tcp sockets):
+                #fastcgi_pass 127.0.0.1:9000;
+        }
+
+Descomentando la opción si php-fpm está en un socket Unix o en un socket TCP.
+
