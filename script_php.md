@@ -1,5 +1,28 @@
 # Ejecución de script PHP
 
+## Apache2 y módulo PHP
+
+Instalamos apache2 y el módulo que permite que los procesos de apache2 sean capaz de ejecutar el código PHP:
+
+	apt install apache2 php7.0 libapache2-mod-php7.0
+
+Cuando hacemos la instalación se desactiva el MPM `event` y se activa el `prefork`:
+
+	...
+	Module mpm_event disabled.
+	Enabling module mpm_prefork.
+	apache2_switch_mpm Switch to prefork
+	...
+
+Si queremos desactivar el módulo PHP de apache2:
+
+	apt remove libapache2-mod-php7.0
+
+Y activamos el módulo `event`:
+
+	a2dismod mpm_prefork
+	a2enmod mpm_event
+
 ## PHP-FPM
 
 FPM (FastCGI Process Manager) es una implementación alternativa al PHP FastCGI. FPM se encarga de interpretar código PHP. Aunque normalmente se utiliza junto a un servidor web (Apache2 o ngnix) vamos a hacer en primer lugar una instalación del proceso y vamos a estudiar algunos parámetros de configuración y estudiar su funcionamiento.
@@ -113,6 +136,9 @@ Por último reiniciamos el servicio:
 
 ### Configuración de Apache2 con php-fpm
 
+
+#### Activarlo para cada virtualhost
+
 Podemos hacerlo de dos maneras:
 
 	* Si php-fpm está escuchando en un socket TCP:
@@ -128,15 +154,29 @@ Otra forma de hacerlo es la siguiente:
 	* Si php-fpm está escuchando en un socket TCP:
 
 		<FilesMatch "\.php$">
-		    SetHandler  "proxy:fcgi://127.0.0.1:9000"
+		    SetHandler "proxy:fcgi://127.0.0.1:9000"
 		</FilesMatch>
 
 	* Si php-fpm está escuchando en un socket UNIX:
 
 		<FilesMatch "\.php$">
-    	    SetHandler  "proxy:unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/"
+    	    SetHandler "proxy:unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/"
 		</FilesMatch>
 
+#### Activarto para todos los virtualhost
+
+Tenemos a nuestra disposición un fichero de configuración `php7.0-fpm` en el directorio `/etc/apache2/conf-available`. Por defecto funciona cuando php-fpm 
+está escuchando en un socket UNIX, si escucha por un socket TCP, hay que cambiar la línea:
+
+	SetHandler "proxy:unix:/run/php/php7.0-fpm.sock|fcgi://localhost"
+
+por esta:
+
+	SetHandler "proxy:fcgi://127.0.0.1:9000"
+
+Por último activamos la configuración:
+
+	a2enconf php7.0-fpm
 
 ### Configuración de Nginx con php-fpm
 
