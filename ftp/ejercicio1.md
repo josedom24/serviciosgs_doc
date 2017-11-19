@@ -1,5 +1,4 @@
-Ejercicio: Instalación de proFTPd y uso de clientes FTP
-=======================================================
+# Ejercicio: Instalación de proFTPd y uso de clientes FTP
 
 Instala el servidor proFTPd y comprueba su funcionamiento desde un cliente FTP gráfico: filezilla, y un cliente FTP de texto: ftp.
 
@@ -42,6 +41,7 @@ Instala el servidor proFTPd y comprueba su funcionamiento desde un cliente FTP g
 
 Modifica la configuración del servidor para que los usuarios sólo puedan entrar en su directorio "Documentos".
 
+```eval_rst
 .. note::
 
         Todos los accesos al servidor FTP lo vamos a hacer utilizando su nombre, por ejemplo ftp.iesgn.org, por lo tanto debes configurar el servidor BIND9 en el servidor para que todos los clientes conozcan este nombre.
@@ -49,3 +49,4 @@ Modifica la configuración del servidor para que los usuarios sólo puedan entra
 Siguiendo las indicación de la documentación suministrada, configura el servidor proFTPd para crear un servidor FTP anónimo de sólo lectura.
 
 Cuando termines, aunque no sea recomendable, configura el servidor proftpd para hacerlo anónimo y de lectura y escritura.
+```

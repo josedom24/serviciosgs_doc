@@ -15,6 +15,7 @@ El índice de contenidos que vamos a estudiar será:
    dhcp/index
    web/index
    dns/index
+   ftp/index
    practicas/index
 
 ```
