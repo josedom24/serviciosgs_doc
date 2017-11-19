@@ -10,4 +10,5 @@
    practica_web_nginx
    practica_dns
    practica_linux_server
+   practica_ftp
 ```
