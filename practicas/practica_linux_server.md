@@ -46,11 +46,11 @@ Vamos a instalar un sevidor dns que nos permita gestionar la resolución directa
 
 **Instalación del servidor DNS**
 
-El servidor DNS se va a instalar en el servidor1 (mickie). Y en un primer momento se configurará de la siguiente manera:
+	El servidor DNS se va a instalar en el servidor1 (mickie). Y en un primer momento se configurará de la siguiente manera:
 
-    * El servidor DNS se llama ``mickie.tu_nombre.gonzalonazareno.org`` y va a ser el servidor con autoridad para la zona ``tu_nombre.gonzalonazareno.org``.
-    * El servidor debe resolver el nombre de los tres servidores.
-    * Se debe configurar las zonas de resolución inversa.
+    	* El servidor DNS se llama ``mickie.tu_nombre.gonzalonazareno.org`` y va a ser el servidor con autoridad para la zona ``tu_nombre.gonzalonazareno.org``.
+    	* El servidor debe resolver el nombre de los tres servidores.
+    	* Se debe configurar las zonas de resolución inversa.
 
 ```eval_rst
 .. note::
@@ -69,30 +69,30 @@ El servidor DNS se va a instalar en el servidor1 (mickie). Y en un primer moment
       * Un resolución inversa de IP fija, y otra resolución inversa de IP flotante.
 ```
 
-Nos gustaría poder dar de alta nuevos nombres en el servidor DNS. Para ello vas a crear un scipt en python que nos permita añadir o borrar registros en las zonas de nuestro servidor.
+	Nos gustaría poder dar de alta nuevos nombres en el servidor DNS. Para ello vas a crear un scipt en python que nos permita añadir o borrar registros en las zonas de nuestro servidor.
 
-El script se debe llamar ``gestionDNS.py`` y recibe cutro parámetros:
+	El script se debe llamar ``gestionDNS.py`` y recibe cutro parámetros:
 
-    * ``-a`` o ``-b``: Si recibe ``-a`` añadirá un nuevo nombre, si recibe ``-b`` borrará el nombre que ha recibido.
-    * ``-dir`` o ``-alias``, si recibe ``-dir`` va a crear un registro tipo A, si recibe ``-alias`` va a crear un registro CNAME
-    * El nombre de la máquina para añadir o borrar
-    * El nombre del alias o la dirección ip: Si has usuado la opción ``-dir`` recibirá una ip y si has usuado ``-alias`` recibirá el nombre de la máquina a la que le vamos a hacer el alias. Si has utilizado -b no teendrá este parámetro.
+    	* ``-a`` o ``-b``: Si recibe ``-a`` añadirá un nuevo nombre, si recibe ``-b`` borrará el nombre que ha recibido.
+	    * ``-dir`` o ``-alias``, si recibe ``-dir`` va a crear un registro tipo A, si recibe ``-alias`` va a crear un registro CNAME
+	    * El nombre de la máquina para añadir o borrar
+	    * El nombre del alias o la dirección ip: Si has usuado la opción ``-dir`` recibirá una ip y si has usuado ``-alias`` recibirá el nombre de la máquina a la que le vamos a hacer el alias. Si has utilizado -b no teendrá este parámetro.
 
-Ejemplos
+	Ejemplos
 
-    ``gestionDNS.py -a -dir smtp 192.168.4.1``
+    	``gestionDNS.py -a -dir smtp 192.168.4.1``	
 
-    Creará el registro -> smtp    A    192.168.4.1
+	    Creará el registro -> smtp    A    192.168.4.1	
 
-    ``gestionDNS.py -a -alias correo smtp``
+	    ``gestionDNS.py -a -alias correo smtp``	
 
-    Creará el registro -> correo      CNAME    smtp
+	    Creará el registro -> correo      CNAME    smtp	
 
-    ``gestionDNS.py -b correo``
+	    ``gestionDNS.py -b correo``	
 
-    Borrará el último registro
+	    Borrará el último registro
 
-Todos los registros creados o borrados pertenecen a las zonas ``tu_nombre.gonzalonazareno.org``. Se debe modificar la zona inversa en los casos necesarios. El script debe reinciar el servidor bind9.
+	Todos los registros creados o borrados pertenecen a las zonas ``tu_nombre.gonzalonazareno.org``. Se debe modificar la zona inversa en los casos necesarios. El script debe reinciar el servidor bind9.
 
 ```eval_rst
 .. warning::
