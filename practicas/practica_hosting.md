@@ -46,9 +46,9 @@ El objetivo de la práctica es montar un servidor que ofrezca un servicio de de 
 
 Crea los siguientes scripts:
 
-    * Un script bash/python (``alta``) que reciba el nombre del usuario y el nombre de dominio relacionado con el usuario, y realice los pasos mostrados anteriormente.
-    * Un script bash/python (``baja``) que reciba un nombre de dominio e elimine la cuenta del usuario relacionado a dicho nombre de dominio. Borrará el vitual host de apache2, la zona del servidor DNS, el usuario de la base de datos y las bases de datos creados, el usuario virtual para el acceso a la base de datos y el directorio personal del usuario.
-    * Un script bash/python (``change_password``) que nos permite cambiar las contraseñas de un determinado usuario. Por lo tanto recibe el nombre de un usuario, una opción (``-sql``, si queremos cambiar la contraseña de mysql, o ``-ftp``, si queremos cambar la contraseña del ftp) y un nueva contraseña y haga la modificación de la contraseña indicada si el usuario existe.
+* Un script bash/python (``alta``) que reciba el nombre del usuario y el nombre de dominio relacionado con el usuario, y realice los pasos mostrados anteriormente.
+* Un script bash/python (``baja``) que reciba un nombre de dominio e elimine la cuenta del usuario relacionado a dicho nombre de dominio. Borrará el vitual host de apache2, la zona del servidor DNS, el usuario de la base de datos y las bases de datos creados, el usuario virtual para el acceso a la base de datos y el directorio personal del usuario.
+* Un script bash/python (``change_password``) que nos permite cambiar las contraseñas de un determinado usuario. Por lo tanto recibe el nombre de un usuario, una opción (``-sql``, si queremos cambiar la contraseña de mysql, o ``-ftp``, si queremos cambar la contraseña del ftp) y un nueva contraseña y haga la modificación de la contraseña indicada si el usuario existe.
 
 ## Posibles mejoras
 
