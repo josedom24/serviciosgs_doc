@@ -1,10 +1,13 @@
-Práctica: Implantación de un servidor de hosting
-================================================
+# Práctica: Implantación de un servidor de hosting
 
+```eval_rst
 .. note::
 
-    (9 tareas - 35 puntos)(3 tareas obligatorias - 10 puntos)
+    * La realización de los apartados "Especificaciones técnicas mínimas" y "Creación de scripts" valen 5 puntos.
+    * Por cada mejora se sumará un punto.
+    * Se puede proponer nuevas propuestas.
 
+```
 
 El objetivo de la práctica es montar un servidor que ofrezca un servicio de de hospedaje de páginas web con las siguientes características:
 
@@ -14,20 +17,21 @@ El objetivo de la práctica es montar un servidor que ofrezca un servicio de de 
     * Para gestionar los ficheros hospedados en nuestro espacio utilizaremos un servidor FTP ``ftp.nombrededominio.com``.
     * Para gestionar las tablas de mysql accederemos al programa phpmyadmin en la dirección ``mysql.nombrededominio.com``.
 
-
+```eval_rst
 .. warning::
 
-    * **Tarea 1 (4 puntos)(Obligatorio)**: Contesta las siguientes preguntas:
+	Quizás os pueda ayudar a empezar la práctica contestar las siguientes preguntas:
+
     1. ¿Qué servidores necesitas instalar en la máquina donde vamos a implantar el hosting? Cuando damos de alta una nueva cuenta en nuestro hosting hay que indicar un usuario y un nombre de dominio. ¿Qué acciones hay que hacer en el servidor con el usuario? ¿Qué acciones hay que hacer con el nombre de dominio?
     2. ¿Cómo puedes comprobar que existe ya un usuario con el mismo nombre?¿y qué ya está dado de alta un determinado nombre de dominio?
     3. ¿Qué debes tener en cuenta, a la hora de crear el directorio home del usuario, para que accediendo por ftp, el usuario pueda gestionar su página web?
     4. ¿Cuantos nombres habrá que dar de alta en la zona de resolución directa de nombrededominio.com?
+```
 
-Especificaciones técnicas mínimas
----------------------------------
+## Especificaciones técnicas mínimas
 
-* El sistema utilizará usuarios virtuales cuya información estará guardad en una base de datos mysql.
-* El administrador debe decidir la estructura para guardar los directorios personales de los usuarios. Cuando se da de alta un nuevo usuario con un nombre de dominio, habr´a que tener en cuenta las siguientes consideraciones:
+* El sistema utilizará usuarios virtuales cuya información estará guardad en una base de datos mysql o en un servidor ldap.
+* El administrador debe decidir la estructura para guardar los directorios personales de los usuarios. Cuando se da de alta un nuevo usuario con un nombre de dominio, habrá que tener en cuenta las siguientes consideraciones:
 
 
     1. Si el usuario o el nombre del dominio existen, no se continúa.
@@ -37,14 +41,8 @@ Especificaciones técnicas mínimas
     5. Se creará un nuevo usuario en el gestor de base de datos mysql, se debe llamar ``mynombredeusuario``, la contraseña que se genere para mysql debe ser distinta a la generada para la gestión del FTP y también se debe mostrar.
     6. Se creará una nueva zona ``nombrededominio.com`` en el servidor DNS bind9 con las zonas de resolución directa e inversa que permitan conocer los distintos nombres (www,ftp, mysql, …)
 
-.. warning::
 
-    * **Tarea 2 (3 puntos)(Obligatorio)**: Escribe una guía donde se vean los comandos y las modficaciones de configuración que hay que hacer en los servidores, para conseguir cada uno de los puntos anteriormente descritos.
-
-    * **Tarea 3 (3 puntos)(Obligatorio)**: Escribe una guía donde se vean los comandos y las modficaciones de configuración que hay que hacer para dar de baja a un usuario y el nombre de dominio asociado.
-
-Creación de un script
----------------------
+## Creación de scripts
 
 Crea los siguientes scripts:
 
@@ -52,41 +50,25 @@ Crea los siguientes scripts:
     * Un script bash/python (``baja``) que reciba un nombre de dominio e elimine la cuenta del usuario relacionado a dicho nombre de dominio. Borrará el vitual host de apache2, la zona del servidor DNS, el usuario de la base de datos y las bases de datos creados, el usuario virtual para el acceso a la base de datos y el directorio personal del usuario.
     * Un script bash/python (``change_password``) que nos permite cambiar las contraseñas de un determinado usuario. Por lo tanto recibe el nombre de un usuario, una opción (``-sql``, si queremos cambiar la contraseña de mysql, o ``-ftp``, si queremos cambar la contraseña del ftp) y un nueva contraseña y haga la modificación de la contraseña indicada si el usuario existe.
 
-.. warning::
-
-    * **Tarea 4 (10 puntos: scrpt de alta (5 ptos), script de baja (3 puntos), script de cambio de contraseña (2 puntos))**: Entrega la url del repositorio github donde has guardado los scripts.
+## Posibles mejoras
 
 **Configuración de estadísticas Webs**
 
-Configura el sistema para que todos los usuarios puedan acceder a las estadísticas de su alojamiento web usando el programa awstats. Tendremos que tener en cuanta que el acceso a esta información no será público, para acceder a ella el usuario se tendrá que autentificar con el nombre de usuario y la contraseña que se han generado para la gestión ftp.
-
-.. warning::
-
-    * **Tarea 5 (2 puntos)**: Crea un sistema de estadística con awstats que sea accesible desde la URL: ``stats.nombrededominio.com``.
+Configura el sistema para que todos los usuarios puedan acceder a las estadísticas de su alojamiento web usando el programa awstats. Tendremos que tener en cuanta que el acceso a esta información no será público, para acceder a ella el usuario se tendrá que autentificar con el nombre de usuario y la contraseña que se han generado para la gestión ftp. Crea un sistema de estadística con awstats que sea accesible desde la URL: ``stats.nombrededominio.com``.
 
 **Utilización de cuotas**
 
-.. warning::
-
-    * **Tarea 6 (2 puntos)**: Investiga la forma de limitar el espacio que los usuarios tienen a su disposición, por ejemplo que cada usuario tenga un espacio limitado de 100 Mb.
+Investiga la forma de limitar el espacio que los usuarios tienen a su disposición, por ejemplo que cada usuario tenga un espacio limitado de 100 Mb.
 
 **Usuarios virtuales con LDAP**
 
-.. warning::
-
-    * **Tarea 7 (3 puntos)**: Modifica toda la configuración para que los suarios virtuales que estamos usando se guarden en un servidor LDAP.
+Modifica toda la configuración para que los suarios virtuales que estamos usando se guarden en un servidor LDAP.
 
 **Aplicación web para la gestión del hosting**
 
-.. warning::
-
-    * **Tarea 8 (4 puntos)**: Crea una palicación web (con cualquier tecnología, por ejemplo bottle o django) que permita gestionar el hosting: dar de alta nuevas cuentas, borrarlas, modificar contraseñas, …
+Crea una palicación web (con cualquier tecnología, por ejemplo bottle o django) que permita gestionar el hosting: dar de alta nuevas cuentas, borrarlas, modificar contraseñas,...
 
 **Creación de subdominios**
 
-Queremos añadir a nuestro hosting para que podamos dar de alta a nuevos subdominios. Por ejemplo podemos crear el subdominio ``web.nombrededominio.com`` que será otra página web del usuario.
-
-.. warning::
-
-    * **Tarea 9 (4 puntos)**: Crea un script que nos permita gestionar subdominios en nuestro hosting.
+Queremos añadir a nuestro hosting para que podamos dar de alta a nuevos subdominios. Por ejemplo podemos crear el subdominio ``web.nombrededominio.com`` que será otra página web del usuario. Crea un script que nos permita gestionar subdominios en nuestro hosting.
 

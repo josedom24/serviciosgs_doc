@@ -11,4 +11,5 @@
    practica_dns
    practica_linux_server
    practica_ftp
+   practica_hosting
 ```

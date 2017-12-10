@@ -136,6 +136,10 @@ Por último reiniciamos el servicio:
 
 ### Configuración de Apache2 con php-fpm
 
+Necesito activar los siguientes módulos_
+
+	a2enmod proxy proxy_fcgi
+
 
 #### Activarlo para cada virtualhost
 
