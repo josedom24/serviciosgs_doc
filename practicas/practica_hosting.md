@@ -11,11 +11,11 @@
 
 El objetivo de la práctica es montar un servidor que ofrezca un servicio de de hospedaje de páginas web con las siguientes características:
 
-    * Podemos dar de alta a un usuario y al nombre de dominio (por ejemplo ``nombrededominio.com``) por el que va estar referido su espacio.
-    * Se podrán hospedar páginas estáticas (html) y páginas web dinámicas construidas con PHP.
-    * Automáticamente se creará una página principal, que al acceder a la pagina web (``www.nombrededominio.com``) de la bienvenida e informe que dicha página está en construcción.
-    * Para gestionar los ficheros hospedados en nuestro espacio utilizaremos un servidor FTP ``ftp.nombrededominio.com``.
-    * Para gestionar las tablas de mysql accederemos al programa phpmyadmin en la dirección ``mysql.nombrededominio.com``.
+* Podemos dar de alta a un usuario y al nombre de dominio (por ejemplo ``nombrededominio.com``) por el que va estar referido su espacio.
+* Se podrán hospedar páginas estáticas (html) y páginas web dinámicas construidas con PHP.
+* Automáticamente se creará una página principal, que al acceder a la pagina web (``www.nombrededominio.com``) de la bienvenida e informe que dicha página está en construcción.
+* Para gestionar los ficheros hospedados en nuestro espacio utilizaremos un servidor FTP ``ftp.nombrededominio.com``.
+* Para gestionar las tablas de mysql accederemos al programa phpmyadmin en la dirección ``mysql.nombrededominio.com``.
 
 ```eval_rst
 .. warning::
@@ -34,12 +34,12 @@ El objetivo de la práctica es montar un servidor que ofrezca un servicio de de 
 * El administrador debe decidir la estructura para guardar los directorios personales de los usuarios. Cuando se da de alta un nuevo usuario con un nombre de dominio, habrá que tener en cuenta las siguientes consideraciones:
 
 
-    1. Si el usuario o el nombre del dominio existen, no se continúa.
-    2. Se creará el directorio personal del usuario, este directorio será el ``DocumentRoot`` del servidor web. En este directorio se tendrá que crear una página web de bienvenida.
-    3. Se creará un nuevo virtual hosting (``www.nombrededomino.com``) con el ``DocumentRoot`` apuntando al directorio personal que anteriormente hemos instalado.
-    4. Se creará un nuevo usuario virtual para el acceso por FTP. El administrador decidirá la política para generar la contraseña. Dicha contraseña generada tendrá que visualizarse por pantalla. La contraseña será guardada en la base de datos encriptada.
-    5. Se creará un nuevo usuario en el gestor de base de datos mysql, se debe llamar ``mynombredeusuario``, la contraseña que se genere para mysql debe ser distinta a la generada para la gestión del FTP y también se debe mostrar.
-    6. Se creará una nueva zona ``nombrededominio.com`` en el servidor DNS bind9 con las zonas de resolución directa e inversa que permitan conocer los distintos nombres (www,ftp, mysql, …)
+1. Si el usuario o el nombre del dominio existen, no se continúa.
+2. Se creará el directorio personal del usuario, este directorio será el ``DocumentRoot`` del servidor web. En este directorio se tendrá que crear una página web de bienvenida.
+3. Se creará un nuevo virtual hosting (``www.nombrededomino.com``) con el ``DocumentRoot`` apuntando al directorio personal que anteriormente hemos instalado.
+4. Se creará un nuevo usuario virtual para el acceso por FTP. El administrador decidirá la política para generar la contraseña. Dicha contraseña generada tendrá que visualizarse por pantalla. La contraseña será guardada en la base de datos encriptada.
+5. Se creará un nuevo usuario en el gestor de base de datos mysql, se debe llamar ``mynombredeusuario``, la contraseña que se genere para mysql debe ser distinta a la generada para la gestión del FTP y también se debe mostrar.
+6. Se creará una nueva zona ``nombrededominio.com`` en el servidor DNS bind9 con las zonas de resolución directa e inversa que permitan conocer los distintos nombres (www,ftp, mysql, ...)
 
 
 ## Creación de scripts
