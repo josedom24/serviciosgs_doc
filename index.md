@@ -16,6 +16,7 @@ El índice de contenidos que vamos a estudiar será:
    web/index
    dns/index
    ftp/index
+   rendimineto/index
    practicas/index
 
 ```
