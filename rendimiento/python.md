@@ -1,7 +1,7 @@
 # Ejecución de scripy python
 
 
-## Apache2 y módufo wsgi
+## Apache2 y módulo wsgi
 
 Instalamos el módulo de apache2 que nos permite ejecutar código python: `libapache2-mod-wsgi`.
 
@@ -50,10 +50,8 @@ Hemos creado una aplicación django en el directorio: `/home/debian/myapp` para 
     [2018-01-07 18:55:34 +0000] [14329] [INFO] Using worker: sync
     [2018-01-07 18:55:34 +0000] [14333] [INFO] Booting worker with pid: 14333
     [2018-01-07 18:55:34 +0000] [14334] [INFO] Booting worker with pid: 14334
-    ^C[2018-01-07 18:55:38 +0000] [14329] [INFO] Handling signal: int
-    [2018-01-07 18:55:39 +0000] [14333] [INFO] Worker exiting (pid: 14333)
-    [2018-01-07 18:55:39 +0000] [14334] [INFO] Worker exiting (pid: 14334)
-    
+    ...
+   
 
 Con la opción `-w` indico el número de procesos que van a servir las peticiones, y con la opción `-b` indico ela dirección y el puerto de escucha. Para más información: [How to Deploy Python WSGI Apps Using Gunicorn](https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx).
 
