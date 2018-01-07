@@ -1,15 +1,6 @@
 # Aumento de rendimiento en servidores web
 
 
-
-**Aceleradores PHP**
-
-El objetivo principal de un acelerador PHP es guardar los scripts php ya compilando, obteniendo un mayor rendimiento en la respuesta del servidor. El acelerador se puede usar usando el módulo php de apache o usando fastcgi. Más información sobre [aceleradores PHP+(http://www.maestrosdelweb.com/aceleradores-de-php/>).
-
-Desde la versión 5.5 de php ya tenemos una cache de código instalada como módulo. En la documentación de PHP 5.5 podemos leer: *“La caché de códigos de operación de Zend Optimiser+ se ha añadido a PHP como la nueva extensión OPcache. OPcache mejora el rendimiento de PHP almacenando código de byte de un script precompilado en la memoria compartida, eliminando así la necesidad por parte de PHP de cargar y analizar scripts en cada petición.”*
-
-Podemos obtener información acerca de como configurar `opcache` en la página: [How To: Enable PHP 7 OPcache on Ubuntu 16.04](https://lastplaceonthe.net/how-to-enable-php-7-opcache-on-ubuntu-16-04/).
-
 **Memcached**
 
 [Memcached+(http://memcached.org/>) es un sistema distribuido de propósito general y que es muy usado en la actualidad por múltiples sitios web. Memcached es empleado para el almacenamiento en caché de datos u objetos en la memoria RAM, reduciendo así las necesidades de acceso a un origen de datos externo (como una base de datos o una API).
