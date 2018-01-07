@@ -27,23 +27,24 @@ En ``/etc/apache2/mods-availables/mpm_prefork.conf``::
 
 Directivas de control de [prefork](https://httpd.apache.org/docs/2.4/mod/prefork.html>):
 
-    StartServers          5
-    MinSpareServers       5
-    MaxSpareServers      10
-    MaxClients          150
-    MaxRequestsPerChild   0
+    StartServers              5
+    MinSpareServers           5
+    MaxSpareServers          10
+    MaxRequestWorkers       150
+    MaxConnectionsPerChild    0
+
 
 En ``/etc/apache2/mods-availables/mpm_worker.conf``:
 
 Directivas de control de [worker](https://httpd.apache.org/docs/2.4/mod/worker.html>):
 
-    StartServers          2
-    MinSpareThreads      25
-    MaxSpareThreads      75
-    ThreadLimit          64
-    ThreadsPerChild      25
-    MaxClients          150
-    MaxRequestsPerChild   0
+    StartServers            2
+    MinSpareThreads         25
+    MaxSpareThreads         75
+    ThreadLimit             64
+    ThreadsPerChild         25
+    MaxRequestWorkers       150
+    MaxConnectionsPerChild  0
 
 En ``/etc/apache2/mods-availables/mpm_event.conf``:
 
