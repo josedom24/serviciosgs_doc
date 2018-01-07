@@ -1,4 +1,4 @@
-# Ejecución de scripy python
+# Ejecución de script python
 
 
 ## Apache2 y módulo wsgi
