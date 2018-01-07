@@ -14,4 +14,5 @@ Para terminar la unidad vamos a hacer un estudio comparativo sobre el rendimient
    ejercicio1
    script_php
    php
+   python
    

@@ -101,4 +101,6 @@ En el ejemplo anterior hemos usado la opción `http` para indicar que se va a de
 
 Existen muchas más opciones que puedes usar: [http://uwsgi-docs.readthedocs.io/en/latest/Options.html](http://uwsgi-docs.readthedocs.io/en/latest/Options.html).
 
+* [Apache support](http://uwsgi-docs.readthedocs.io/en/latest/Apache.html)
+* [Nginx support](http://uwsgi-docs.readthedocs.io/en/latest/Nginx.html)
 
