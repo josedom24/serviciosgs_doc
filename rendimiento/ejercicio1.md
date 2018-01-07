@@ -59,7 +59,7 @@ Directivas de control de [event](http://httpd.apache.org/docs/2.4/mod/event.html
 
 ## Gestión de peticiones en nginx
 
-** Procesos worker **
+**Procesos worker**
 
 La directiva `worker_processes` nos indica el número de procesos que van a responder peticiones. 
 El valor de `worker_processes`, se suele definir al mismo número de CPUs que tenga el equipo, o como mucho, el doble. Esto se hace así porque, al ser un servidor web asíncrono, cada proceso se puede encargar de muchas peticiones y por lo tanto no tiene sentido tener más procesos que CPUs capaces de ejecutar código.
@@ -70,7 +70,7 @@ Para indicar un worker por cada core de la CPU:
 
 * Comprueba la configuración por defecto de nginx y comprueba cuantos procesos worker se están ejecutando.
 
-** Conexiones por proceso **
+**Conexiones por proceso**
 
 La opción `worker_connections` establece el número máximo de conexiones que cada proceso worker puede procesar a la vez. Es recomendable aumentar este valor si nuestra web tiene un elevado tráfico. El valor por defecto es de 768.
 
