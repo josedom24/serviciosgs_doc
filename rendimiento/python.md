@@ -53,7 +53,7 @@ Hemos creado una aplicación django en el directorio: `/home/debian/myapp` para 
     ...
    
 
-Con la opción `-w` indico el número de procesos que van a servir las peticiones, y con la opción `-b` indico ela dirección y el puerto de escucha. Para más información: [How to Deploy Python WSGI Apps Using Gunicorn](https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx).
+Con la opción `-w` indico el número de procesos que van a servir las peticiones, y con la opción `-b` indico la dirección y el puerto de escucha. Para más información: [How to Deploy Python WSGI Apps Using Gunicorn](https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-apps-using-gunicorn-http-server-behind-nginx).
 
 Podemos configurar systemd para gunicorn se pueda utilizar con `systemctl`, esto lo puedes ver en el documento: [Deploying Gunicorn](http://docs.gunicorn.org/en/stable/deploy.html#systemd).
 
