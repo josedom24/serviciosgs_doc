@@ -175,8 +175,7 @@ Otra forma de hacerlo es la siguiente:
 
 #### Activarlo para todos los virtualhost
 
-Tenemos a nuestra disposición un fichero de configuración `php7.0-fpm` en el directorio `/etc/apache2/conf-available`. Por defecto funciona cuando php-fpm 
-está escuchando en un socket UNIX, si escucha por un socket TCP, hay que cambiar la línea:
+Tenemos a nuestra disposición un fichero de configuración `php7.0-fpm` en el directorio `/etc/apache2/conf-available`. Por defecto funciona cuando php-fpm está escuchando en un socket UNIX, si escucha por un socket TCP, hay que cambiar la línea:
 
 	SetHandler "proxy:unix:/run/php/php7.0-fpm.sock|fcgi://localhost"
 
