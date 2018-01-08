@@ -19,10 +19,13 @@ Las configuraciones que vamos a realizar son las siguientes:
 
 .. note::
 
-	    * **Tarea 1 (2 punto)(Obligatorio)**: Documenta la instalación del módulo php de apache2. Muestra wordpress funcionando con el módulo php de apache2. Realiza una comprobación de que, efectivamente, se está usando el módulo php.
-	    * **Tarea 2 (2 puntos)(Obligatorio)**: Documenta la instalación y configuración de memcached. Entrega una comprobación de que memcached está funcionando.
-	    * **Tarea 3 (2 puntos)(Obligatorio)**: Documenta la instalación y configuración de varnish. Entrega una comprobación de que varnish está funcionando.
-	    * **Tarea 4 (2 puntos)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP con el módulo de multiprocesamiento event (desinstala el memcached y vanish). Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
+	    * **Tarea 1 (1 punto)(Obligatorio)**: Documenta la instalación del módulo php de apache2. Muestra wordpress funcionando con el módulo php de apache2. Realiza una comprobación de que, efectivamente, se está usando el módulo php.
+	    * **Tarea 2 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP y apache2 (escuchando en un socket UNIX) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
+	    * **Tarea 3 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP y apache2 (escuchando en un socket TCP) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
+	    
+	    * **Tarea 4 (1 punto)(Obligatorio)**: Añade a la configuración anterior memcached. Documenta la instalación y configuración memcached. Recuerda que para que Wordpress utilice memcached le tenemos que instalar un plugin. Muestra las estadísticas de memcached después de acceder varias veces a wordpress para comprobar que esa funcionando.
+
+
 	    * **Tarea 5 (2 puntos)(Obligatorio)**: Entrega y muestra una comprobación de que memcached está funcionando con la nueva configuración.
 	    * **Tarea 6 (2 puntos)(Obligatorio)**: Entrega y muestra una comprobación de que varnish está funcionando con la nueva configuración.
 
