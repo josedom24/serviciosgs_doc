@@ -1,7 +1,7 @@
-El comando ab
-=============
+# El comando ab
 
-La utilidad `ab <http://httpd.apache.org/docs/2.4/programs/ab.html>`_ (Apache Benchmark) sirve para hacer pruebas de carga a un servidor apache. Es un programa que forma parte del apaquete ``apache2-utils``.
+
+La utilidad [ab](http://httpd.apache.org/docs/2.4/programs/ab.html>) (Apache Benchmark) sirve para hacer pruebas de carga a un servidor apache. Es un programa que forma parte del apaquete ``apache2-utils``.
 
 Veamos un ejemplo::
 
