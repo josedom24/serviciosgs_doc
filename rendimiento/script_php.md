@@ -151,27 +151,27 @@ Necesito activar los siguientes módulos_
 
 Podemos hacerlo de dos maneras:
 
-	* Si php-fpm está escuchando en un socket TCP:
-	
-		ProxyPassMatch ^/(.*\.php)$ fcgi://127.0.0.1:9000/var/www/html/$1
+* Si php-fpm está escuchando en un socket TCP:
 
-	* Si php-fpm está escuchando en un socket UNIX:
-	
-		ProxyPassMatch ^/(.*\.php)$ unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/var/www/html
+	ProxyPassMatch ^/(.*\.php)$ fcgi://127.0.0.1:9000/var/www/html/$1
+
+* Si php-fpm está escuchando en un socket UNIX:
+
+	ProxyPassMatch ^/(.*\.php)$ unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/var/www/html
 
 Otra forma de hacerlo es la siguiente:
 
-	* Si php-fpm está escuchando en un socket TCP:
+* Si php-fpm está escuchando en un socket TCP:
 
-		<FilesMatch "\.php$">
-		    SetHandler "proxy:fcgi://127.0.0.1:9000"
-		</FilesMatch>
+	<FilesMatch "\.php$">
+	    SetHandler "proxy:fcgi://127.0.0.1:9000"
+	</FilesMatch>
 
-	* Si php-fpm está escuchando en un socket UNIX:
+* Si php-fpm está escuchando en un socket UNIX:
 
-		<FilesMatch "\.php$">
-    	    SetHandler "proxy:unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/"
-		</FilesMatch>
+	<FilesMatch "\.php$">
+   	    SetHandler "proxy:unix:/run/php/php7.0-fpm.sock|fcgi://127.0.0.1/"
+	</FilesMatch>
 
 #### Activarlo para todos los virtualhost
 
