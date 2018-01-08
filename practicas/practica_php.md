@@ -2,7 +2,7 @@
 
 .. note::
 
-    (9 tareas - 30 puntos)(6 tareas obligatorias - 12 puntos)
+    (9 tareas - 30 puntos)(9 tareas obligatorias - 11 puntos)
     
     
 Vamos a comparar el rendimiento de distintas configuraciones de servidores web sirviendo páginas dinámicas programadas con PHP, en concreto vamos a servir una CMS Wordpress.
@@ -19,15 +19,22 @@ Las configuraciones que vamos a realizar son las siguientes:
 
 .. note::
 
+		* Apache2
+
 	    * **Tarea 1 (1 punto)(Obligatorio)**: Documenta la instalación del módulo php de apache2. Muestra wordpress funcionando con el módulo php de apache2. Realiza una comprobación de que, efectivamente, se está usando el módulo php.
 	    * **Tarea 2 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP y apache2 (escuchando en un socket UNIX) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
-	    * **Tarea 3 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP y apache2 (escuchando en un socket TCP) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
-	    
+	    * **Tarea 3 (1 punto)(Obligatorio)**: Cambia la configuración anterior para que FPM-PHP escuche en un socket TCP.
 	    * **Tarea 4 (1 punto)(Obligatorio)**: Añade a la configuración anterior memcached. Documenta la instalación y configuración memcached. Recuerda que para que Wordpress utilice memcached le tenemos que instalar un plugin. Muestra las estadísticas de memcached después de acceder varias veces a wordpress para comprobar que esa funcionando.
+	    * **Tarea 5 (2 puntos)(Obligatorio)**: Configura un proxy inverso - caché Varnish escuchando en el puerto 80 y que se comunica con el servidor web por el puerto 8080. Entrega y muestra una comprobación de que varnish está funcionando con la nueva configuración.
 
+	    * nginx
 
-	    * **Tarea 5 (2 puntos)(Obligatorio)**: Entrega y muestra una comprobación de que memcached está funcionando con la nueva configuración.
-	    * **Tarea 6 (2 puntos)(Obligatorio)**: Entrega y muestra una comprobación de que varnish está funcionando con la nueva configuración.
+	    * **Tarea 6 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP y nginx (escuchando en un socket UNIX) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
+	    * **Tarea 7 (1 punto)(Obligatorio)**: Cambia la configuración anterior para que FPM-PHP escuche en un socket TCP.
+	    * **Tarea 8 (1 punto)(Obligatorio)**: Añade a la configuración anterior memcached. Documenta la instalación y configuración memcached. Recuerda que para que Wordpress utilice memcached le tenemos que instalar un plugin. Muestra las estadísticas de memcached después de acceder varias veces a wordpress para comprobar que esa funcionando.
+	    * **Tarea 9 (2 puntos)(Obligatorio)**: Configura un proxy inverso - caché Varnish escuchando en el puerto 80 y que se comunica con el servidor web por el puerto 8080. Entrega y muestra una comprobación de que varnish está funcionando con la nueva configuración.
+	    
+
 
 	Ahora puedes realizar el trabajo y generar la documentación en pdf requerida, teniendo en cuenta los siguientes puntos:
 
