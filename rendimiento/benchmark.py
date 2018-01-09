@@ -24,15 +24,17 @@ for con in CONN:
                         lcon.append(float(res.split("\n")[-1]))
                 except:
                         pass
+        print str(lcon[0])+ " #/seg"
         resultados.append(lcon)
+        time.sleep(2)
         for server in SERVERS:
                 print "Reiniciando %s..." % server
                 os.system("systemctl restart %s" % server)
-cad=TITULO+","
+cad=TITULO+"\t"
 for lista in resultados:
         if len(lista)<3:
-                cad+=str(sum(lista)/len(lista))
+                cad+='"'+str(sum(lista)/len(lista)).replace(".",",")+'"'
         else:
-                cad+=str(sum(sorted(lista)[1:-1])/len(sorted(lista)[1:-1]))
-        cad+=","
+                cad+='"'+str(sum(sorted(lista)[1:-1])/len(sorted(lista)[1:-1])).replace(".",",")+'"'
+        cad+="\t"
 print cad[:-1]
