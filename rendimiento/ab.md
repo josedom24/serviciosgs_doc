@@ -60,3 +60,9 @@ El anterior comando simula 5 usuarios al mismo tiempo ahciendo 1000 peticiones a
 	  98%      1
 	  99%      1
 	 100%      3 (longest request)
+
+Tenemos otra opción donde indicamos el tiempo que va a durar la prueba y el nivel de concurrencia, sería de la siguiente forma:
+
+	ab -t 10 -c 5 -k http://localhost/
+
+En este caso se va a realizar la prueba durante 10 segundos.
