@@ -17,7 +17,8 @@ Para cada configuración que vamos a estudiar hay que configurar el script `benc
 * `CONN`: Lista con el nivel de concurrencia que vamos a realizar en cada prueba.
 * `TITULO`: Ponemos el nombre de la configuración estudiada.
 * `DURACION`: Tiempo que va a durar cada test con `ab`.
-* `IP`: Dirección IP del servidor. Nosotros vamos a ahcer las pruebas desde el mismo servidor, por lo que la podemos dejar en `localhost`.
+* `IP`: Dirección IP del servidor. Nosotros vamos a a
+hacer las pruebas desde el mismo servidor, por lo que la podemos dejar en `localhost`.
 * `URLS`: Lista con las direcciones relativas que vamos a probar.
 * `SERVERS`: Lista con los servicios que se van a reiniciar antes de cada prueba.
 
