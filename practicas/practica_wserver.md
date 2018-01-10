@@ -43,9 +43,9 @@ Crea una reserva para el que uno de los clientes tome siempre una dirección fij
 
 Lo primero que tienes que hacer es determinar un nombre de dominio que va a ser utilizado en nuestro sistema. (En esta documentación voy a utilizar el nombre ``example.com``). El servidor DNS ofrece el servicio de resolución de nombres para los ordenadores de nuestra red local. Debes tener en cunta los siguientes puntos:
 
-	* Cuando tengas funcionando el servidor DNS, tendrás que modificar el servidor DHCP para que los clientes usen el nuevo servidor DNS. 
-	* Piensa el nombre que tiene el servidor. El servidor DNS debe poder resolver los siguientes nombres: ``nombredelservidor.example.com``, ``www.example.com``, ``informatica.example.com``. El primero es el nombre del servidor, los dos siguientes son dos páginas webs que el servidor va a servir. 
-	* Debes implementar la zona inversa del servidor.
+* Cuando tengas funcionando el servidor DNS, tendrás que modificar el servidor DHCP para que los clientes usen el nuevo servidor DNS. 
+* Piensa el nombre que tiene el servidor. El servidor DNS debe poder resolver los siguientes nombres: ``nombredelservidor.example.com``, ``www.example.com``, ``informatica.example.com``. El primero es el nombre del servidor, los dos siguientes son dos páginas webs que el servidor va a servir. 
+* Debes implementar la zona inversa del servidor.
 
 ```eval_rst
 .. warning::
