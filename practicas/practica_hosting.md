@@ -4,8 +4,10 @@
 .. note::
 
     * La realización de los apartados "Especificaciones técnicas mínimas" y "Creación de scripts" valen 5 puntos.
-    * Por cada mejora se sumará un punto.
+    * Por cada mejora se sumará un punto. (Hasta 5 puntos)
     * Se puede proponer nuevas propuestas.
+    * Se tendrán que entrega una memoria donde se explique el trabajo que se ha realizado (5 puntos).
+    * Se entregará una presentación, que usará el grupo para la presentación en público que se realizasrá en clase (5 puntos)
 
 ```
 
