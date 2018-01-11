@@ -12,4 +12,6 @@
    practica_linux_server
    practica_ftp
    practica_hosting
+   practica_wserver
+   practica_php
 ```
