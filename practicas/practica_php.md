@@ -11,8 +11,8 @@ Vamos a comparar el rendimiento de distintas configuraciones de servidores web s
 Las configuraciones que vamos a realizar son las siguientes:
 	
 * Módulo php5-apache2
-* FPM-PHP + apache2
-* FPM-PHP + nginx 
+* PHP-FPM + apache2
+* PHP-FPM + nginx 
 	
 ```eval_rst
 .. note::
@@ -22,14 +22,14 @@ Las configuraciones que vamos a realizar son las siguientes:
 
 	    * **Tarea 1 (1 punto)(Obligatorio)**: Documenta la instalación del módulo php de apache2. Muestra wordpress funcionando con el módulo php de apache2. Realiza una comprobación de que, efectivamente, se está usando el módulo php.
 	    * **Tarea 2 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP y apache2 (escuchando en un socket UNIX) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
-	    * **Tarea 3 (1 punto)(Obligatorio)**: Cambia la configuración anterior para que FPM-PHP escuche en un socket TCP.
+	    * **Tarea 3 (1 punto)(Obligatorio)**: Cambia la configuración anterior para que PHP-FPM escuche en un socket TCP.
 	    
 
 	    nginx
 	    -----
 
-	    * **Tarea 4 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de FPM-PHP y nginx (escuchando en un socket UNIX) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con FPM-PHP. Realiza una comprobación de que, efectivamente, se está usando FPM-PHP.
-	    * **Tarea 5 (1 punto)(Obligatorio)**: Cambia la configuración anterior para que FPM-PHP escuche en un socket TCP.
+	    * **Tarea 4 (1 punto)(Obligatorio)**: Documenta la instalación y configuración de PHP-FPM y nginx (escuchando en un socket UNIX) con el módulo de multiprocesamiento event. Muestra wordpress funcionando con PHP-FPM. Realiza una comprobación de que, efectivamente, se está usando PHP-FPM.
+	    * **Tarea 5 (1 punto)(Obligatorio)**: Cambia la configuración anterior para que PHP-FPM escuche en un socket TCP.
 ```
 
 ## Estudio de rendimiento
