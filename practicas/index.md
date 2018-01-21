@@ -14,4 +14,5 @@
    practica_hosting
    practica_wserver
    practica_php
+   practica_python
 ```
