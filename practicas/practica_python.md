@@ -31,7 +31,7 @@ Las configuraciones que vamos a realizar son las siguientes:
 
 		* **Tarea 4 (2 puntos)**: Documenta la instalación y configuración de gunicorn y nginx. Muestra mezzanine funcionando y una comprobación de que, efectivamente, se está usando gunicorn.
 	    * **Tarea 5 (2 puntos)**: Documenta la instalación y configuración de uwsgi y nginx. Muestra mezzanine funcionando y una comprobación de que, efectivamente, se está usando wusgi.
-	    ```
+```
 
 ## Estudio de rendimiento
 
