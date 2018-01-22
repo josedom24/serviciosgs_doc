@@ -1,8 +1,8 @@
-Caso 1: Envío local, entre usuarios del mismo servidor
-======================================================
+# Caso 1: Envío local, entre usuarios del mismo servidor
+
 Esta situación podemos aprovecharla para el envío de correos entre usuarios de la máquina, disponiendo de correo interno. Con utilidades como ``mail usuario`` podemos enviar mensajes a usuarios del propio sistema.
 
-Vamos a realizar el envío utilizando una conexión ``telnet``, muy interesante tanto para entender los pasos que sigue el protocolo SMTP::
+Vamos a realizar el envío utilizando una conexión ``telnet``, muy interesante tanto para entender los pasos que sigue el protocolo SMTP:
 
 	root@vostro:/home/jose# telnet localhost 25
 	Trying 127.0.0.1...
@@ -31,7 +31,7 @@ Vamos a realizar el envío utilizando una conexión ``telnet``, muy interesante 
 
 Pasemos a describir los pasos:
 
-.. image:: img/postfix3.jpg
+![postfix3](img/postfix3.jpg)
 
 **Fases en el envío de un mensaje de correo**
 
@@ -52,7 +52,7 @@ Pasemos a describir los pasos:
     * Escribe el mensaje en varias líneas
     * DOS SALTOS DE LÍNEAS, y en el segundo escribe “.” para finalizar el mensaje, y el cliente lo envía al servidor
 
-Podemos comprobar el log ``/var/log/mail.log`` para comproar que se ha mandado el mansaje::
+Podemos comprobar el log ``/var/log/mail.log`` para comproar que se ha mandado el mansaje:
 
 	Feb 6 18:10:05 vostro postfix/smtpd[3660]: DE3232C16A: client=localhost[127.0.0.1]
 	Feb 6 18:11:07 vostro postfix/cleanup[3907]: DE3232C16A: message-id=<20120206171005.DE3232C16A@mail2.josedomingo.org>
@@ -61,7 +61,7 @@ Podemos comprobar el log ``/var/log/mail.log`` para comproar que se ha mandado e
 	Feb 6 18:11:08 vostro postfix/qmgr[3531]: DE3232C16A: removed
 	Feb 6 18:11:09 vostro postfix/smtpd[3660]: disconnect from localhost[127.0.0.1]
 
-Y podemos leer el mansaje del usuario "usuario" con el programa ``mail``::
+Y podemos leer el mansaje del usuario "usuario" con el programa ``mail``:
 
 	Mail version 8.1.2 01/15/2001. Type ? for help.
 	"/var/mail/usuario": 1 message 1 new

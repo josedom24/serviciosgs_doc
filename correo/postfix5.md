@@ -1,5 +1,4 @@
-Alias y redirecciones
-=====================
+# Alias y redirecciones
 
 **Alias**
 

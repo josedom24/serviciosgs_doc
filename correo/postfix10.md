@@ -1,11 +1,11 @@
-Antispam y antivirus en nuestro ervidor de correos
-==================================================
+# Antispam y antivirus en nuestro ervidor de correos
+
 
 En este apartado vamos a realizar una introducción a la configuración de nuestro servidor de correos postfix para que sea capaz de determinar si los correos que le llegan tienen algun virus o son spam. Para ello vamos a utilizar tres programas:
 
-	* `amavisd <https://www.ijs.si/software/amavisd/>`_: Es una interfaz entre el servidor de correos y el antivirus y antispam.
-	* `ClamAV <https://www.clamav.net/>`_: Un antivirus.
-	* `SpamAssassin <http://spamassassin.apache.org/>`_: Un software para detectar el spam.
+* [amavisd](https://www.ijs.si/software/amavisd/): Es una interfaz entre el servidor de correos y el antivirus y antispam.
+* [ClamAV](https://www.clamav.net/): Un antivirus.
+* [SpamAssassin](http://spamassassin.apache.org/): Un software para detectar el spam.
 
 Es esquema de funcionamiento es el siguiente::
 
@@ -26,8 +26,7 @@ Instalamos descompresores y utilidades::
 
 	apt-get install unrar-free zoo unzip bzip2 libnet-ph-perl libnet-snpp-perl libnet-telnet-perl nomarch lzop
 
-amavisd
--------
+## amavisd
 
 En el fichero ``/etc/amavis/conf.d/15-content_filter_mode`` descomentamos las siguientes líneas si vamos a activar el antivirus::
 
@@ -82,16 +81,14 @@ Y podemos ver los puertos por los que se está escuchando::
 	tcp        0      0 0.0.0.0:25              0.0.0.0:*               LISTEN      19134/master    
 
 
-clamav
-------
+## clamav
 
 Actualizamos el antivirus::
 
 	freshclam
 	systemctl restart clamav-daemon
 
-spamassassin
-------------
+## spamassassin
 
 Lo activamos en el fichero ``/etc/default/spamassassin``::
 

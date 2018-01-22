@@ -1,5 +1,5 @@
-Caso 2: Envío de correos desde internet a usuarios del servidor
-===============================================================
+# Caso 2: Envío de correos desde internet a usuarios del servidor
+
 
 **DESDE EL AULA**
 
