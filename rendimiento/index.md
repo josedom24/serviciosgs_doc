@@ -9,6 +9,7 @@ Para terminar la unidad vamos a hacer un estudio comparativo sobre el rendimient
 
 ```eval_rst
 .. toctree::
+   :maxdepth: 1
    
    enlaces
    ejercicio1
