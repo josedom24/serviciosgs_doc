@@ -1,5 +1,4 @@
-Instalación y configuración básica de postfix
-=============================================
+# Instalación y configuración básica de postfix
 
 **Directivas de configuración**
 
@@ -12,4 +11,4 @@ Revisemos las directivas a tener en cuenta en nuestra configuración (``/etc/pos
 
 **Localización de los ficheros del servidor postfix**
 
-.. image:: img/postfix1.jpg
+![postfix1](img/postfix1.jpg)

@@ -1,8 +1,8 @@
-Servidor de correo electrónico
-==============================
+# Servidor de correo electrónico
 
 **Indice**
 
+```eval_rst
 .. toctree::
 
    enlaces
@@ -16,3 +16,4 @@ Servidor de correo electrónico
    postfix8
    postfix9
    postfix10
+```
