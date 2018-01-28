@@ -98,7 +98,7 @@ El fichero de configuración es ``/etc/spamassassin/local.cf``
 
 Para más información puedes leer los siguientes artículos:
 
-* `howtoforge - Integrating amavisd-new Into Postfix For Spam- And Virus-Scanning <https://www.howtoforge.com/amavisd_postfix_debian_ubuntu_p2>`_
-* `Correo SPAM <http://spamassassin.apache.org/gtube/gtube.txt>`_
-* `Como probar la efectividad y eficiencia del programa antivirus instalado <https://norfipc.com/virus/probar-antivirus.html>`_
-* `Los test de spamassassin <https://spamassassin.apache.org/tests_3_3_x.html>`_
+* [howtoforge - Integrating amavisd-new Into Postfix For Spam- And Virus-Scanning](https://www.howtoforge.com/amavisd_postfix_debian_ubuntu_p2)
+* [Correo SPAM](http://spamassassin.apache.org/gtube/gtube.txt)
+* [Como probar la efectividad y eficiencia del programa antivirus instalado](https://norfipc.com/virus/probar-antivirus.html)
+* [Los test de spamassassin](https://spamassassin.apache.org/tests_3_3_x.html)
