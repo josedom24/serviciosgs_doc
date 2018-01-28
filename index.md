@@ -17,6 +17,7 @@ El índice de contenidos que vamos a estudiar será:
    dns/index
    ftp/index
    rendimiento/index
+   correo/index
    practicas/index
 
 ```
