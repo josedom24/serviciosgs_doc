@@ -73,11 +73,11 @@ En el servidor de clase, configura postfix para que use usuarios virtuales guard
 
 Instala un esquema adecuado para usuarios de postfix en LDAP y crea un script que reciba un nombre de usuario y añade un nuevo registro al LDAP:
 
-    1. El dn debes ajustarlo a la base a la de tu directorio
-    2. Cada entrada incluye un objectClass y atributos adecuados para postfix
-    3. El atributo mail es del tipo usuario@dominio
-    4. El buzón de cada usuario está en formato Maildir
-    5. El atributo userPassword es un hash SSHA del uid del usuario
+1. El dn debes ajustarlo a la base a la de tu directorio
+2. Cada entrada incluye un objectClass y atributos adecuados para postfix
+3. El atributo mail es del tipo usuario@dominio
+4. El buzón de cada usuario está en formato Maildir
+5. El atributo userPassword es un hash SSHA del uid del usuario
 
 ```eval_rst
 .. note::
