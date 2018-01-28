@@ -23,25 +23,25 @@ En este caso vamos a utilizar un nombre de dominio, en mi caso he usado ``josedo
 1. Configura el servidor postfix en tu ordenador, teniendo en cuenta que en el fichero ``/etc/mailname`` este tu nombre de dominio.
 2. Configura tu DNS para que el registro MX apunte a un nombre de ordenador que está definido como un registro A a tu dirección IP pública (si es dinámica y por cualquier motivo te cambia tendrás que actualizar el registro). En mi caso el registro MX de josedomingo.org está configurado de este modo::
 
-	; <<>> DiG 9.7.3 <<>> -t mx josedomingo.org
-	;; global options: +cmd
-	;; Got answer:
-	;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9147
-	;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 4	
+		; <<>> DiG 9.7.3 <<>> -t mx josedomingo.org
+		;; global options: +cmd
+		;; Got answer:
+		;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 9147
+		;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 3, ADDITIONAL: 4		
 
-	;; QUESTION SECTION:
-	;josedomingo.org.        IN    MX	
+		;; QUESTION SECTION:
+		;josedomingo.org.        IN    MX		
 
-	;; ANSWER SECTION:
-	josedomingo.org.    900    IN    MX    10 mail2.josedomingo.org.	
+		;; ANSWER SECTION:
+		josedomingo.org.    900    IN    MX    10 mail2.josedomingo.org.		
 
-	;; AUTHORITY SECTION:
-	josedomingo.org.    21600    IN    NS    ns1.cdmon.net.
-	josedomingo.org.    21600    IN    NS    ns3.cdmon.net.
-	josedomingo.org.    21600    IN    NS    ns2.cdmon.net.	
+		;; AUTHORITY SECTION:
+		josedomingo.org.    21600    IN    NS    ns1.cdmon.net.
+		josedomingo.org.    21600    IN    NS    ns3.cdmon.net.
+		josedomingo.org.    21600    IN    NS    ns2.cdmon.net.		
 
-	;; ADDITIONAL SECTION:
-	mail2.josedomingo.org.    900    IN    A    46.234.130.137
+		;; ADDITIONAL SECTION:
+		mail2.josedomingo.org.    900    IN    A    46.234.130.137
 
 3. En tu router haz DNAT para redirigir las peticiones por el puerto 25 al ordenador local que tiene instalado el servidor de correos.
 
