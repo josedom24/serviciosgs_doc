@@ -79,16 +79,19 @@ Instala un esquema adecuado para usuarios de postfix en LDAP y crea un script qu
     4. El buzón de cada usuario está en formato Maildir
     5. El atributo userPassword es un hash SSHA del uid del usuario
 
+```eval_rst
 .. note::
 
 	* **Tarea 11 (5 puntos)**: Documenta en redmine la configuración realizada. Y realiza una prueba de funcionamiento al profesor.
+```
 
 ## Tarea adicional: Configuración de seguridad para SMTP, POP e IMAP
 
 En el servidor de clase, configura postfix para que las conecciones al servidor SMTP, POP e IMAP sean seguras (SSL).
 
+```eval_rst
 .. note::
 
     * **Tarea 12 (2 puntos)**: Documenta en redmine la configuración realizada para que nuestro servidor SMTP sea seguro. Indica alguna prueba de funcionamiento.
     * **Tarea 13 (3 puntos)**: Documenta en redmine la configuración realizada para que nuestro servidor POP o IMAP sea seguro. Indica alguna prueba de funcionamiento.
-
+```
