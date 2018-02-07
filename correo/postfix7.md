@@ -15,7 +15,9 @@ Como hemos visto en el caso 3 es posible que nuestra ip dinámica que tenemos en
 	* [Cisco IronPort SenderBase Security Network ](http://www.senderbase.org/)
 
 * **Sender Policy Framework (SPF)**: Esta técnica consiste en publicar una serie de datos en un registro TXT del servidor DNS que haga que el servidor de correo donde llega el correo confíe en que el correo no es spam. Para más información lee el artículo: [Sender Policy Framework (SPF)](https://github.com/josedom24/serviciosgs_doc/raw/master/correo/doc/SPF.pdf)
-	* **DomainKeys Identified Mail (DKIM)**: Es un mecanismo que nos permite firmar un correo utilizando criptografía de clave pública. Para más información puede leer en la wikipedia: [DomainKeys Identified Mail](https://es.wikipedia.org/wiki/DomainKeys_Identified_Mail) 
-	* **Lita gris**: El servidor de correo si determina que el origen puede ser una amenaza, rechazada por defecto el correo, los servidores de correo legítimos volverán a enviar el correo transcurrido un tiempo, este correo será aceptado. Sin embargo un sistema que manda spam no suele reenviar el correo rechazado. Para más información puede leer en la wikipedia: [Lista gris](https://es.wikipedia.org/wiki/Lista_gris) 
+
+* **DomainKeys Identified Mail (DKIM)**: Es un mecanismo que nos permite firmar un correo utilizando criptografía de clave pública. Para más información puede leer en la wikipedia: [DomainKeys Identified Mail](https://es.wikipedia.org/wiki/DomainKeys_Identified_Mail) 
+
+* **Lita gris**: El servidor de correo si determina que el origen puede ser una amenaza, rechazada por defecto el correo, los servidores de correo legítimos volverán a enviar el correo transcurrido un tiempo, este correo será aceptado. Sin embargo un sistema que manda spam no suele reenviar el correo rechazado. Para más información puede leer en la wikipedia: [Lista gris](https://es.wikipedia.org/wiki/Lista_gris) 
 
 Para terminar os dejo una presentación: [Univ. de Deusto: Seguridad en sistemas de correo electrónico](http://www.slideshare.net/alvmarin/seguridad-en-sistemas-de-correo-electrnico-3131736)
