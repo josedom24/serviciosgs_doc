@@ -5,7 +5,7 @@ Como hemos visto en el caso 3 es posible que nuestra ip dinámica que tenemos en
 
 * **SMTP submission**: Para que no se permita conectar directamente a un servidor de correo de destino, una técnica para evitar a los spammer sería cambiar el puerto estándar del protocolo SMTP, normalmente se cambia al 587. Para más información leer el siguiente artículo: [Para que el correo llegue a buen puerto](http://blog.arsys.es/para-que-el-correo-llegue-a-buen-puerto/)
 
-* **Enviar correo a través Relay autentifcado**: En este caso podemos hacer relay uslizando un servidor de correos autentificado por ejemplo gmail: [Configurar postfix a través de un relay host autenticado (Gmail)](http://albertomolina.wordpress.com/2009/01/04/configurar-postfix-a-traves-de-un-relay-host-autenticado-gmail/)
+* **Enviar correo a través Relay autentifcado**: En este caso podemos hacer relay utilizando un servidor de correos autentificado por ejemplo gmail: [Configurar postfix a través de un relay host autenticado (Gmail)](http://albertomolina.wordpress.com/2009/01/04/configurar-postfix-a-traves-de-un-relay-host-autenticado-gmail/)
 
 * **SMTPd restrictions**: Podemos configurar nuestro servidor de correos para que filtre a los clientes que intentan usarlo por medio de algún parámetro del protocolo: HELO, MAIL FROM, RCPT TO,..., en el siguiente artículo puedes informarte sobre esta técnica y algunas otras que vamos a ver a continuación: [SMTPd restrictions, SPF, DKIM and greylisting ](https://workaround.org/ispmail/wheezy/smtpd-restrictions-spf-dkim-and-greylisting)
 
