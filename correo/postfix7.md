@@ -7,7 +7,7 @@ Como hemos visto en el caso 3 es posible que nuestra ip dinámica que tenemos en
 
 * **Enviar correo a través Relay autentifcado**: En este caso podemos hacer relay utilizando un servidor de correos autentificado por ejemplo gmail: [Configurar postfix a través de un relay host autenticado (Gmail)](http://albertomolina.wordpress.com/2009/01/04/configurar-postfix-a-traves-de-un-relay-host-autenticado-gmail/)
 
-* **SMTPd restrictions**: Podemos configurar nuestro servidor de correos para que filtre a los clientes que intentan usarlo por medio de algún parámetro del protocolo: HELO, MAIL FROM, RCPT TO,..., en el siguiente artículo puedes informarte sobre esta técnica y algunas otras que vamos a ver a continuación: [SMTPd restrictions, SPF, DKIM and greylisting ](https://workaround.org/ispmail/wheezy/smtpd-restrictions-spf-dkim-and-greylisting)
+* **SMTPd restrictions**: Podemos configurar nuestro servidor de correos para que filtre a los clientes que intentan usarlo por medio de algún parámetro del protocolo: HELO, MAIL FROM, RCPT TO,..., en el siguiente artículo puedes informarte sobre esta técnica y algunas otras que vamos a ver a continuación: [SMTPd restrictions, SPF, DKIM and greylisting ](https://workaround.org/ispmail/wheezy/smtpd-restrictions-spf-dkim-and-greylisting), [Postfix restrictions](https://wiki.centos.org/HowTos/postfix_restrictions).
 
 * **Realtime blacklists (RBL)**: La técnica más importante para luchar contra el spam son las listas negras. Podemos configurar nuestro servidor de correo para que consulte en las distintas listas que existen la dirección de ip de origen. Tenemos muchos sitios para ver si nuestra ip está en una lista negra:
 	* [mxtoolbox ](http://mxtoolbox.com/blacklists.aspx)
