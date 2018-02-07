@@ -1,12 +1,12 @@
 # Caso 5: Recepción de correo electrónico usando nuestro servidor de correos
 
 
-En este caso vamos a utilizar el [protocolo pop3](https://es.wikipedia.org/wiki/Post_Office_Protocol/] y el [protocolo imap](https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol] para obtener los correos electrónicos que hemos recibio en nuestro servidor. 
+En este caso vamos a utilizar el [protocolo pop3](https://es.wikipedia.org/wiki/Post_Office_Protocol/) y el [protocolo imap](https://es.wikipedia.org/wiki/Internet_Message_Access_Protocol) para obtener los correos electrónicos que hemos recibio en nuestro servidor. 
 
 Ante de ellos tenemos que estudiar los ditintos tipos de buzones donde un servidor de correos puede guardar los mensajes: 
 
-* [Buzón mbox](https://es.wikipedia.org/wiki/Mbox]: Todos los mensjaes están en un fichero, es el tipo de buzón que hemos utilizado hasta ahora.
-* [Buzón maildir](https://es.wikipedia.org/wiki/Maildir]: Los mensajes se guardan en una carpeta. Es imprescindible para que funcione el protocolo imap.
+* [Buzón mbox](https://es.wikipedia.org/wiki/Mbox): Todos los mensjaes están en un fichero, es el tipo de buzón que hemos utilizado hasta ahora.
+* [Buzón maildir](https://es.wikipedia.org/wiki/Maildir): Los mensajes se guardan en una carpeta. Es imprescindible para que funcione el protocolo imap.
 
 **Configurando un bozón Maildir**
 
