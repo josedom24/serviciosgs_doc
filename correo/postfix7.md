@@ -9,7 +9,7 @@ Como hemos visto en el caso 3 es posible que nuestra ip dinámica que tenemos en
 
 * **SMTPd restrictions**: Podemos configurar nuestro servidor de correos para que filtre a los clientes que intentan usarlo por medio de algún parámetro del protocolo: HELO, MAIL FROM, RCPT TO,..., en el siguiente artículo puedes informarte sobre esta técnica y algunas otras que vamos a ver a continuación: [SMTPd restrictions, SPF, DKIM and greylisting ](https://workaround.org/ispmail/wheezy/smtpd-restrictions-spf-dkim-and-greylisting), [Postfix restrictions](https://wiki.centos.org/HowTos/postfix_restrictions).
 
-* **Realtime blacklists (RBL)**: La técnica más importante para luchar contra el spam son las listas negras. Podemos configurar nuestro servidor de correo para que consulte en las distintas listas que existen la dirección de ip de origen. Tenemos muchos sitios para ver si nuestra ip está en una lista negra:
+* **Realtime blacklists (RBL)**: La técnica más importante para luchar contra el spam son las listas negras. Podemos configurar nuestro servidor de correo para que consulte en las distintas listas que existen la dirección de ip de origen [How To Block Spam Before It Enters The Server (Postfix)](https://www.howtoforge.com/block_spam_at_mta_level_postfix). Tenemos muchos sitios para ver si nuestra ip está en una lista negra:
 	* [mxtoolbox ](http://mxtoolbox.com/blacklists.aspx)
 	* [Spamhaus Block List ](http://www.spamhaus.org/sbl/index.lasso)
 	* [Cisco IronPort SenderBase Security Network ](http://www.senderbase.org/)
