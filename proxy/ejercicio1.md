@@ -11,7 +11,7 @@
 
 2. Una vez realizada la configuración básica, reinicia el servicio. Configura de manera manual un navegador y comienza a navegar utilizando el proxy.
 
-¿Funciona? No, el servidor viene configurado por defecto para que sólo se puedan realizar conexiones desde localhost.
+	¿Funciona? No, el servidor viene configurado por defecto para que sólo se puedan realizar conexiones desde localhost.
 
 3. Para solucionar esto y poder acceder desde nuetra LAN tenemos que modificar una regla de acceso ACL:
 
