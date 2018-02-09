@@ -13,14 +13,14 @@ Reglas de acceso basadas en puertos, dominios, URLs y tipos MIME
 6. Comprueba el acl que viene en el fichero de configuración donde se indican los puertos permitidos.
 7. Explica que conseguimos con las siguientes ACL::
 
-    acl Safe_ports port 80 21 443 563 70 210 1025-65535
-    acl SSL_ports port 443
-    acl CONNECT method CONNECT
-    ...
-    ...
-    ...
-    http_access deny !Safe_ports
-    http_access deny CONNECT !SSL_ports
+	    acl Safe_ports port 80 21 443 563 70 210 1025-65535
+	    acl SSL_ports port 443
+	    acl CONNECT method CONNECT
+	    ...
+	    ...
+	    ...
+	    http_access deny !Safe_ports
+	    http_access deny CONNECT !SSL_ports
 
 8. Evita que nos podamos conectar al dominio youtube.com y todos sus subdominios.
 9. Evita que nos podamos conectar a los dominios listados en el fichero url_prohibidas.txt (lista negra)
@@ -31,7 +31,7 @@ Reglas de acceso basadas en puertos, dominios, URLs y tipos MIME
 14. Usando el tipo MIME: evita el acceso a los ficheros de CSS (text/css), a los jpg (image/jpeg)
 15. Evita la visualización de los contenidos flash
 
-*Otras reglas de acceso*
+	*Otras reglas de acceso*
 
 16. Evita que se pueda navegar con el navgador Internet Explorer
 17. Permite la navegación sólo los días entre semana de 8:00 de la mañana a las 14:00 de la tarde.
