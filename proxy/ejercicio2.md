@@ -1,5 +1,4 @@
-Ejercicio: Controlando la cache de squid
-========================================
+# Ejercicio: Controlando la cache de squid
 
 Partimos de la siguiente situación: tenemos instalado squid3 en un servidor, un navegador en la máquina real está configurado para usar el proxy (además en este navegador hemos desactivado la función de cache) y vamos acceder desde este navegador a una página html almacenada en un servidor web apache2 instalado en otro servidor.
 
