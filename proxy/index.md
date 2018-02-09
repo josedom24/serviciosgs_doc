@@ -1,6 +1,4 @@
-Servidor proxy/cache Squid
-==========================
-
+# Servidor proxy/cache Squid
 
 **Indice**
 

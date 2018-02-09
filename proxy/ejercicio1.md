@@ -1,5 +1,4 @@
-Ejercicio: Instalación y configuración básica de squid
-======================================================
+# Ejercicio: Instalación y configuración básica de squid
 
 1. Instala el proxy-cache squid3 y comprueba la configuración básica del servidor:
 
@@ -14,7 +13,7 @@ Ejercicio: Instalación y configuración básica de squid
 
 ¿Funciona? No, el servidor viene configurado por defecto para que sólo se puedan realizar conexiones desde localhost.
 
-4. Para solucionar esto y poder acceder desde nuetra LAN tenemos que modificar una regla de acceso ACL:
+3. Para solucionar esto y poder acceder desde nuetra LAN tenemos que modificar una regla de acceso ACL:
 
 * Descomentamos una regla ACL localnet y la ponemos de la siguiente manera::
 
@@ -27,5 +26,5 @@ Ejercicio: Instalación y configuración básica de squid
 Reinicamos, y comprobamos: miramos el fichero ``/var/log/squid3/access.log``, y vemos las peticiones que se han guardado en la cache.
 Puedes econtrar información de cómo leer los logs en las siguientes direcciones:
 
-* `linofee.org - Squid access.log <http://www.linofee.org/~jel/proxy/Squid/accesslog.shtml>`_
-* `Analizar los logs de access.log de squid  <https://enavas.blogspot.com.es/2009/10/analizar-los-logs-de-accesslog-de-squid.html>`_
+* [linofee.org - Squid access.log](http://www.linofee.org/~jel/proxy/Squid/accesslog.shtml)
+* [Analizar los logs de access.log de squid ](https://enavas.blogspot.com.es/2009/10/analizar-los-logs-de-accesslog-de-squid.html)

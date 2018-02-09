@@ -1,5 +1,4 @@
-Ejercicio: Configuración de parámetros de proxy en clientes web
-===============================================================
+# Ejercicio: Configuración de parámetros de proxy en clientes web
 
 *Configuración manual de parámetros de proxy*
 
@@ -13,13 +12,10 @@ Configura el cliente web en la opción: Configuración automática de proxy
 
 *Configuración de parámetros de proxy usando la detección automática WPAD*
 
-1 Configura un servidor dhcp que permita que los clientes al recibir la configuración dinámica configuren los parámtros de acceso al proxy.
-
+1. Configura un servidor dhcp que permita que los clientes al recibir la configuración dinámica configuren los parámtros de acceso al proxy.
 2. Configura el servidor bind9 que permita a los clientes con direccionamiento estático encontrar la configuración del proxy.
 
-Puedes encontrar mucha más información en: `FindProxyForUrl <http://findproxyforurl.com/>`_
-
-
+Puedes encontrar mucha más información en: [FindProxyForUrl](http://findproxyforurl.com/)
 
 *Proxy transparente*
 
