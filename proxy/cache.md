@@ -6,7 +6,7 @@ En este apartado vamos a estudiar cómo funciona la caché de squid:
 * Gestión de la cache por mecanismos de frescura
 * Como evitar el cacheo de nuestro contenido
 
-* [Gestionando la caché de Squid (parte 1)](http://www.josedomingo.org/pledin/2013/01/gestionando-la-cache-de-squid-parte-1/)
+[Gestionando la caché de Squid (parte 1)](http://www.josedomingo.org/pledin/2013/01/gestionando-la-cache-de-squid-parte-1/)
 
 Para obtener más información puedes ver los siguientes enlaces:
 
