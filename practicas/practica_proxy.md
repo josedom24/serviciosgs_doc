@@ -7,7 +7,7 @@
 
 ```
 
-En primer lugar, construye con KVM con vagrant la siguiente infraestructura:
+En primer lugar, construye con KVM o con vagrant la siguiente infraestructura:
 
 ```eval_rst
 .. image:: img/esquema.png
