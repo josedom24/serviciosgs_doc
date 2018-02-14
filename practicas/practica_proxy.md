@@ -9,7 +9,9 @@
 
 En primer lugar, construye con KVM con vagrant la siguiente infraestructura:
 
+```eval_rst
 .. image:: img/esquema.png
+```
 
 ## Proxy squid
 
