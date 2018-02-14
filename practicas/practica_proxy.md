@@ -73,18 +73,12 @@ En el **Servidor 1** vamos a instalar diferentes configuraciones de proxy invers
 
 Ajustar la configuración de las dos máquinas del cluster de balanceo (**Servidor 2** y **Servidor3**):
 
-Deshabilitar la opción `KeepAlive` en el fichero de configuración ``/etc/apache2/apache2.conf`` para realizar la evaluación del rendimiento sin la opción de reutilización de conexiones::
-
-    apache1:~# nano /etc/apache2/apache2.conf
+Deshabilitar la opción `KeepAlive` en el fichero de configuración ``/etc/apache2/apache2.conf`` para realizar la evaluación del rendimiento sin la opción de reutilización de conexiones, para ello en `/etc/apache2/apache2.conf`:
+     
      ...
      KeepAlive Off
      ...            
-
-     apache2:~# nano /etc/apache2/apache2.conf
-     ...
-     KeepAlive Off
-     ...
-
+    
 ```eval_rst
 .. warning:: 
 
@@ -198,11 +192,9 @@ En los servidores web **Servidor 2** y **Servidor 3** vamos a configurar apache2
     ?>
 
 Para realizar la comprobación de que la sesión se mantiene aunque estemos balanceando, en la máquina cliente, arrancar el sniffer de red whireshark y ponerlo en escucha sobre el interfaz eth0 (fijar como filtro la cadena http para que solo muestre las peticiones y respuestas HTTP).
-5. En la máquina cliente:
     
-* desde el navegador web acceder varias veces a la URL `http://172.22.x.x/sesion.php` (comprobar el incremento del contador [variable de sesión])
+* desde el navegador web del cliente acceder varias veces a la URL `http://172.22.x.x/sesion.php` (comprobar el incremento del contador [variable de sesión])
 * acceder la misma URL desde otro navegador (o desde una pestaña de "incógnito") para forzar la creación de una nueva sesión:
-
     
 Detener la captura de tráfico en wireshark y comprobar las peticiones/respuestas HTTP capturadas.
 
