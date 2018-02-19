@@ -15,4 +15,5 @@
    practica_php
    practica_python
    practica_correo
+   practica_proxy
 ```
