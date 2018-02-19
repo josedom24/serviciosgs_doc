@@ -19,6 +19,7 @@ El índice de contenidos que vamos a estudiar será:
    rendimiento/index
    correo/index
    proxy/index
+   loadbalancer/index
    practicas/index
 
 ```
