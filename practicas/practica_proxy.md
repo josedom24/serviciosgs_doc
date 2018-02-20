@@ -46,7 +46,7 @@ Nos piden la configuración de un proxy/cache/filtro en nuestra infraestructura.
     Seguimos trabajando con las mismas máquinas, pero en un ejercicio nuevo, por lo que si necesitas detener los servicios del ejercicio anterior lo puedes hacer.
 ```
 
-En este caso queremos instalar dos servidor web en el **Servidor 2** y en **Servidor 3**, estos servidores simplemente deben ofrecer una página de bienvenida donde se vea el nombre del servidor ("Bienvenido al Servidor 2").
+En este caso queremos instalar dos servidor web en el **Servidor 2** y en **Servidor 3**, estos servidores deben servir una web completa (con hoja de estilo, imágenes,...) busca alguna plantilla.
 
 En el **Servidor 1** vamos a instalar diferentes configuraciones de proxy inverso para que desde el exterior se puedan acceder a las páginas de los servidores conectados a la red interna. Los proxy inversos los vamos a configurar de dos maneras distintas:
 
