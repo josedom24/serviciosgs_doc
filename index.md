@@ -18,6 +18,8 @@ El índice de contenidos que vamos a estudiar será:
    ftp/index
    rendimiento/index
    correo/index
+   proxy/index
+   loadbalancer/index
    practicas/index
 
 ```
