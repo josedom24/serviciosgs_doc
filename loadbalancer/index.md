@@ -10,7 +10,7 @@
 ```
 
 
-## Blanceado de carga
+## Balanceador de carga
 
 ```eval_rst
 .. toctree::
