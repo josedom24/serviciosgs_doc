@@ -5,7 +5,7 @@
 ```eval_rst
 .. toctree::
 
-   proxy_inverso   
+   proxy-inverso
    enlaces_proxy
 ```
 
