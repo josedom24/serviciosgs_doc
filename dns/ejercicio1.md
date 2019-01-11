@@ -1,6 +1,5 @@
 # Ejercicio: Consultas DNS
 
-
 **dig**
 
 dig es una herramienta que permite hacer consultas a un servidor DNS desde la línea de comandos, es el sustituto de los programas nslookup y host. La sintaxis es:

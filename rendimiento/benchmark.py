@@ -5,18 +5,23 @@ import time
 import commands
 
 # Configuración
+# Se van a realizar pruebas de rendimiento con la siguiente lista de peticiones concurrentes
 CONN =[1,10,25,50,75,100]
 TITULO="modulo"
+# Tiempo de la prueba
 DURATION="10"
-IP="localhost"
+IP="172.22.x.x"
+# Las url no tienen que tener / al principio
 URLS=["wordpress/","wordpress/index.php/2017/11/20/hello-world/","wordpress/?s=hola","wordpress/index.php/2017/11/"]
+# Servidores que se tienen que reiniciar
 SERVERS=["apache2","memcached"]
 
 ##############################################################################################################
 resultados=[]
 for con in CONN:
-        time.sleep(2)
+        
         for server in SERVERS:
+                time.sleep(2)
                 print "Reiniciando %s..." % server
                 os.system("systemctl restart %s" % server)
         lcon=[]
