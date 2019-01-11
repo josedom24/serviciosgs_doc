@@ -35,6 +35,8 @@ for con in CONN:
                 except:
                         pass
         resultados.append(lcon)
+        # Tiempo para que se terminen de hacer las pruebas 
+        time.sleep(5)
         
 cad=TITULO+"\t"
 for lista in resultados:
