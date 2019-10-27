@@ -1,4 +1,4 @@
-<?
+<?php
 $pag=fopen("http://www.google.com/search?q=".$_GET["id"],"r");
 if($pag)
 {
